@@ -1,0 +1,52 @@
+[
+  {
+    "name": "Example News Site",
+    "url": "https://example-news.com",
+    "selectors": {
+      "headline": "h1.main-headline",
+      "subheading": "h2.sub-headline",
+      "articleText": "div.article-content p",
+      "author": "span.author-name",
+      "publishDate": "time.publish-date"
+    }
+  },
+  {
+    "name": "Weather Data Site",
+    "url": "https://example-weather.com",
+    "selectors": {
+      "temperature": "div.current-temp",
+      "condition": "div.weather-condition",
+      "feelsLike": "div.feels-like",
+      "humidity": "div.humidity-value",
+      "windSpeed": "div.wind-speed"
+    },
+    "actions": [
+      {
+        "type": "wait",
+        "selector": "div.weather-loaded",
+        "timeout": 10000
+      }
+    ]
+  },
+  {
+    "name": "E-Commerce Product",
+    "url": "https://example-store.com/products/sample",
+    "selectors": {
+      "productName": "h1.product-title",
+      "price": "span.current-price",
+      "oldPrice": "span.old-price",
+      "availability": "div.stock-status",
+      "rating": "div.product-rating"
+    },
+    "actions": [
+      {
+        "type": "click",
+        "selector": "button.accept-cookies"
+      },
+      {
+        "type": "wait",
+        "timeout": 2000
+      }
+    ]
+  }
+]

@@ -1,0 +1,35 @@
+{
+    "name": "reg-scan-node",
+    "version": "1.0.0",
+    "description": "Application to scan regulatory RSS feeds",
+    "main": "src/index.ts",
+    "scripts": {
+        "build": "tsc",
+        "start": "ts-node src/index.ts all",
+        "dev": "ts-node src/index.ts",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [
+        "rss",
+        "feed",
+        "bis",
+        "regulatory"
+    ],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "axios": "^1.8.4",
+        "cheerio": "^1.0.0",
+        "csv-writer": "^1.6.0",
+        "dotenv": "^16.3.1",
+        "playwright": "^1.38.0",
+        "xml2js": "^0.6.2"
+    },
+    "devDependencies": {
+        "@playwright/test": "^1.38.0",
+        "@types/node": "^18.16.0",
+        "@types/xml2js": "^0.4.14",
+        "ts-node": "^10.9.2",
+        "typescript": "^5.1.6"
+    }
+}

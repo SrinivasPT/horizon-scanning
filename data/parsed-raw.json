@@ -1,0 +1,3751 @@
+{
+  "rdf:RDF": {
+    "xmlns": {
+      "name": "xmlns",
+      "value": "http://purl.org/rss/1.0/",
+      "prefix": "xmlns",
+      "local": "",
+      "uri": "http://www.w3.org/2000/xmlns/"
+    },
+    "xmlns:rdf": {
+      "name": "xmlns:rdf",
+      "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+      "prefix": "xmlns",
+      "local": "rdf",
+      "uri": "http://www.w3.org/2000/xmlns/"
+    },
+    "xmlns:content": {
+      "name": "xmlns:content",
+      "value": "http://purl.org/rss/1.0/modules/content/",
+      "prefix": "xmlns",
+      "local": "content",
+      "uri": "http://www.w3.org/2000/xmlns/"
+    },
+    "xmlns:dc": {
+      "name": "xmlns:dc",
+      "value": "http://purl.org/dc/elements/1.1/",
+      "prefix": "xmlns",
+      "local": "dc",
+      "uri": "http://www.w3.org/2000/xmlns/"
+    },
+    "xmlns:dcterms": {
+      "name": "xmlns:dcterms",
+      "value": "http://purl.org/dc/terms/",
+      "prefix": "xmlns",
+      "local": "dcterms",
+      "uri": "http://www.w3.org/2000/xmlns/"
+    },
+    "xmlns:cb": {
+      "name": "xmlns:cb",
+      "value": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+      "prefix": "xmlns",
+      "local": "cb",
+      "uri": "http://www.w3.org/2000/xmlns/"
+    },
+    "xmlns:slash": {
+      "name": "xmlns:slash",
+      "value": "http://purl.org/rss/1.0/modules/slash/",
+      "prefix": "xmlns",
+      "local": "slash",
+      "uri": "http://www.w3.org/2000/xmlns/"
+    },
+    "xmlns:taxo": {
+      "name": "xmlns:taxo",
+      "value": "http://purl.org/rss/1.0/modules/taxonomy/",
+      "prefix": "xmlns",
+      "local": "taxo",
+      "uri": "http://www.w3.org/2000/xmlns/"
+    },
+    "xmlns:opensearch": {
+      "name": "xmlns:opensearch",
+      "value": "http://a9.com/-/spec/opensearch/1.1/",
+      "prefix": "xmlns",
+      "local": "opensearch",
+      "uri": "http://www.w3.org/2000/xmlns/"
+    },
+    "xmlns:sy": {
+      "name": "xmlns:sy",
+      "value": "http://purl.org/rss/1.0/modules/syndication/",
+      "prefix": "xmlns",
+      "local": "sy",
+      "uri": "http://www.w3.org/2000/xmlns/"
+    },
+    "xmlns:g-core": {
+      "name": "xmlns:g-core",
+      "value": "http://base.google.com/ns/1.0",
+      "prefix": "xmlns",
+      "local": "g-core",
+      "uri": "http://www.w3.org/2000/xmlns/"
+    },
+    "$ns": {
+      "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+      "local": "RDF"
+    },
+    "channel": {
+      "rdf:about": {
+        "name": "rdf:about",
+        "value": "https://www.bis.org/doclist/bcbspubls.rss",
+        "prefix": "rdf",
+        "local": "about",
+        "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+      },
+      "$ns": {
+        "uri": "http://purl.org/rss/1.0/",
+        "local": "channel"
+      },
+      "title": {
+        "_": "BCBS publications - english",
+        "$ns": {
+          "uri": "http://purl.org/rss/1.0/",
+          "local": "title"
+        }
+      },
+      "link": {
+        "_": "https://www.bis.org/doclist/bcbspubls.rss",
+        "$ns": {
+          "uri": "http://purl.org/rss/1.0/",
+          "local": "link"
+        }
+      },
+      "description": {
+        "_": "BCBS publications - english",
+        "$ns": {
+          "uri": "http://purl.org/rss/1.0/",
+          "local": "description"
+        }
+      },
+      "items": {
+        "$ns": {
+          "uri": "http://purl.org/rss/1.0/",
+          "local": "items"
+        },
+        "rdf:Seq": {
+          "$ns": {
+            "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+            "local": "Seq"
+          },
+          "rdf:li": [
+            {
+              "resource": {
+                "name": "resource",
+                "value": "https://www.bis.org/bcbs/publ/d591.htm",
+                "prefix": "",
+                "local": "resource",
+                "uri": ""
+              },
+              "$ns": {
+                "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+                "local": "li"
+              }
+            },
+            {
+              "resource": {
+                "name": "resource",
+                "value": "https://www.bis.org/bcbs/publ/d590.htm",
+                "prefix": "",
+                "local": "resource",
+                "uri": ""
+              },
+              "$ns": {
+                "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+                "local": "li"
+              }
+            },
+            {
+              "resource": {
+                "name": "resource",
+                "value": "https://www.bis.org/bcbs/publ/d589.htm",
+                "prefix": "",
+                "local": "resource",
+                "uri": ""
+              },
+              "$ns": {
+                "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+                "local": "li"
+              }
+            },
+            {
+              "resource": {
+                "name": "resource",
+                "value": "https://www.bis.org/bcbs/publ/d588.htm",
+                "prefix": "",
+                "local": "resource",
+                "uri": ""
+              },
+              "$ns": {
+                "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+                "local": "li"
+              }
+            },
+            {
+              "resource": {
+                "name": "resource",
+                "value": "https://www.bis.org/bcbs/publ/d587.htm",
+                "prefix": "",
+                "local": "resource",
+                "uri": ""
+              },
+              "$ns": {
+                "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+                "local": "li"
+              }
+            },
+            {
+              "resource": {
+                "name": "resource",
+                "value": "https://www.bis.org/bcbs/publ/d586.htm",
+                "prefix": "",
+                "local": "resource",
+                "uri": ""
+              },
+              "$ns": {
+                "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+                "local": "li"
+              }
+            },
+            {
+              "resource": {
+                "name": "resource",
+                "value": "https://www.bis.org/bcbs/publ/d585.htm",
+                "prefix": "",
+                "local": "resource",
+                "uri": ""
+              },
+              "$ns": {
+                "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+                "local": "li"
+              }
+            },
+            {
+              "resource": {
+                "name": "resource",
+                "value": "https://www.bis.org/bcbs/publ/d584.htm",
+                "prefix": "",
+                "local": "resource",
+                "uri": ""
+              },
+              "$ns": {
+                "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+                "local": "li"
+              }
+            },
+            {
+              "resource": {
+                "name": "resource",
+                "value": "https://www.bis.org/bcbs/publ/d583.htm",
+                "prefix": "",
+                "local": "resource",
+                "uri": ""
+              },
+              "$ns": {
+                "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+                "local": "li"
+              }
+            },
+            {
+              "resource": {
+                "name": "resource",
+                "value": "https://www.bis.org/bcbs/publ/d582.htm",
+                "prefix": "",
+                "local": "resource",
+                "uri": ""
+              },
+              "$ns": {
+                "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+                "local": "li"
+              }
+            },
+            {
+              "resource": {
+                "name": "resource",
+                "value": "https://www.bis.org/bcbs/publ/d581.htm",
+                "prefix": "",
+                "local": "resource",
+                "uri": ""
+              },
+              "$ns": {
+                "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+                "local": "li"
+              }
+            },
+            {
+              "resource": {
+                "name": "resource",
+                "value": "https://www.bis.org/bcbs/publ/wp44.htm",
+                "prefix": "",
+                "local": "resource",
+                "uri": ""
+              },
+              "$ns": {
+                "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+                "local": "li"
+              }
+            },
+            {
+              "resource": {
+                "name": "resource",
+                "value": "https://www.bis.org/bcbs/publ/d579.htm",
+                "prefix": "",
+                "local": "resource",
+                "uri": ""
+              },
+              "$ns": {
+                "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+                "local": "li"
+              }
+            },
+            {
+              "resource": {
+                "name": "resource",
+                "value": "https://www.bis.org/bcbs/publ/d580.htm",
+                "prefix": "",
+                "local": "resource",
+                "uri": ""
+              },
+              "$ns": {
+                "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+                "local": "li"
+              }
+            },
+            {
+              "resource": {
+                "name": "resource",
+                "value": "https://www.bis.org/bcbs/publ/d578.htm",
+                "prefix": "",
+                "local": "resource",
+                "uri": ""
+              },
+              "$ns": {
+                "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+                "local": "li"
+              }
+            },
+            {
+              "resource": {
+                "name": "resource",
+                "value": "https://www.bis.org/bcbs/publ/d577.htm",
+                "prefix": "",
+                "local": "resource",
+                "uri": ""
+              },
+              "$ns": {
+                "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+                "local": "li"
+              }
+            },
+            {
+              "resource": {
+                "name": "resource",
+                "value": "https://www.bis.org/bcbs/publ/d576.htm",
+                "prefix": "",
+                "local": "resource",
+                "uri": ""
+              },
+              "$ns": {
+                "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+                "local": "li"
+              }
+            },
+            {
+              "resource": {
+                "name": "resource",
+                "value": "https://www.bis.org/bcbs/publ/wp43.htm",
+                "prefix": "",
+                "local": "resource",
+                "uri": ""
+              },
+              "$ns": {
+                "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+                "local": "li"
+              }
+            },
+            {
+              "resource": {
+                "name": "resource",
+                "value": "https://www.bis.org/bcbs/publ/d575.htm",
+                "prefix": "",
+                "local": "resource",
+                "uri": ""
+              },
+              "$ns": {
+                "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+                "local": "li"
+              }
+            },
+            {
+              "resource": {
+                "name": "resource",
+                "value": "https://www.bis.org/bcbs/publ/d574.htm",
+                "prefix": "",
+                "local": "resource",
+                "uri": ""
+              },
+              "$ns": {
+                "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+                "local": "li"
+              }
+            },
+            {
+              "resource": {
+                "name": "resource",
+                "value": "https://www.bis.org/bcbs/publ/d573.htm",
+                "prefix": "",
+                "local": "resource",
+                "uri": ""
+              },
+              "$ns": {
+                "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+                "local": "li"
+              }
+            },
+            {
+              "resource": {
+                "name": "resource",
+                "value": "https://www.bis.org/bcbs/publ/d572.htm",
+                "prefix": "",
+                "local": "resource",
+                "uri": ""
+              },
+              "$ns": {
+                "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+                "local": "li"
+              }
+            },
+            {
+              "resource": {
+                "name": "resource",
+                "value": "https://www.bis.org/bcbs/publ/wp42.htm",
+                "prefix": "",
+                "local": "resource",
+                "uri": ""
+              },
+              "$ns": {
+                "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+                "local": "li"
+              }
+            },
+            {
+              "resource": {
+                "name": "resource",
+                "value": "https://www.bis.org/bcbs/publ/wp41.htm",
+                "prefix": "",
+                "local": "resource",
+                "uri": ""
+              },
+              "$ns": {
+                "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+                "local": "li"
+              }
+            },
+            {
+              "resource": {
+                "name": "resource",
+                "value": "https://www.bis.org/bcbs/publ/d571.htm",
+                "prefix": "",
+                "local": "resource",
+                "uri": ""
+              },
+              "$ns": {
+                "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+                "local": "li"
+              }
+            }
+          ]
+        }
+      }
+    },
+    "item": [
+      {
+        "rdf:about": {
+          "name": "rdf:about",
+          "value": "https://www.bis.org/bcbs/publ/d591.htm",
+          "prefix": "rdf",
+          "local": "about",
+          "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        },
+        "$ns": {
+          "uri": "http://purl.org/rss/1.0/",
+          "local": "item"
+        },
+        "title": {
+          "_": "Principles for the management of credit risk",
+          "$ns": {
+            "uri": "http://purl.org/rss/1.0/",
+            "local": "title"
+          }
+        },
+        "link": {
+          "_": "https://www.bis.org/bcbs/publ/d591.htm",
+          "$ns": {
+            "uri": "http://purl.org/rss/1.0/",
+            "local": "link"
+          }
+        },
+        "description": {
+          "_": "The Basel Committee on Banking Supervision has issued a public consultation on a limited update of the Principles for the Management of Credit Risk ('Credit Risk Principles').",
+          "$ns": {
+            "uri": "http://purl.org/rss/1.0/",
+            "local": "description"
+          }
+        },
+        "dc:title": {
+          "_": "Principles for the management of credit risk",
+          "$ns": {
+            "uri": "http://purl.org/dc/elements/1.1/",
+            "local": "title"
+          }
+        },
+        "dc:date": {
+          "_": "2025-02-05T10:00:00Z",
+          "$ns": {
+            "uri": "http://purl.org/dc/elements/1.1/",
+            "local": "date"
+          }
+        },
+        "cb:paper": {
+          "$ns": {
+            "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+            "local": "paper"
+          },
+          "cb:simpleTitle": {
+            "_": "Principles for the management of credit risk",
+            "$ns": {
+              "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+              "local": "simpleTitle"
+            }
+          },
+          "cb:occurrenceDate": {
+            "_": "2025-02-05T10:00:00Z",
+            "$ns": {
+              "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+              "local": "occurrenceDate"
+            }
+          },
+          "cb:institutionAbbrev": {
+            "_": "BIS",
+            "$ns": {
+              "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+              "local": "institutionAbbrev"
+            }
+          },
+          "cb:resource": {
+            "$ns": {
+              "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+              "local": "resource"
+            },
+            "cb:title": {
+              "_": "PDF version",
+              "$ns": {
+                "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+                "local": "title"
+              }
+            },
+            "cb:link": {
+              "_": "https://www.bis.org/bcbs/publ/d591.pdf",
+              "$ns": {
+                "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+                "local": "link"
+              }
+            },
+            "cb:description": {
+              "$ns": {
+                "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+                "local": "description"
+              }
+            }
+          },
+          "cb:publicationDate": {
+            "_": "05 Feb 2025",
+            "$ns": {
+              "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+              "local": "publicationDate"
+            }
+          },
+          "cb:publication": {
+            "_": "Bank for International Settlements: Papers",
+            "$ns": {
+              "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+              "local": "publication"
+            }
+          }
+        }
+      },
+      {
+        "rdf:about": {
+          "name": "rdf:about",
+          "value": "https://www.bis.org/bcbs/publ/d590.htm",
+          "prefix": "rdf",
+          "local": "about",
+          "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        },
+        "$ns": {
+          "uri": "http://purl.org/rss/1.0/",
+          "local": "item"
+        },
+        "title": {
+          "_": "Transparency and responsiveness of initial margin in centrally cleared markets - review and policy proposals",
+          "$ns": {
+            "uri": "http://purl.org/rss/1.0/",
+            "local": "title"
+          }
+        },
+        "link": {
+          "_": "https://www.bis.org/bcbs/publ/d590.htm",
+          "$ns": {
+            "uri": "http://purl.org/rss/1.0/",
+            "local": "link"
+          }
+        },
+        "description": {
+          "_": "This BCBS-CPMI-IOSCO report sets out ten final policy proposals which aim to increase the resilience of the centrally cleared market ecosystem in times of market stress.",
+          "$ns": {
+            "uri": "http://purl.org/rss/1.0/",
+            "local": "description"
+          }
+        },
+        "dc:title": {
+          "_": "Transparency and responsiveness of initial margin in centrally cleared markets - review and policy proposals",
+          "$ns": {
+            "uri": "http://purl.org/dc/elements/1.1/",
+            "local": "title"
+          }
+        },
+        "dc:date": {
+          "_": "2025-01-15T10:00:00Z",
+          "$ns": {
+            "uri": "http://purl.org/dc/elements/1.1/",
+            "local": "date"
+          }
+        },
+        "cb:paper": {
+          "$ns": {
+            "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+            "local": "paper"
+          },
+          "cb:simpleTitle": {
+            "_": "Transparency and responsiveness of initial margin in centrally cleared markets - review and policy proposals",
+            "$ns": {
+              "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+              "local": "simpleTitle"
+            }
+          },
+          "cb:occurrenceDate": {
+            "_": "2025-01-15T10:00:00Z",
+            "$ns": {
+              "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+              "local": "occurrenceDate"
+            }
+          },
+          "cb:institutionAbbrev": {
+            "_": "BIS",
+            "$ns": {
+              "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+              "local": "institutionAbbrev"
+            }
+          },
+          "cb:resource": {
+            "$ns": {
+              "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+              "local": "resource"
+            },
+            "cb:title": {
+              "_": "PDF version",
+              "$ns": {
+                "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+                "local": "title"
+              }
+            },
+            "cb:link": {
+              "_": "https://www.bis.org/bcbs/publ/d590.pdf",
+              "$ns": {
+                "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+                "local": "link"
+              }
+            },
+            "cb:description": {
+              "$ns": {
+                "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+                "local": "description"
+              }
+            }
+          },
+          "cb:publicationDate": {
+            "_": "15 Jan 2025",
+            "$ns": {
+              "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+              "local": "publicationDate"
+            }
+          },
+          "cb:publication": {
+            "_": "Bank for International Settlements: Papers",
+            "$ns": {
+              "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+              "local": "publication"
+            }
+          }
+        }
+      },
+      {
+        "rdf:about": {
+          "name": "rdf:about",
+          "value": "https://www.bis.org/bcbs/publ/d589.htm",
+          "prefix": "rdf",
+          "local": "about",
+          "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        },
+        "$ns": {
+          "uri": "http://purl.org/rss/1.0/",
+          "local": "item"
+        },
+        "title": {
+          "_": "Streamlining variation margin processes and initial margin responsiveness of margin models in non-centrally cleared markets",
+          "$ns": {
+            "uri": "http://purl.org/rss/1.0/",
+            "local": "title"
+          }
+        },
+        "link": {
+          "_": "https://www.bis.org/bcbs/publ/d589.htm",
+          "$ns": {
+            "uri": "http://purl.org/rss/1.0/",
+            "local": "link"
+          }
+        },
+        "description": {
+          "_": "This report by the BCBS and IOSCO sets out eight recommendations to participants in non-centrally cleared markets to encourage the widespread implementation of good market practices related to (i) variation margin processes; and (ii) the responsiveness of initial margin models.",
+          "$ns": {
+            "uri": "http://purl.org/rss/1.0/",
+            "local": "description"
+          }
+        },
+        "dc:title": {
+          "_": "Streamlining variation margin processes and initial margin responsiveness of margin models in non-centrally cleared markets",
+          "$ns": {
+            "uri": "http://purl.org/dc/elements/1.1/",
+            "local": "title"
+          }
+        },
+        "dc:date": {
+          "_": "2025-01-15T10:00:00Z",
+          "$ns": {
+            "uri": "http://purl.org/dc/elements/1.1/",
+            "local": "date"
+          }
+        },
+        "cb:paper": {
+          "$ns": {
+            "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+            "local": "paper"
+          },
+          "cb:simpleTitle": {
+            "_": "Streamlining variation margin processes and initial margin responsiveness of margin models in non-centrally cleared markets",
+            "$ns": {
+              "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+              "local": "simpleTitle"
+            }
+          },
+          "cb:occurrenceDate": {
+            "_": "2025-01-15T10:00:00Z",
+            "$ns": {
+              "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+              "local": "occurrenceDate"
+            }
+          },
+          "cb:institutionAbbrev": {
+            "_": "BIS",
+            "$ns": {
+              "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+              "local": "institutionAbbrev"
+            }
+          },
+          "cb:resource": {
+            "$ns": {
+              "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+              "local": "resource"
+            },
+            "cb:title": {
+              "_": "PDF version",
+              "$ns": {
+                "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+                "local": "title"
+              }
+            },
+            "cb:link": {
+              "_": "https://www.bis.org/bcbs/publ/d589.pdf",
+              "$ns": {
+                "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+                "local": "link"
+              }
+            },
+            "cb:description": {
+              "$ns": {
+                "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+                "local": "description"
+              }
+            }
+          },
+          "cb:publicationDate": {
+            "_": "15 Jan 2025",
+            "$ns": {
+              "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+              "local": "publicationDate"
+            }
+          },
+          "cb:publication": {
+            "_": "Bank for International Settlements: Papers",
+            "$ns": {
+              "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+              "local": "publication"
+            }
+          }
+        }
+      },
+      {
+        "rdf:about": {
+          "name": "rdf:about",
+          "value": "https://www.bis.org/bcbs/publ/d588.htm",
+          "prefix": "rdf",
+          "local": "about",
+          "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        },
+        "$ns": {
+          "uri": "http://purl.org/rss/1.0/",
+          "local": "item"
+        },
+        "title": {
+          "_": "Final guidelines for counterparty credit risk management",
+          "$ns": {
+            "uri": "http://purl.org/rss/1.0/",
+            "local": "title"
+          }
+        },
+        "link": {
+          "_": "https://www.bis.org/bcbs/publ/d588.htm",
+          "$ns": {
+            "uri": "http://purl.org/rss/1.0/",
+            "local": "link"
+          }
+        },
+        "description": {
+          "_": "The Basel Committee on Banking Supervision has issued guidelines for banks' counterparty credit risk (CCR) management. The guidelines include key practices critical to resolving long-standing industry weaknesses in CCR management, including the need to: (i) conduct comprehensive due diligence at both initial onboarding, as well as on an ongoing basis; (ii) develop a comprehensive credit risk mitigation strategy to effectively manage counterparty exposures; (iii) measure, control and limit CCR using a wide variety of complementary metrics; and (iv) build a strong CCR governance framework.",
+          "$ns": {
+            "uri": "http://purl.org/rss/1.0/",
+            "local": "description"
+          }
+        },
+        "dc:title": {
+          "_": "Final guidelines for counterparty credit risk management",
+          "$ns": {
+            "uri": "http://purl.org/dc/elements/1.1/",
+            "local": "title"
+          }
+        },
+        "dc:date": {
+          "_": "2024-12-11T15:00:00Z",
+          "$ns": {
+            "uri": "http://purl.org/dc/elements/1.1/",
+            "local": "date"
+          }
+        },
+        "cb:paper": {
+          "$ns": {
+            "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+            "local": "paper"
+          },
+          "cb:simpleTitle": {
+            "_": "Final guidelines for counterparty credit risk management",
+            "$ns": {
+              "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+              "local": "simpleTitle"
+            }
+          },
+          "cb:occurrenceDate": {
+            "_": "2024-12-11T15:00:00Z",
+            "$ns": {
+              "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+              "local": "occurrenceDate"
+            }
+          },
+          "cb:institutionAbbrev": {
+            "_": "BIS",
+            "$ns": {
+              "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+              "local": "institutionAbbrev"
+            }
+          },
+          "cb:resource": {
+            "$ns": {
+              "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+              "local": "resource"
+            },
+            "cb:title": {
+              "_": "PDF version",
+              "$ns": {
+                "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+                "local": "title"
+              }
+            },
+            "cb:link": {
+              "_": "https://www.bis.org/bcbs/publ/d588.pdf",
+              "$ns": {
+                "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+                "local": "link"
+              }
+            },
+            "cb:description": {
+              "$ns": {
+                "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+                "local": "description"
+              }
+            }
+          },
+          "cb:publicationDate": {
+            "_": "11 Dec 2024",
+            "$ns": {
+              "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+              "local": "publicationDate"
+            }
+          },
+          "cb:publication": {
+            "_": "Bank for International Settlements: Papers",
+            "$ns": {
+              "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+              "local": "publication"
+            }
+          }
+        }
+      },
+      {
+        "rdf:about": {
+          "name": "rdf:about",
+          "value": "https://www.bis.org/bcbs/publ/d587.htm",
+          "prefix": "rdf",
+          "local": "about",
+          "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        },
+        "$ns": {
+          "uri": "http://purl.org/rss/1.0/",
+          "local": "item"
+        },
+        "title": {
+          "_": "Regulatory Consistency Assessment Programme (RCAP): Assessment of Basel Committee's large exposures framework - Korea",
+          "$ns": {
+            "uri": "http://purl.org/rss/1.0/",
+            "local": "title"
+          }
+        },
+        "link": {
+          "_": "https://www.bis.org/bcbs/publ/d587.htm",
+          "$ns": {
+            "uri": "http://purl.org/rss/1.0/",
+            "local": "link"
+          }
+        },
+        "description": {
+          "_": "This report describes the Committee's assessment of the implementation of the Basel Committee's large exposures framework (LEX) in Korea. The Korean LEX regulations have been assessed as largely compliant.",
+          "$ns": {
+            "uri": "http://purl.org/rss/1.0/",
+            "local": "description"
+          }
+        },
+        "dc:title": {
+          "_": "Regulatory Consistency Assessment Programme (RCAP): Assessment of Basel Committee's large exposures framework - Korea",
+          "$ns": {
+            "uri": "http://purl.org/dc/elements/1.1/",
+            "local": "title"
+          }
+        },
+        "dc:date": {
+          "_": "2024-12-04T09:29:00Z",
+          "$ns": {
+            "uri": "http://purl.org/dc/elements/1.1/",
+            "local": "date"
+          }
+        },
+        "cb:paper": {
+          "$ns": {
+            "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+            "local": "paper"
+          },
+          "cb:simpleTitle": {
+            "_": "Regulatory Consistency Assessment Programme (RCAP): Assessment of Basel Committee's large exposures framework - Korea",
+            "$ns": {
+              "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+              "local": "simpleTitle"
+            }
+          },
+          "cb:occurrenceDate": {
+            "_": "2024-12-04T09:29:00Z",
+            "$ns": {
+              "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+              "local": "occurrenceDate"
+            }
+          },
+          "cb:institutionAbbrev": {
+            "_": "BIS",
+            "$ns": {
+              "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+              "local": "institutionAbbrev"
+            }
+          },
+          "cb:resource": {
+            "$ns": {
+              "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+              "local": "resource"
+            },
+            "cb:title": {
+              "_": "PDF version",
+              "$ns": {
+                "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+                "local": "title"
+              }
+            },
+            "cb:link": {
+              "_": "https://www.bis.org/bcbs/publ/d587.pdf",
+              "$ns": {
+                "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+                "local": "link"
+              }
+            },
+            "cb:description": {
+              "$ns": {
+                "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+                "local": "description"
+              }
+            }
+          },
+          "cb:publicationDate": {
+            "_": "04 Dec 2024",
+            "$ns": {
+              "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+              "local": "publicationDate"
+            }
+          },
+          "cb:publication": {
+            "_": "Bank for International Settlements: Papers",
+            "$ns": {
+              "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+              "local": "publication"
+            }
+          }
+        }
+      },
+      {
+        "rdf:about": {
+          "name": "rdf:about",
+          "value": "https://www.bis.org/bcbs/publ/d586.htm",
+          "prefix": "rdf",
+          "local": "about",
+          "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        },
+        "$ns": {
+          "uri": "http://purl.org/rss/1.0/",
+          "local": "item"
+        },
+        "title": {
+          "_": "Regulatory Consistency Assessment Programme (RCAP): Assessment of Basel Committee's Net Stable Funding Ratio standard - Korea",
+          "$ns": {
+            "uri": "http://purl.org/rss/1.0/",
+            "local": "title"
+          }
+        },
+        "link": {
+          "_": "https://www.bis.org/bcbs/publ/d586.htm",
+          "$ns": {
+            "uri": "http://purl.org/rss/1.0/",
+            "local": "link"
+          }
+        },
+        "description": {
+          "_": "This report describes the Committee's assessment of the implementation of the Basel Committee's Net Stable Funding Ratio (NSFR) standard in Korea. The Korean NSFR regulations have been assessed as compliant.",
+          "$ns": {
+            "uri": "http://purl.org/rss/1.0/",
+            "local": "description"
+          }
+        },
+        "dc:title": {
+          "_": "Regulatory Consistency Assessment Programme (RCAP): Assessment of Basel Committee's Net Stable Funding Ratio standard - Korea",
+          "$ns": {
+            "uri": "http://purl.org/dc/elements/1.1/",
+            "local": "title"
+          }
+        },
+        "dc:date": {
+          "_": "2024-12-04T09:29:00Z",
+          "$ns": {
+            "uri": "http://purl.org/dc/elements/1.1/",
+            "local": "date"
+          }
+        },
+        "cb:paper": {
+          "$ns": {
+            "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+            "local": "paper"
+          },
+          "cb:simpleTitle": {
+            "_": "Regulatory Consistency Assessment Programme (RCAP): Assessment of Basel Committee's Net Stable Funding Ratio standard - Korea",
+            "$ns": {
+              "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+              "local": "simpleTitle"
+            }
+          },
+          "cb:occurrenceDate": {
+            "_": "2024-12-04T09:29:00Z",
+            "$ns": {
+              "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+              "local": "occurrenceDate"
+            }
+          },
+          "cb:institutionAbbrev": {
+            "_": "BIS",
+            "$ns": {
+              "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+              "local": "institutionAbbrev"
+            }
+          },
+          "cb:resource": {
+            "$ns": {
+              "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+              "local": "resource"
+            },
+            "cb:title": {
+              "_": "PDF version",
+              "$ns": {
+                "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+                "local": "title"
+              }
+            },
+            "cb:link": {
+              "_": "https://www.bis.org/bcbs/publ/d586.pdf",
+              "$ns": {
+                "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+                "local": "link"
+              }
+            },
+            "cb:description": {
+              "$ns": {
+                "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+                "local": "description"
+              }
+            }
+          },
+          "cb:publicationDate": {
+            "_": "04 Dec 2024",
+            "$ns": {
+              "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+              "local": "publicationDate"
+            }
+          },
+          "cb:publication": {
+            "_": "Bank for International Settlements: Papers",
+            "$ns": {
+              "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+              "local": "publication"
+            }
+          }
+        }
+      },
+      {
+        "rdf:about": {
+          "name": "rdf:about",
+          "value": "https://www.bis.org/bcbs/publ/d585.htm",
+          "prefix": "rdf",
+          "local": "about",
+          "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        },
+        "$ns": {
+          "uri": "http://purl.org/rss/1.0/",
+          "local": "item"
+        },
+        "title": {
+          "_": "Range of practices in implementing a positive neutral countercyclical capital buffer",
+          "$ns": {
+            "uri": "http://purl.org/rss/1.0/",
+            "local": "title"
+          }
+        },
+        "link": {
+          "_": "https://www.bis.org/bcbs/publ/d585.htm",
+          "$ns": {
+            "uri": "http://purl.org/rss/1.0/",
+            "local": "link"
+          }
+        },
+        "description": {
+          "_": "The Basel Committee on Banking Supervision has published a report which describes the range of practices in implementing a positive neutral countercyclical capital buffer (CCyB).",
+          "$ns": {
+            "uri": "http://purl.org/rss/1.0/",
+            "local": "description"
+          }
+        },
+        "dc:title": {
+          "_": "Range of practices in implementing a positive neutral countercyclical capital buffer",
+          "$ns": {
+            "uri": "http://purl.org/dc/elements/1.1/",
+            "local": "title"
+          }
+        },
+        "dc:date": {
+          "_": "2024-11-28T10:28:00Z",
+          "$ns": {
+            "uri": "http://purl.org/dc/elements/1.1/",
+            "local": "date"
+          }
+        },
+        "cb:paper": {
+          "$ns": {
+            "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+            "local": "paper"
+          },
+          "cb:simpleTitle": {
+            "_": "Range of practices in implementing a positive neutral countercyclical capital buffer",
+            "$ns": {
+              "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+              "local": "simpleTitle"
+            }
+          },
+          "cb:occurrenceDate": {
+            "_": "2024-11-28T10:28:00Z",
+            "$ns": {
+              "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+              "local": "occurrenceDate"
+            }
+          },
+          "cb:institutionAbbrev": {
+            "_": "BIS",
+            "$ns": {
+              "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+              "local": "institutionAbbrev"
+            }
+          },
+          "cb:resource": {
+            "$ns": {
+              "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+              "local": "resource"
+            },
+            "cb:title": {
+              "_": "PDF version",
+              "$ns": {
+                "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+                "local": "title"
+              }
+            },
+            "cb:link": {
+              "_": "https://www.bis.org/bcbs/publ/d585.pdf",
+              "$ns": {
+                "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+                "local": "link"
+              }
+            },
+            "cb:description": {
+              "$ns": {
+                "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+                "local": "description"
+              }
+            }
+          },
+          "cb:publicationDate": {
+            "_": "28 Nov 2024",
+            "$ns": {
+              "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+              "local": "publicationDate"
+            }
+          },
+          "cb:publication": {
+            "_": "Bank for International Settlements: Papers",
+            "$ns": {
+              "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+              "local": "publication"
+            }
+          }
+        }
+      },
+      {
+        "rdf:about": {
+          "name": "rdf:about",
+          "value": "https://www.bis.org/bcbs/publ/d584.htm",
+          "prefix": "rdf",
+          "local": "about",
+          "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        },
+        "$ns": {
+          "uri": "http://purl.org/rss/1.0/",
+          "local": "item"
+        },
+        "title": {
+          "_": "Technical Amendment - Hedging of counterparty credit risk exposures",
+          "$ns": {
+            "uri": "http://purl.org/rss/1.0/",
+            "local": "title"
+          }
+        },
+        "link": {
+          "_": "https://www.bis.org/bcbs/publ/d584.htm",
+          "$ns": {
+            "uri": "http://purl.org/rss/1.0/",
+            "local": "link"
+          }
+        },
+        "description": {
+          "_": "To help promote consistent interpretation of the Basel Framework, the Basel Committee on Banking Supervision periodically publishes proposals for technical amendments.",
+          "$ns": {
+            "uri": "http://purl.org/rss/1.0/",
+            "local": "description"
+          }
+        },
+        "dc:title": {
+          "_": "Technical Amendment - Hedging of counterparty credit risk exposures",
+          "$ns": {
+            "uri": "http://purl.org/dc/elements/1.1/",
+            "local": "title"
+          }
+        },
+        "dc:date": {
+          "_": "2024-11-27T10:00:00Z",
+          "$ns": {
+            "uri": "http://purl.org/dc/elements/1.1/",
+            "local": "date"
+          }
+        },
+        "cb:paper": {
+          "$ns": {
+            "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+            "local": "paper"
+          },
+          "cb:simpleTitle": {
+            "_": "Technical Amendment - Hedging of counterparty credit risk exposures",
+            "$ns": {
+              "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+              "local": "simpleTitle"
+            }
+          },
+          "cb:occurrenceDate": {
+            "_": "2024-11-27T10:00:00Z",
+            "$ns": {
+              "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+              "local": "occurrenceDate"
+            }
+          },
+          "cb:institutionAbbrev": {
+            "_": "BIS",
+            "$ns": {
+              "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+              "local": "institutionAbbrev"
+            }
+          },
+          "cb:resource": {
+            "$ns": {
+              "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+              "local": "resource"
+            },
+            "cb:title": {
+              "_": "PDF version",
+              "$ns": {
+                "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+                "local": "title"
+              }
+            },
+            "cb:link": {
+              "_": "https://www.bis.org/bcbs/publ/d584.pdf",
+              "$ns": {
+                "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+                "local": "link"
+              }
+            },
+            "cb:description": {
+              "$ns": {
+                "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+                "local": "description"
+              }
+            }
+          },
+          "cb:publicationDate": {
+            "_": "27 Nov 2024",
+            "$ns": {
+              "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+              "local": "publicationDate"
+            }
+          },
+          "cb:publication": {
+            "_": "Bank for International Settlements: Papers",
+            "$ns": {
+              "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+              "local": "publication"
+            }
+          }
+        }
+      },
+      {
+        "rdf:about": {
+          "name": "rdf:about",
+          "value": "https://www.bis.org/bcbs/publ/d583.htm",
+          "prefix": "rdf",
+          "local": "about",
+          "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        },
+        "$ns": {
+          "uri": "http://purl.org/rss/1.0/",
+          "local": "item"
+        },
+        "title": {
+          "_": "Finalisation of various technical amendments",
+          "$ns": {
+            "uri": "http://purl.org/rss/1.0/",
+            "local": "title"
+          }
+        },
+        "link": {
+          "_": "https://www.bis.org/bcbs/publ/d583.htm",
+          "$ns": {
+            "uri": "http://purl.org/rss/1.0/",
+            "local": "link"
+          }
+        },
+        "description": {
+          "_": "This document sets out various technical amendments to the Basel Framework. The amendments relate to: (i) the standardised approach to credit risk; and (ii) cryptoasset exposures.",
+          "$ns": {
+            "uri": "http://purl.org/rss/1.0/",
+            "local": "description"
+          }
+        },
+        "dc:title": {
+          "_": "Finalisation of various technical amendments",
+          "$ns": {
+            "uri": "http://purl.org/dc/elements/1.1/",
+            "local": "title"
+          }
+        },
+        "dc:date": {
+          "_": "2024-11-27T10:00:00Z",
+          "$ns": {
+            "uri": "http://purl.org/dc/elements/1.1/",
+            "local": "date"
+          }
+        },
+        "cb:paper": {
+          "$ns": {
+            "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+            "local": "paper"
+          },
+          "cb:simpleTitle": {
+            "_": "Finalisation of various technical amendments",
+            "$ns": {
+              "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+              "local": "simpleTitle"
+            }
+          },
+          "cb:occurrenceDate": {
+            "_": "2024-11-27T10:00:00Z",
+            "$ns": {
+              "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+              "local": "occurrenceDate"
+            }
+          },
+          "cb:institutionAbbrev": {
+            "_": "BIS",
+            "$ns": {
+              "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+              "local": "institutionAbbrev"
+            }
+          },
+          "cb:resource": {
+            "$ns": {
+              "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+              "local": "resource"
+            },
+            "cb:title": {
+              "_": "PDF version",
+              "$ns": {
+                "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+                "local": "title"
+              }
+            },
+            "cb:link": {
+              "_": "https://www.bis.org/bcbs/publ/d583.pdf",
+              "$ns": {
+                "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+                "local": "link"
+              }
+            },
+            "cb:description": {
+              "$ns": {
+                "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+                "local": "description"
+              }
+            }
+          },
+          "cb:publicationDate": {
+            "_": "27 Nov 2024",
+            "$ns": {
+              "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+              "local": "publicationDate"
+            }
+          },
+          "cb:publication": {
+            "_": "Bank for International Settlements: Papers",
+            "$ns": {
+              "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+              "local": "publication"
+            }
+          }
+        }
+      },
+      {
+        "rdf:about": {
+          "name": "rdf:about",
+          "value": "https://www.bis.org/bcbs/publ/d582.htm",
+          "prefix": "rdf",
+          "local": "about",
+          "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        },
+        "$ns": {
+          "uri": "http://purl.org/rss/1.0/",
+          "local": "item"
+        },
+        "title": {
+          "_": "The 2023 banking turmoil and liquidity risk: a progress report",
+          "$ns": {
+            "uri": "http://purl.org/rss/1.0/",
+            "local": "title"
+          }
+        },
+        "link": {
+          "_": "https://www.bis.org/bcbs/publ/d582.htm",
+          "$ns": {
+            "uri": "http://purl.org/rss/1.0/",
+            "local": "link"
+          }
+        },
+        "description": {
+          "_": "This progress report to the G20 Finance Ministers and Central Bank Governors provides an update on the Basel Committee's analytical work on the 2023 banking turmoil.",
+          "$ns": {
+            "uri": "http://purl.org/rss/1.0/",
+            "local": "description"
+          }
+        },
+        "dc:title": {
+          "_": "The 2023 banking turmoil and liquidity risk: a progress report",
+          "$ns": {
+            "uri": "http://purl.org/dc/elements/1.1/",
+            "local": "title"
+          }
+        },
+        "dc:date": {
+          "_": "2024-10-11T08:57:00Z",
+          "$ns": {
+            "uri": "http://purl.org/dc/elements/1.1/",
+            "local": "date"
+          }
+        },
+        "cb:paper": {
+          "$ns": {
+            "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+            "local": "paper"
+          },
+          "cb:simpleTitle": {
+            "_": "The 2023 banking turmoil and liquidity risk: a progress report",
+            "$ns": {
+              "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+              "local": "simpleTitle"
+            }
+          },
+          "cb:occurrenceDate": {
+            "_": "2024-10-11T08:57:00Z",
+            "$ns": {
+              "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+              "local": "occurrenceDate"
+            }
+          },
+          "cb:institutionAbbrev": {
+            "_": "BIS",
+            "$ns": {
+              "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+              "local": "institutionAbbrev"
+            }
+          },
+          "cb:resource": {
+            "$ns": {
+              "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+              "local": "resource"
+            },
+            "cb:title": {
+              "_": "PDF version",
+              "$ns": {
+                "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+                "local": "title"
+              }
+            },
+            "cb:link": {
+              "_": "https://www.bis.org/bcbs/publ/d582.pdf",
+              "$ns": {
+                "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+                "local": "link"
+              }
+            },
+            "cb:description": {
+              "$ns": {
+                "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+                "local": "description"
+              }
+            }
+          },
+          "cb:publicationDate": {
+            "_": "11 Oct 2024",
+            "$ns": {
+              "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+              "local": "publicationDate"
+            }
+          },
+          "cb:publication": {
+            "_": "Bank for International Settlements: Papers",
+            "$ns": {
+              "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+              "local": "publication"
+            }
+          }
+        }
+      },
+      {
+        "rdf:about": {
+          "name": "rdf:about",
+          "value": "https://www.bis.org/bcbs/publ/d581.htm",
+          "prefix": "rdf",
+          "local": "about",
+          "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        },
+        "$ns": {
+          "uri": "http://purl.org/rss/1.0/",
+          "local": "item"
+        },
+        "title": {
+          "_": "Basel III monitoring report",
+          "$ns": {
+            "uri": "http://purl.org/rss/1.0/",
+            "local": "title"
+          }
+        },
+        "link": {
+          "_": "https://www.bis.org/bcbs/publ/d581.htm",
+          "$ns": {
+            "uri": "http://purl.org/rss/1.0/",
+            "local": "link"
+          }
+        },
+        "description": {
+          "_": "The report sets out the impact of the Basel III framework, including the December 2017 finalisation of the Basel III reforms and the January 2019 finalisation of the market risk framework.",
+          "$ns": {
+            "uri": "http://purl.org/rss/1.0/",
+            "local": "description"
+          }
+        },
+        "dc:title": {
+          "_": "Basel III monitoring report",
+          "$ns": {
+            "uri": "http://purl.org/dc/elements/1.1/",
+            "local": "title"
+          }
+        },
+        "dc:date": {
+          "_": "2024-10-07T09:23:00Z",
+          "$ns": {
+            "uri": "http://purl.org/dc/elements/1.1/",
+            "local": "date"
+          }
+        },
+        "cb:paper": {
+          "$ns": {
+            "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+            "local": "paper"
+          },
+          "cb:simpleTitle": {
+            "_": "Basel III monitoring report",
+            "$ns": {
+              "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+              "local": "simpleTitle"
+            }
+          },
+          "cb:occurrenceDate": {
+            "_": "2024-10-07T09:23:00Z",
+            "$ns": {
+              "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+              "local": "occurrenceDate"
+            }
+          },
+          "cb:institutionAbbrev": {
+            "_": "BIS",
+            "$ns": {
+              "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+              "local": "institutionAbbrev"
+            }
+          },
+          "cb:resource": {
+            "$ns": {
+              "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+              "local": "resource"
+            },
+            "cb:title": {
+              "_": "PDF version",
+              "$ns": {
+                "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+                "local": "title"
+              }
+            },
+            "cb:link": {
+              "_": "https://www.bis.org/bcbs/publ/d581.pdf",
+              "$ns": {
+                "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+                "local": "link"
+              }
+            },
+            "cb:description": {
+              "$ns": {
+                "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+                "local": "description"
+              }
+            }
+          },
+          "cb:publicationDate": {
+            "_": "07 Oct 2024",
+            "$ns": {
+              "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+              "local": "publicationDate"
+            }
+          },
+          "cb:publication": {
+            "_": "Bank for International Settlements: Papers",
+            "$ns": {
+              "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+              "local": "publication"
+            }
+          }
+        }
+      },
+      {
+        "rdf:about": {
+          "name": "rdf:about",
+          "value": "https://www.bis.org/bcbs/publ/wp44.htm",
+          "prefix": "rdf",
+          "local": "about",
+          "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        },
+        "$ns": {
+          "uri": "http://purl.org/rss/1.0/",
+          "local": "item"
+        },
+        "title": {
+          "_": "Novel risks, mitigants and uncertainties with permissionless distributed ledger technologies",
+          "$ns": {
+            "uri": "http://purl.org/rss/1.0/",
+            "local": "title"
+          }
+        },
+        "link": {
+          "_": "https://www.bis.org/bcbs/publ/wp44.htm",
+          "$ns": {
+            "uri": "http://purl.org/rss/1.0/",
+            "local": "link"
+          }
+        },
+        "description": {
+          "_": "Banks that transact on permissionless blockchains or similar distributed ledger technologies (DLTs) face various risks. This paper considers the risks related to operations and security, governance, legal, compliance (including money laundering/financing of terrorism) and settlement finality.",
+          "$ns": {
+            "uri": "http://purl.org/rss/1.0/",
+            "local": "description"
+          }
+        },
+        "dc:title": {
+          "_": "Novel risks, mitigants and uncertainties with permissionless distributed ledger technologies",
+          "$ns": {
+            "uri": "http://purl.org/dc/elements/1.1/",
+            "local": "title"
+          }
+        },
+        "dc:date": {
+          "_": "2024-08-28T12:53:00Z",
+          "$ns": {
+            "uri": "http://purl.org/dc/elements/1.1/",
+            "local": "date"
+          }
+        },
+        "cb:paper": {
+          "$ns": {
+            "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+            "local": "paper"
+          },
+          "cb:simpleTitle": {
+            "_": "Novel risks, mitigants and uncertainties with permissionless distributed ledger technologies",
+            "$ns": {
+              "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+              "local": "simpleTitle"
+            }
+          },
+          "cb:occurrenceDate": {
+            "_": "2024-08-28T12:53:00Z",
+            "$ns": {
+              "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+              "local": "occurrenceDate"
+            }
+          },
+          "cb:institutionAbbrev": {
+            "_": "BIS",
+            "$ns": {
+              "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+              "local": "institutionAbbrev"
+            }
+          },
+          "cb:resource": {
+            "$ns": {
+              "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+              "local": "resource"
+            },
+            "cb:title": {
+              "_": "PDF version",
+              "$ns": {
+                "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+                "local": "title"
+              }
+            },
+            "cb:link": {
+              "_": "https://www.bis.org/bcbs/publ/wp44.pdf",
+              "$ns": {
+                "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+                "local": "link"
+              }
+            },
+            "cb:description": {
+              "$ns": {
+                "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+                "local": "description"
+              }
+            }
+          },
+          "cb:publicationDate": {
+            "_": "28 Aug 2024",
+            "$ns": {
+              "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+              "local": "publicationDate"
+            }
+          },
+          "cb:publication": {
+            "_": "Bank for International Settlements: Working Papers",
+            "$ns": {
+              "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+              "local": "publication"
+            }
+          },
+          "cb:issue": {
+            "_": "44",
+            "$ns": {
+              "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+              "local": "issue"
+            }
+          }
+        }
+      },
+      {
+        "rdf:about": {
+          "name": "rdf:about",
+          "value": "https://www.bis.org/bcbs/publ/d579.htm",
+          "prefix": "rdf",
+          "local": "about",
+          "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        },
+        "$ns": {
+          "uri": "http://purl.org/rss/1.0/",
+          "local": "item"
+        },
+        "title": {
+          "_": "Cryptoasset standard amendments",
+          "$ns": {
+            "uri": "http://purl.org/rss/1.0/",
+            "local": "title"
+          }
+        },
+        "link": {
+          "_": "https://www.bis.org/bcbs/publ/d579.htm",
+          "$ns": {
+            "uri": "http://purl.org/rss/1.0/",
+            "local": "link"
+          }
+        },
+        "description": {
+          "_": "The Basel Committee on Banking Supervision has finalised targeted amendments to its prudential standard on banks' exposures to cryptoassets.",
+          "$ns": {
+            "uri": "http://purl.org/rss/1.0/",
+            "local": "description"
+          }
+        },
+        "dc:title": {
+          "_": "Cryptoasset standard amendments",
+          "$ns": {
+            "uri": "http://purl.org/dc/elements/1.1/",
+            "local": "title"
+          }
+        },
+        "dc:date": {
+          "_": "2024-07-17T09:00:00Z",
+          "$ns": {
+            "uri": "http://purl.org/dc/elements/1.1/",
+            "local": "date"
+          }
+        },
+        "cb:paper": {
+          "$ns": {
+            "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+            "local": "paper"
+          },
+          "cb:simpleTitle": {
+            "_": "Cryptoasset standard amendments",
+            "$ns": {
+              "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+              "local": "simpleTitle"
+            }
+          },
+          "cb:occurrenceDate": {
+            "_": "2024-07-17T09:00:00Z",
+            "$ns": {
+              "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+              "local": "occurrenceDate"
+            }
+          },
+          "cb:institutionAbbrev": {
+            "_": "BIS",
+            "$ns": {
+              "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+              "local": "institutionAbbrev"
+            }
+          },
+          "cb:resource": {
+            "$ns": {
+              "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+              "local": "resource"
+            },
+            "cb:title": {
+              "_": "PDF version",
+              "$ns": {
+                "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+                "local": "title"
+              }
+            },
+            "cb:link": {
+              "_": "https://www.bis.org/bcbs/publ/d579.pdf",
+              "$ns": {
+                "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+                "local": "link"
+              }
+            },
+            "cb:description": {
+              "$ns": {
+                "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+                "local": "description"
+              }
+            }
+          },
+          "cb:publicationDate": {
+            "_": "17 Jul 2024",
+            "$ns": {
+              "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+              "local": "publicationDate"
+            }
+          },
+          "cb:publication": {
+            "_": "Bank for International Settlements: Papers",
+            "$ns": {
+              "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+              "local": "publication"
+            }
+          }
+        }
+      },
+      {
+        "rdf:about": {
+          "name": "rdf:about",
+          "value": "https://www.bis.org/bcbs/publ/d580.htm",
+          "prefix": "rdf",
+          "local": "about",
+          "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        },
+        "$ns": {
+          "uri": "http://purl.org/rss/1.0/",
+          "local": "item"
+        },
+        "title": {
+          "_": "Disclosure of cryptoasset exposures",
+          "$ns": {
+            "uri": "http://purl.org/rss/1.0/",
+            "local": "title"
+          }
+        },
+        "link": {
+          "_": "https://www.bis.org/bcbs/publ/d580.htm",
+          "$ns": {
+            "uri": "http://purl.org/rss/1.0/",
+            "local": "link"
+          }
+        },
+        "description": {
+          "_": "The Basel Committee on Banking Supervision has finalised its disclosure framework for banks' cryptoasset exposures.",
+          "$ns": {
+            "uri": "http://purl.org/rss/1.0/",
+            "local": "description"
+          }
+        },
+        "dc:title": {
+          "_": "Disclosure of cryptoasset exposures",
+          "$ns": {
+            "uri": "http://purl.org/dc/elements/1.1/",
+            "local": "title"
+          }
+        },
+        "dc:date": {
+          "_": "2024-07-17T09:00:00Z",
+          "$ns": {
+            "uri": "http://purl.org/dc/elements/1.1/",
+            "local": "date"
+          }
+        },
+        "cb:paper": {
+          "$ns": {
+            "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+            "local": "paper"
+          },
+          "cb:simpleTitle": {
+            "_": "Disclosure of cryptoasset exposures",
+            "$ns": {
+              "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+              "local": "simpleTitle"
+            }
+          },
+          "cb:occurrenceDate": {
+            "_": "2024-07-17T09:00:00Z",
+            "$ns": {
+              "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+              "local": "occurrenceDate"
+            }
+          },
+          "cb:institutionAbbrev": {
+            "_": "BIS",
+            "$ns": {
+              "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+              "local": "institutionAbbrev"
+            }
+          },
+          "cb:resource": {
+            "$ns": {
+              "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+              "local": "resource"
+            },
+            "cb:title": {
+              "_": "PDF version",
+              "$ns": {
+                "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+                "local": "title"
+              }
+            },
+            "cb:link": {
+              "_": "https://www.bis.org/bcbs/publ/d580.pdf",
+              "$ns": {
+                "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+                "local": "link"
+              }
+            },
+            "cb:description": {
+              "$ns": {
+                "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+                "local": "description"
+              }
+            }
+          },
+          "cb:publicationDate": {
+            "_": "17 Jul 2024",
+            "$ns": {
+              "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+              "local": "publicationDate"
+            }
+          },
+          "cb:publication": {
+            "_": "Bank for International Settlements: Papers",
+            "$ns": {
+              "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+              "local": "publication"
+            }
+          }
+        }
+      },
+      {
+        "rdf:about": {
+          "name": "rdf:about",
+          "value": "https://www.bis.org/bcbs/publ/d578.htm",
+          "prefix": "rdf",
+          "local": "about",
+          "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        },
+        "$ns": {
+          "uri": "http://purl.org/rss/1.0/",
+          "local": "item"
+        },
+        "title": {
+          "_": "Recalibration of shocks for interest rate risk in the banking book",
+          "$ns": {
+            "uri": "http://purl.org/rss/1.0/",
+            "local": "title"
+          }
+        },
+        "link": {
+          "_": "https://www.bis.org/bcbs/publ/d578.htm",
+          "$ns": {
+            "uri": "http://purl.org/rss/1.0/",
+            "local": "link"
+          }
+        },
+        "description": {
+          "_": "The Basel Committee on Banking Supervision has finalised targeted adjustments to its standard on interest rate risk in the banking book (IRRBB).",
+          "$ns": {
+            "uri": "http://purl.org/rss/1.0/",
+            "local": "description"
+          }
+        },
+        "dc:title": {
+          "_": "Recalibration of shocks for interest rate risk in the banking book",
+          "$ns": {
+            "uri": "http://purl.org/dc/elements/1.1/",
+            "local": "title"
+          }
+        },
+        "dc:date": {
+          "_": "2024-07-16T09:00:00Z",
+          "$ns": {
+            "uri": "http://purl.org/dc/elements/1.1/",
+            "local": "date"
+          }
+        },
+        "cb:paper": {
+          "$ns": {
+            "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+            "local": "paper"
+          },
+          "cb:simpleTitle": {
+            "_": "Recalibration of shocks for interest rate risk in the banking book",
+            "$ns": {
+              "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+              "local": "simpleTitle"
+            }
+          },
+          "cb:occurrenceDate": {
+            "_": "2024-07-16T09:00:00Z",
+            "$ns": {
+              "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+              "local": "occurrenceDate"
+            }
+          },
+          "cb:institutionAbbrev": {
+            "_": "BIS",
+            "$ns": {
+              "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+              "local": "institutionAbbrev"
+            }
+          },
+          "cb:resource": {
+            "$ns": {
+              "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+              "local": "resource"
+            },
+            "cb:title": {
+              "_": "PDF version",
+              "$ns": {
+                "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+                "local": "title"
+              }
+            },
+            "cb:link": {
+              "_": "https://www.bis.org/bcbs/publ/d578.pdf",
+              "$ns": {
+                "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+                "local": "link"
+              }
+            },
+            "cb:description": {
+              "$ns": {
+                "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+                "local": "description"
+              }
+            }
+          },
+          "cb:publicationDate": {
+            "_": "16 Jul 2024",
+            "$ns": {
+              "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+              "local": "publicationDate"
+            }
+          },
+          "cb:publication": {
+            "_": "Bank for International Settlements: Papers",
+            "$ns": {
+              "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+              "local": "publication"
+            }
+          }
+        }
+      },
+      {
+        "rdf:about": {
+          "name": "rdf:about",
+          "value": "https://www.bis.org/bcbs/publ/d577.htm",
+          "prefix": "rdf",
+          "local": "about",
+          "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        },
+        "$ns": {
+          "uri": "http://purl.org/rss/1.0/",
+          "local": "item"
+        },
+        "title": {
+          "_": "Principles for the sound management of third-party risk",
+          "$ns": {
+            "uri": "http://purl.org/rss/1.0/",
+            "local": "title"
+          }
+        },
+        "link": {
+          "_": "https://www.bis.org/bcbs/publ/d577.htm",
+          "$ns": {
+            "uri": "http://purl.org/rss/1.0/",
+            "local": "link"
+          }
+        },
+        "description": {
+          "_": "The Basel Committee on Banking Supervision has issued a consultative document proposing Principles for the sound management of third-party risk in the banking sector. The Principles address banks' increasing reliance on third-party service providers due to the ongoing digitalisation and rapid growth in financial technology. ...",
+          "$ns": {
+            "uri": "http://purl.org/rss/1.0/",
+            "local": "description"
+          }
+        },
+        "dc:title": {
+          "_": "Principles for the sound management of third-party risk",
+          "$ns": {
+            "uri": "http://purl.org/dc/elements/1.1/",
+            "local": "title"
+          }
+        },
+        "dc:date": {
+          "_": "2024-07-09T13:36:00Z",
+          "$ns": {
+            "uri": "http://purl.org/dc/elements/1.1/",
+            "local": "date"
+          }
+        },
+        "cb:paper": {
+          "$ns": {
+            "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+            "local": "paper"
+          },
+          "cb:simpleTitle": {
+            "_": "Principles for the sound management of third-party risk",
+            "$ns": {
+              "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+              "local": "simpleTitle"
+            }
+          },
+          "cb:occurrenceDate": {
+            "_": "2024-07-09T13:36:00Z",
+            "$ns": {
+              "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+              "local": "occurrenceDate"
+            }
+          },
+          "cb:institutionAbbrev": {
+            "_": "BIS",
+            "$ns": {
+              "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+              "local": "institutionAbbrev"
+            }
+          },
+          "cb:resource": {
+            "$ns": {
+              "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+              "local": "resource"
+            },
+            "cb:title": {
+              "_": "PDF version",
+              "$ns": {
+                "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+                "local": "title"
+              }
+            },
+            "cb:link": {
+              "_": "https://www.bis.org/bcbs/publ/d577.pdf",
+              "$ns": {
+                "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+                "local": "link"
+              }
+            },
+            "cb:description": {
+              "$ns": {
+                "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+                "local": "description"
+              }
+            }
+          },
+          "cb:publicationDate": {
+            "_": "09 Jul 2024",
+            "$ns": {
+              "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+              "local": "publicationDate"
+            }
+          },
+          "cb:publication": {
+            "_": "Bank for International Settlements: Papers",
+            "$ns": {
+              "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+              "local": "publication"
+            }
+          }
+        }
+      },
+      {
+        "rdf:about": {
+          "name": "rdf:about",
+          "value": "https://www.bis.org/bcbs/publ/d576.htm",
+          "prefix": "rdf",
+          "local": "about",
+          "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        },
+        "$ns": {
+          "uri": "http://purl.org/rss/1.0/",
+          "local": "item"
+        },
+        "title": {
+          "_": "Various technical amendments and FAQs",
+          "$ns": {
+            "uri": "http://purl.org/rss/1.0/",
+            "local": "title"
+          }
+        },
+        "link": {
+          "_": "https://www.bis.org/bcbs/publ/d576.htm",
+          "$ns": {
+            "uri": "http://purl.org/rss/1.0/",
+            "local": "link"
+          }
+        },
+        "description": {
+          "_": "The set of interpretative issues addressed in this document relate to: (i) the standardised approach to credit risk; (ii) cryptoasset exposures; (iii) counterparty credit risk; (iv) the standardised approach to operational risk; (v) the simplified standardised, standardised and internal models approaches to market risk; and (vi) the net stable funding ratio.",
+          "$ns": {
+            "uri": "http://purl.org/rss/1.0/",
+            "local": "description"
+          }
+        },
+        "dc:title": {
+          "_": "Various technical amendments and FAQs",
+          "$ns": {
+            "uri": "http://purl.org/dc/elements/1.1/",
+            "local": "title"
+          }
+        },
+        "dc:date": {
+          "_": "2024-07-05T13:36:00Z",
+          "$ns": {
+            "uri": "http://purl.org/dc/elements/1.1/",
+            "local": "date"
+          }
+        },
+        "cb:paper": {
+          "$ns": {
+            "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+            "local": "paper"
+          },
+          "cb:simpleTitle": {
+            "_": "Various technical amendments and FAQs",
+            "$ns": {
+              "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+              "local": "simpleTitle"
+            }
+          },
+          "cb:occurrenceDate": {
+            "_": "2024-07-05T13:36:00Z",
+            "$ns": {
+              "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+              "local": "occurrenceDate"
+            }
+          },
+          "cb:institutionAbbrev": {
+            "_": "BIS",
+            "$ns": {
+              "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+              "local": "institutionAbbrev"
+            }
+          },
+          "cb:resource": {
+            "$ns": {
+              "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+              "local": "resource"
+            },
+            "cb:title": {
+              "_": "PDF version",
+              "$ns": {
+                "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+                "local": "title"
+              }
+            },
+            "cb:link": {
+              "_": "https://www.bis.org/bcbs/publ/d576.pdf",
+              "$ns": {
+                "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+                "local": "link"
+              }
+            },
+            "cb:description": {
+              "$ns": {
+                "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+                "local": "description"
+              }
+            }
+          },
+          "cb:publicationDate": {
+            "_": "05 Jul 2024",
+            "$ns": {
+              "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+              "local": "publicationDate"
+            }
+          },
+          "cb:publication": {
+            "_": "Bank for International Settlements: Papers",
+            "$ns": {
+              "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+              "local": "publication"
+            }
+          }
+        }
+      },
+      {
+        "rdf:about": {
+          "name": "rdf:about",
+          "value": "https://www.bis.org/bcbs/publ/wp43.htm",
+          "prefix": "rdf",
+          "local": "about",
+          "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        },
+        "$ns": {
+          "uri": "http://purl.org/rss/1.0/",
+          "local": "item"
+        },
+        "title": {
+          "_": "Literature review on financial technology and competition for banking services",
+          "$ns": {
+            "uri": "http://purl.org/rss/1.0/",
+            "local": "title"
+          }
+        },
+        "link": {
+          "_": "https://www.bis.org/bcbs/publ/wp43.htm",
+          "$ns": {
+            "uri": "http://purl.org/rss/1.0/",
+            "local": "link"
+          }
+        },
+        "description": {
+          "_": "by Hein Bogaard, Sebastian Doerr, Nicole Jonker, Hua Kiefer, Onur Koltukcu, Calixto López, José Renato Haas Ornelas, Ricky Rambharat, Sigrid Röhrs, Federica Teppa, Frans van Bruggen, Eric Vansteenberghe<br />The extent to which financial technology will shape the banking industry depends in part on the nature of competition for banking services that arises from innovation by incumbent banks and the entry of new players. This paper presents a review of the growing body of economic literature on financial technology and competition for banking services.",
+          "$ns": {
+            "uri": "http://purl.org/rss/1.0/",
+            "local": "description"
+          }
+        },
+        "dc:title": {
+          "_": "Literature review on financial technology and competition for banking services",
+          "$ns": {
+            "uri": "http://purl.org/dc/elements/1.1/",
+            "local": "title"
+          }
+        },
+        "dc:creator": [
+          {
+            "_": "Hein Bogaard",
+            "$ns": {
+              "uri": "http://purl.org/dc/elements/1.1/",
+              "local": "creator"
+            }
+          },
+          {
+            "_": "Sebastian Doerr",
+            "$ns": {
+              "uri": "http://purl.org/dc/elements/1.1/",
+              "local": "creator"
+            }
+          },
+          {
+            "_": "Nicole Jonker",
+            "$ns": {
+              "uri": "http://purl.org/dc/elements/1.1/",
+              "local": "creator"
+            }
+          },
+          {
+            "_": "Hua Kiefer",
+            "$ns": {
+              "uri": "http://purl.org/dc/elements/1.1/",
+              "local": "creator"
+            }
+          },
+          {
+            "_": "Onur Koltukcu",
+            "$ns": {
+              "uri": "http://purl.org/dc/elements/1.1/",
+              "local": "creator"
+            }
+          },
+          {
+            "_": "Calixto López",
+            "$ns": {
+              "uri": "http://purl.org/dc/elements/1.1/",
+              "local": "creator"
+            }
+          },
+          {
+            "_": "José Renato Haas Ornelas",
+            "$ns": {
+              "uri": "http://purl.org/dc/elements/1.1/",
+              "local": "creator"
+            }
+          },
+          {
+            "_": "Ricky Rambharat",
+            "$ns": {
+              "uri": "http://purl.org/dc/elements/1.1/",
+              "local": "creator"
+            }
+          },
+          {
+            "_": "Sigrid Röhrs",
+            "$ns": {
+              "uri": "http://purl.org/dc/elements/1.1/",
+              "local": "creator"
+            }
+          },
+          {
+            "_": "Federica Teppa",
+            "$ns": {
+              "uri": "http://purl.org/dc/elements/1.1/",
+              "local": "creator"
+            }
+          },
+          {
+            "_": "Frans van Bruggen",
+            "$ns": {
+              "uri": "http://purl.org/dc/elements/1.1/",
+              "local": "creator"
+            }
+          },
+          {
+            "_": "Eric Vansteenberghe",
+            "$ns": {
+              "uri": "http://purl.org/dc/elements/1.1/",
+              "local": "creator"
+            }
+          }
+        ],
+        "dc:date": {
+          "_": "2024-06-07T15:07:00Z",
+          "$ns": {
+            "uri": "http://purl.org/dc/elements/1.1/",
+            "local": "date"
+          }
+        },
+        "cb:paper": {
+          "$ns": {
+            "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+            "local": "paper"
+          },
+          "cb:simpleTitle": {
+            "_": "Literature review on financial technology and competition for banking services",
+            "$ns": {
+              "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+              "local": "simpleTitle"
+            }
+          },
+          "cb:occurrenceDate": {
+            "_": "2024-06-07T15:07:00Z",
+            "$ns": {
+              "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+              "local": "occurrenceDate"
+            }
+          },
+          "cb:institutionAbbrev": {
+            "_": "BIS",
+            "$ns": {
+              "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+              "local": "institutionAbbrev"
+            }
+          },
+          "cb:resource": {
+            "$ns": {
+              "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+              "local": "resource"
+            },
+            "cb:title": {
+              "_": "PDF version",
+              "$ns": {
+                "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+                "local": "title"
+              }
+            },
+            "cb:link": {
+              "_": "https://www.bis.org/bcbs/publ/wp43.pdf",
+              "$ns": {
+                "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+                "local": "link"
+              }
+            },
+            "cb:description": {
+              "$ns": {
+                "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+                "local": "description"
+              }
+            }
+          },
+          "cb:person": [
+            {
+              "type": {
+                "name": "type",
+                "value": "author",
+                "prefix": "",
+                "local": "type",
+                "uri": ""
+              },
+              "$ns": {
+                "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+                "local": "person"
+              },
+              "cb:nameAsWritten": {
+                "_": "Hein Bogaard",
+                "$ns": {
+                  "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+                  "local": "nameAsWritten"
+                }
+              },
+              "cb:surname": {
+                "$ns": {
+                  "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+                  "local": "surname"
+                }
+              }
+            },
+            {
+              "type": {
+                "name": "type",
+                "value": "author",
+                "prefix": "",
+                "local": "type",
+                "uri": ""
+              },
+              "$ns": {
+                "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+                "local": "person"
+              },
+              "cb:nameAsWritten": {
+                "_": "Sebastian Doerr",
+                "$ns": {
+                  "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+                  "local": "nameAsWritten"
+                }
+              },
+              "cb:surname": {
+                "_": "Doerr",
+                "$ns": {
+                  "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+                  "local": "surname"
+                }
+              }
+            },
+            {
+              "type": {
+                "name": "type",
+                "value": "author",
+                "prefix": "",
+                "local": "type",
+                "uri": ""
+              },
+              "$ns": {
+                "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+                "local": "person"
+              },
+              "cb:nameAsWritten": {
+                "_": "Nicole Jonker",
+                "$ns": {
+                  "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+                  "local": "nameAsWritten"
+                }
+              },
+              "cb:surname": {
+                "$ns": {
+                  "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+                  "local": "surname"
+                }
+              }
+            },
+            {
+              "type": {
+                "name": "type",
+                "value": "author",
+                "prefix": "",
+                "local": "type",
+                "uri": ""
+              },
+              "$ns": {
+                "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+                "local": "person"
+              },
+              "cb:nameAsWritten": {
+                "_": "Hua Kiefer",
+                "$ns": {
+                  "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+                  "local": "nameAsWritten"
+                }
+              },
+              "cb:surname": {
+                "$ns": {
+                  "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+                  "local": "surname"
+                }
+              }
+            },
+            {
+              "type": {
+                "name": "type",
+                "value": "author",
+                "prefix": "",
+                "local": "type",
+                "uri": ""
+              },
+              "$ns": {
+                "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+                "local": "person"
+              },
+              "cb:nameAsWritten": {
+                "_": "Onur Koltukcu",
+                "$ns": {
+                  "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+                  "local": "nameAsWritten"
+                }
+              },
+              "cb:surname": {
+                "$ns": {
+                  "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+                  "local": "surname"
+                }
+              }
+            },
+            {
+              "type": {
+                "name": "type",
+                "value": "author",
+                "prefix": "",
+                "local": "type",
+                "uri": ""
+              },
+              "$ns": {
+                "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+                "local": "person"
+              },
+              "cb:nameAsWritten": {
+                "_": "Calixto López",
+                "$ns": {
+                  "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+                  "local": "nameAsWritten"
+                }
+              },
+              "cb:surname": {
+                "$ns": {
+                  "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+                  "local": "surname"
+                }
+              }
+            },
+            {
+              "type": {
+                "name": "type",
+                "value": "author",
+                "prefix": "",
+                "local": "type",
+                "uri": ""
+              },
+              "$ns": {
+                "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+                "local": "person"
+              },
+              "cb:nameAsWritten": {
+                "_": "José Renato Haas Ornelas",
+                "$ns": {
+                  "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+                  "local": "nameAsWritten"
+                }
+              },
+              "cb:surname": {
+                "_": "Haas",
+                "$ns": {
+                  "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+                  "local": "surname"
+                }
+              }
+            },
+            {
+              "type": {
+                "name": "type",
+                "value": "author",
+                "prefix": "",
+                "local": "type",
+                "uri": ""
+              },
+              "$ns": {
+                "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+                "local": "person"
+              },
+              "cb:nameAsWritten": {
+                "_": "Ricky Rambharat",
+                "$ns": {
+                  "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+                  "local": "nameAsWritten"
+                }
+              },
+              "cb:surname": {
+                "$ns": {
+                  "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+                  "local": "surname"
+                }
+              }
+            },
+            {
+              "type": {
+                "name": "type",
+                "value": "author",
+                "prefix": "",
+                "local": "type",
+                "uri": ""
+              },
+              "$ns": {
+                "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+                "local": "person"
+              },
+              "cb:nameAsWritten": {
+                "_": "Sigrid Röhrs",
+                "$ns": {
+                  "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+                  "local": "nameAsWritten"
+                }
+              },
+              "cb:surname": {
+                "$ns": {
+                  "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+                  "local": "surname"
+                }
+              }
+            },
+            {
+              "type": {
+                "name": "type",
+                "value": "author",
+                "prefix": "",
+                "local": "type",
+                "uri": ""
+              },
+              "$ns": {
+                "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+                "local": "person"
+              },
+              "cb:nameAsWritten": {
+                "_": "Federica Teppa",
+                "$ns": {
+                  "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+                  "local": "nameAsWritten"
+                }
+              },
+              "cb:surname": {
+                "$ns": {
+                  "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+                  "local": "surname"
+                }
+              }
+            },
+            {
+              "type": {
+                "name": "type",
+                "value": "author",
+                "prefix": "",
+                "local": "type",
+                "uri": ""
+              },
+              "$ns": {
+                "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+                "local": "person"
+              },
+              "cb:nameAsWritten": {
+                "_": "Frans van Bruggen",
+                "$ns": {
+                  "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+                  "local": "nameAsWritten"
+                }
+              },
+              "cb:surname": {
+                "$ns": {
+                  "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+                  "local": "surname"
+                }
+              }
+            },
+            {
+              "type": {
+                "name": "type",
+                "value": "author",
+                "prefix": "",
+                "local": "type",
+                "uri": ""
+              },
+              "$ns": {
+                "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+                "local": "person"
+              },
+              "cb:nameAsWritten": {
+                "_": "Eric Vansteenberghe",
+                "$ns": {
+                  "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+                  "local": "nameAsWritten"
+                }
+              },
+              "cb:surname": {
+                "$ns": {
+                  "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+                  "local": "surname"
+                }
+              }
+            }
+          ],
+          "cb:publicationDate": {
+            "_": "07 Jun 2024",
+            "$ns": {
+              "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+              "local": "publicationDate"
+            }
+          },
+          "cb:publication": {
+            "_": "Bank for International Settlements: Working Papers",
+            "$ns": {
+              "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+              "local": "publication"
+            }
+          },
+          "cb:issue": {
+            "_": "43",
+            "$ns": {
+              "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+              "local": "issue"
+            }
+          }
+        }
+      },
+      {
+        "rdf:about": {
+          "name": "rdf:about",
+          "value": "https://www.bis.org/bcbs/publ/d575.htm",
+          "prefix": "rdf",
+          "local": "about",
+          "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        },
+        "$ns": {
+          "uri": "http://purl.org/rss/1.0/",
+          "local": "item"
+        },
+        "title": {
+          "_": "Digitalisation of finance",
+          "$ns": {
+            "uri": "http://purl.org/rss/1.0/",
+            "local": "title"
+          }
+        },
+        "link": {
+          "_": "https://www.bis.org/bcbs/publ/d575.htm",
+          "$ns": {
+            "uri": "http://purl.org/rss/1.0/",
+            "local": "link"
+          }
+        },
+        "description": {
+          "_": "The Basel Committee on Banking Supervision has published a report which considers the implications of the ongoing digitalisation of finance on banks and supervision. This report builds on the Sound Practices: Implications of fintech developments for banks and bank supervisors published in 2018, and takes stock of recent developments in the digitalisation of finance.",
+          "$ns": {
+            "uri": "http://purl.org/rss/1.0/",
+            "local": "description"
+          }
+        },
+        "dc:title": {
+          "_": "Digitalisation of finance",
+          "$ns": {
+            "uri": "http://purl.org/dc/elements/1.1/",
+            "local": "title"
+          }
+        },
+        "dc:date": {
+          "_": "2024-05-16T14:46:00Z",
+          "$ns": {
+            "uri": "http://purl.org/dc/elements/1.1/",
+            "local": "date"
+          }
+        },
+        "cb:paper": {
+          "$ns": {
+            "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+            "local": "paper"
+          },
+          "cb:simpleTitle": {
+            "_": "Digitalisation of finance",
+            "$ns": {
+              "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+              "local": "simpleTitle"
+            }
+          },
+          "cb:occurrenceDate": {
+            "_": "2024-05-16T14:46:00Z",
+            "$ns": {
+              "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+              "local": "occurrenceDate"
+            }
+          },
+          "cb:institutionAbbrev": {
+            "_": "BIS",
+            "$ns": {
+              "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+              "local": "institutionAbbrev"
+            }
+          },
+          "cb:resource": {
+            "$ns": {
+              "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+              "local": "resource"
+            },
+            "cb:title": {
+              "_": "PDF version",
+              "$ns": {
+                "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+                "local": "title"
+              }
+            },
+            "cb:link": {
+              "_": "https://www.bis.org/bcbs/publ/d575.pdf",
+              "$ns": {
+                "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+                "local": "link"
+              }
+            },
+            "cb:description": {
+              "$ns": {
+                "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+                "local": "description"
+              }
+            }
+          },
+          "cb:publicationDate": {
+            "_": "16 May 2024",
+            "$ns": {
+              "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+              "local": "publicationDate"
+            }
+          },
+          "cb:publication": {
+            "_": "Bank for International Settlements: Papers",
+            "$ns": {
+              "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+              "local": "publication"
+            }
+          }
+        }
+      },
+      {
+        "rdf:about": {
+          "name": "rdf:about",
+          "value": "https://www.bis.org/bcbs/publ/d574.htm",
+          "prefix": "rdf",
+          "local": "about",
+          "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        },
+        "$ns": {
+          "uri": "http://purl.org/rss/1.0/",
+          "local": "item"
+        },
+        "title": {
+          "_": "Guidelines for counterparty credit risk management",
+          "$ns": {
+            "uri": "http://purl.org/rss/1.0/",
+            "local": "title"
+          }
+        },
+        "link": {
+          "_": "https://www.bis.org/bcbs/publ/d574.htm",
+          "$ns": {
+            "uri": "http://purl.org/rss/1.0/",
+            "local": "link"
+          }
+        },
+        "description": {
+          "_": "The Basel Committee on Banking Supervision has issued a consultation on guidelines for counterparty credit risk management. The proposed guidelines include key practices critical to resolving long-standing industry weaknesses in counterparty credit risk management, including the need to: (i) conduct comprehensive due diligence at both initial onboarding, as well as on an ongoing basis; (ii) develop a comprehensive credit risk mitigation strategy to effectively manage counterparty exposures; (iii) measure, control and limit CCR using a wide variety of complementary metrics; and (iv) build a strong CCR governance framework.",
+          "$ns": {
+            "uri": "http://purl.org/rss/1.0/",
+            "local": "description"
+          }
+        },
+        "dc:title": {
+          "_": "Guidelines for counterparty credit risk management",
+          "$ns": {
+            "uri": "http://purl.org/dc/elements/1.1/",
+            "local": "title"
+          }
+        },
+        "dc:date": {
+          "_": "2024-04-30T09:00:00Z",
+          "$ns": {
+            "uri": "http://purl.org/dc/elements/1.1/",
+            "local": "date"
+          }
+        },
+        "cb:paper": {
+          "$ns": {
+            "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+            "local": "paper"
+          },
+          "cb:simpleTitle": {
+            "_": "Guidelines for counterparty credit risk management",
+            "$ns": {
+              "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+              "local": "simpleTitle"
+            }
+          },
+          "cb:occurrenceDate": {
+            "_": "2024-04-30T09:00:00Z",
+            "$ns": {
+              "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+              "local": "occurrenceDate"
+            }
+          },
+          "cb:institutionAbbrev": {
+            "_": "BIS",
+            "$ns": {
+              "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+              "local": "institutionAbbrev"
+            }
+          },
+          "cb:resource": {
+            "$ns": {
+              "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+              "local": "resource"
+            },
+            "cb:title": {
+              "_": "PDF version",
+              "$ns": {
+                "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+                "local": "title"
+              }
+            },
+            "cb:link": {
+              "_": "https://www.bis.org/bcbs/publ/d574.pdf",
+              "$ns": {
+                "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+                "local": "link"
+              }
+            },
+            "cb:description": {
+              "$ns": {
+                "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+                "local": "description"
+              }
+            }
+          },
+          "cb:publicationDate": {
+            "_": "30 Apr 2024",
+            "$ns": {
+              "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+              "local": "publicationDate"
+            }
+          },
+          "cb:publication": {
+            "_": "Bank for International Settlements: Papers",
+            "$ns": {
+              "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+              "local": "publication"
+            }
+          }
+        }
+      },
+      {
+        "rdf:about": {
+          "name": "rdf:about",
+          "value": "https://www.bis.org/bcbs/publ/d573.htm",
+          "prefix": "rdf",
+          "local": "about",
+          "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        },
+        "$ns": {
+          "uri": "http://purl.org/rss/1.0/",
+          "local": "item"
+        },
+        "title": {
+          "_": "Core Principles for effective banking supervision",
+          "$ns": {
+            "uri": "http://purl.org/rss/1.0/",
+            "local": "title"
+          }
+        },
+        "link": {
+          "_": "https://www.bis.org/bcbs/publ/d573.htm",
+          "$ns": {
+            "uri": "http://purl.org/rss/1.0/",
+            "local": "link"
+          }
+        },
+        "description": {
+          "_": "This publication sets out the revised Core Principles for effective banking supervision (\"Core Principles\"). The revised Core Principles were endorsed by banking supervisors at the 23rd International Conference of Banking Supervisors held in Basel, Switzerland, on 24-25 April 2024.",
+          "$ns": {
+            "uri": "http://purl.org/rss/1.0/",
+            "local": "description"
+          }
+        },
+        "dc:title": {
+          "_": "Core Principles for effective banking supervision",
+          "$ns": {
+            "uri": "http://purl.org/dc/elements/1.1/",
+            "local": "title"
+          }
+        },
+        "dc:date": {
+          "_": "2024-04-25T16:00:00Z",
+          "$ns": {
+            "uri": "http://purl.org/dc/elements/1.1/",
+            "local": "date"
+          }
+        },
+        "cb:paper": {
+          "$ns": {
+            "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+            "local": "paper"
+          },
+          "cb:simpleTitle": {
+            "_": "Core Principles for effective banking supervision",
+            "$ns": {
+              "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+              "local": "simpleTitle"
+            }
+          },
+          "cb:occurrenceDate": {
+            "_": "2024-04-25T16:00:00Z",
+            "$ns": {
+              "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+              "local": "occurrenceDate"
+            }
+          },
+          "cb:institutionAbbrev": {
+            "_": "BIS",
+            "$ns": {
+              "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+              "local": "institutionAbbrev"
+            }
+          },
+          "cb:resource": {
+            "$ns": {
+              "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+              "local": "resource"
+            },
+            "cb:title": {
+              "_": "PDF version",
+              "$ns": {
+                "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+                "local": "title"
+              }
+            },
+            "cb:link": {
+              "_": "https://www.bis.org/bcbs/publ/d573.pdf",
+              "$ns": {
+                "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+                "local": "link"
+              }
+            },
+            "cb:description": {
+              "$ns": {
+                "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+                "local": "description"
+              }
+            }
+          },
+          "cb:publicationDate": {
+            "_": "25 Apr 2024",
+            "$ns": {
+              "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+              "local": "publicationDate"
+            }
+          },
+          "cb:publication": {
+            "_": "Bank for International Settlements: Papers",
+            "$ns": {
+              "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+              "local": "publication"
+            }
+          }
+        }
+      },
+      {
+        "rdf:about": {
+          "name": "rdf:about",
+          "value": "https://www.bis.org/bcbs/publ/d572.htm",
+          "prefix": "rdf",
+          "local": "about",
+          "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        },
+        "$ns": {
+          "uri": "http://purl.org/rss/1.0/",
+          "local": "item"
+        },
+        "title": {
+          "_": "The role of climate scenario analysis in strengthening the management and supervision of climate-related financial risks",
+          "$ns": {
+            "uri": "http://purl.org/rss/1.0/",
+            "local": "title"
+          }
+        },
+        "link": {
+          "_": "https://www.bis.org/bcbs/publ/d572.htm",
+          "$ns": {
+            "uri": "http://purl.org/rss/1.0/",
+            "local": "link"
+          }
+        },
+        "description": {
+          "_": "The Basel Committee on Banking Supervision has issued a discussion paper on how climate scenario analysis (CSA) can be practically used to help strengthen the management and supervision of climate-related financial risks.",
+          "$ns": {
+            "uri": "http://purl.org/rss/1.0/",
+            "local": "description"
+          }
+        },
+        "dc:title": {
+          "_": "The role of climate scenario analysis in strengthening the management and supervision of climate-related financial risks",
+          "$ns": {
+            "uri": "http://purl.org/dc/elements/1.1/",
+            "local": "title"
+          }
+        },
+        "dc:date": {
+          "_": "2024-04-16T07:47:00Z",
+          "$ns": {
+            "uri": "http://purl.org/dc/elements/1.1/",
+            "local": "date"
+          }
+        },
+        "cb:paper": {
+          "$ns": {
+            "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+            "local": "paper"
+          },
+          "cb:simpleTitle": {
+            "_": "The role of climate scenario analysis in strengthening the management and supervision of climate-related financial risks",
+            "$ns": {
+              "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+              "local": "simpleTitle"
+            }
+          },
+          "cb:occurrenceDate": {
+            "_": "2024-04-16T07:47:00Z",
+            "$ns": {
+              "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+              "local": "occurrenceDate"
+            }
+          },
+          "cb:institutionAbbrev": {
+            "_": "BIS",
+            "$ns": {
+              "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+              "local": "institutionAbbrev"
+            }
+          },
+          "cb:resource": {
+            "$ns": {
+              "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+              "local": "resource"
+            },
+            "cb:title": {
+              "_": "PDF version",
+              "$ns": {
+                "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+                "local": "title"
+              }
+            },
+            "cb:link": {
+              "_": "https://www.bis.org/bcbs/publ/d572.pdf",
+              "$ns": {
+                "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+                "local": "link"
+              }
+            },
+            "cb:description": {
+              "$ns": {
+                "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+                "local": "description"
+              }
+            }
+          },
+          "cb:publicationDate": {
+            "_": "16 Apr 2024",
+            "$ns": {
+              "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+              "local": "publicationDate"
+            }
+          },
+          "cb:publication": {
+            "_": "Bank for International Settlements: Papers",
+            "$ns": {
+              "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+              "local": "publication"
+            }
+          }
+        }
+      },
+      {
+        "rdf:about": {
+          "name": "rdf:about",
+          "value": "https://www.bis.org/bcbs/publ/wp42.htm",
+          "prefix": "rdf",
+          "local": "about",
+          "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        },
+        "$ns": {
+          "uri": "http://purl.org/rss/1.0/",
+          "local": "item"
+        },
+        "title": {
+          "_": "Banks' window-dressing of the G-SIB framework: causal evidence from a quantitative impact study",
+          "$ns": {
+            "uri": "http://purl.org/rss/1.0/",
+            "local": "title"
+          }
+        },
+        "link": {
+          "_": "https://www.bis.org/bcbs/publ/wp42.htm",
+          "$ns": {
+            "uri": "http://purl.org/rss/1.0/",
+            "local": "link"
+          }
+        },
+        "description": {
+          "_": "Exploiting a novel and uniquely extensive bank-level dataset, this study employs a difference-in-differences empirical strategy to test whether the response of banks to the G-SIB framework &#8211; a key component of the Basel III macroprudential reforms &#8211; directly contributes to window-dressing behaviour.",
+          "$ns": {
+            "uri": "http://purl.org/rss/1.0/",
+            "local": "description"
+          }
+        },
+        "dc:title": {
+          "_": "Banks' window-dressing of the G-SIB framework: causal evidence from a quantitative impact study",
+          "$ns": {
+            "uri": "http://purl.org/dc/elements/1.1/",
+            "local": "title"
+          }
+        },
+        "dc:date": {
+          "_": "2024-03-07T13:03:00Z",
+          "$ns": {
+            "uri": "http://purl.org/dc/elements/1.1/",
+            "local": "date"
+          }
+        },
+        "cb:paper": {
+          "$ns": {
+            "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+            "local": "paper"
+          },
+          "cb:simpleTitle": {
+            "_": "Banks' window-dressing of the G-SIB framework: causal evidence from a quantitative impact study",
+            "$ns": {
+              "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+              "local": "simpleTitle"
+            }
+          },
+          "cb:occurrenceDate": {
+            "_": "2024-03-07T13:03:00Z",
+            "$ns": {
+              "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+              "local": "occurrenceDate"
+            }
+          },
+          "cb:institutionAbbrev": {
+            "_": "BIS",
+            "$ns": {
+              "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+              "local": "institutionAbbrev"
+            }
+          },
+          "cb:resource": {
+            "$ns": {
+              "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+              "local": "resource"
+            },
+            "cb:title": {
+              "_": "PDF version",
+              "$ns": {
+                "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+                "local": "title"
+              }
+            },
+            "cb:link": {
+              "_": "https://www.bis.org/bcbs/publ/wp42.pdf",
+              "$ns": {
+                "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+                "local": "link"
+              }
+            },
+            "cb:description": {
+              "$ns": {
+                "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+                "local": "description"
+              }
+            }
+          },
+          "cb:publicationDate": {
+            "_": "07 Mar 2024",
+            "$ns": {
+              "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+              "local": "publicationDate"
+            }
+          },
+          "cb:publication": {
+            "_": "Bank for International Settlements: Working Papers",
+            "$ns": {
+              "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+              "local": "publication"
+            }
+          }
+        }
+      },
+      {
+        "rdf:about": {
+          "name": "rdf:about",
+          "value": "https://www.bis.org/bcbs/publ/wp41.htm",
+          "prefix": "rdf",
+          "local": "about",
+          "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        },
+        "$ns": {
+          "uri": "http://purl.org/rss/1.0/",
+          "local": "item"
+        },
+        "title": {
+          "_": "G-SIB denominators and scores dynamics: a ten-year assessment",
+          "$ns": {
+            "uri": "http://purl.org/rss/1.0/",
+            "local": "title"
+          }
+        },
+        "link": {
+          "_": "https://www.bis.org/bcbs/publ/wp41.htm",
+          "$ns": {
+            "uri": "http://purl.org/rss/1.0/",
+            "local": "link"
+          }
+        },
+        "description": {
+          "_": "This paper examines the global systemically important bank (G-SIB) framework ten years after its introduction, covering three complementary perspectives: the evolution of the G-SIB denominators, the relative evolution of scores of G-SIBs and non-G-SIBs, and the adjustments in the balance sheets of G-SIBs.",
+          "$ns": {
+            "uri": "http://purl.org/rss/1.0/",
+            "local": "description"
+          }
+        },
+        "dc:title": {
+          "_": "G-SIB denominators and scores dynamics: a ten-year assessment",
+          "$ns": {
+            "uri": "http://purl.org/dc/elements/1.1/",
+            "local": "title"
+          }
+        },
+        "dc:date": {
+          "_": "2024-03-07T13:01:00Z",
+          "$ns": {
+            "uri": "http://purl.org/dc/elements/1.1/",
+            "local": "date"
+          }
+        },
+        "cb:paper": {
+          "$ns": {
+            "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+            "local": "paper"
+          },
+          "cb:simpleTitle": {
+            "_": "G-SIB denominators and scores dynamics: a ten-year assessment",
+            "$ns": {
+              "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+              "local": "simpleTitle"
+            }
+          },
+          "cb:occurrenceDate": {
+            "_": "2024-03-07T13:01:00Z",
+            "$ns": {
+              "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+              "local": "occurrenceDate"
+            }
+          },
+          "cb:institutionAbbrev": {
+            "_": "BIS",
+            "$ns": {
+              "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+              "local": "institutionAbbrev"
+            }
+          },
+          "cb:resource": {
+            "$ns": {
+              "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+              "local": "resource"
+            },
+            "cb:title": {
+              "_": "PDF version",
+              "$ns": {
+                "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+                "local": "title"
+              }
+            },
+            "cb:link": {
+              "_": "https://www.bis.org/bcbs/publ/wp41.pdf",
+              "$ns": {
+                "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+                "local": "link"
+              }
+            },
+            "cb:description": {
+              "$ns": {
+                "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+                "local": "description"
+              }
+            }
+          },
+          "cb:publicationDate": {
+            "_": "07 Mar 2024",
+            "$ns": {
+              "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+              "local": "publicationDate"
+            }
+          },
+          "cb:publication": {
+            "_": "Bank for International Settlements: Working Papers",
+            "$ns": {
+              "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+              "local": "publication"
+            }
+          }
+        }
+      },
+      {
+        "rdf:about": {
+          "name": "rdf:about",
+          "value": "https://www.bis.org/bcbs/publ/d571.htm",
+          "prefix": "rdf",
+          "local": "about",
+          "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        },
+        "$ns": {
+          "uri": "http://purl.org/rss/1.0/",
+          "local": "item"
+        },
+        "title": {
+          "_": "Global systemically important banks - revised assessment framework",
+          "$ns": {
+            "uri": "http://purl.org/rss/1.0/",
+            "local": "title"
+          }
+        },
+        "link": {
+          "_": "https://www.bis.org/bcbs/publ/d571.htm",
+          "$ns": {
+            "uri": "http://purl.org/rss/1.0/",
+            "local": "link"
+          }
+        },
+        "description": {
+          "_": "The Basel Committee on Banking Supervision issued today a consultation on revisions to the global systemically important banks (G-SIB) assessment framework aimed at mitigating \"window-dressing\" behaviour by some banks in the context of the G-SIB framework.",
+          "$ns": {
+            "uri": "http://purl.org/rss/1.0/",
+            "local": "description"
+          }
+        },
+        "dc:title": {
+          "_": "Global systemically important banks - revised assessment framework",
+          "$ns": {
+            "uri": "http://purl.org/dc/elements/1.1/",
+            "local": "title"
+          }
+        },
+        "dc:date": {
+          "_": "2024-03-07T13:00:00Z",
+          "$ns": {
+            "uri": "http://purl.org/dc/elements/1.1/",
+            "local": "date"
+          }
+        },
+        "cb:paper": {
+          "$ns": {
+            "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+            "local": "paper"
+          },
+          "cb:simpleTitle": {
+            "_": "Global systemically important banks - revised assessment framework",
+            "$ns": {
+              "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+              "local": "simpleTitle"
+            }
+          },
+          "cb:occurrenceDate": {
+            "_": "2024-03-07T13:00:00Z",
+            "$ns": {
+              "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+              "local": "occurrenceDate"
+            }
+          },
+          "cb:institutionAbbrev": {
+            "_": "BIS",
+            "$ns": {
+              "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+              "local": "institutionAbbrev"
+            }
+          },
+          "cb:resource": {
+            "$ns": {
+              "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+              "local": "resource"
+            },
+            "cb:title": {
+              "_": "PDF version",
+              "$ns": {
+                "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+                "local": "title"
+              }
+            },
+            "cb:link": {
+              "_": "https://www.bis.org/bcbs/publ/d571.pdf",
+              "$ns": {
+                "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+                "local": "link"
+              }
+            },
+            "cb:description": {
+              "$ns": {
+                "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+                "local": "description"
+              }
+            }
+          },
+          "cb:publicationDate": {
+            "_": "07 Mar 2024",
+            "$ns": {
+              "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+              "local": "publicationDate"
+            }
+          },
+          "cb:publication": {
+            "_": "Bank for International Settlements: Papers",
+            "$ns": {
+              "uri": "http://www.cbwiki.net/wiki/index.php/Specification_1.1",
+              "local": "publication"
+            }
+          }
+        }
+      }
+    ]
+  }
+}

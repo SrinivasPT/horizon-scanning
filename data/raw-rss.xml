@@ -1,0 +1,574 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF xmlns="http://purl.org/rss/1.0/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:cb="http://www.cbwiki.net/wiki/index.php/Specification_1.1" xmlns:slash="http://purl.org/rss/1.0/modules/slash/" xmlns:taxo="http://purl.org/rss/1.0/modules/taxonomy/" xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:g-core="http://base.google.com/ns/1.0">
+  <channel rdf:about="https://www.bis.org/doclist/bcbspubls.rss">
+    <title>BCBS publications - english</title>
+    <link>https://www.bis.org/doclist/bcbspubls.rss</link>
+    <description>BCBS publications - english</description>
+    <items>
+      <rdf:Seq>
+        <rdf:li resource="https://www.bis.org/bcbs/publ/d591.htm"/>
+        <rdf:li resource="https://www.bis.org/bcbs/publ/d590.htm"/>
+        <rdf:li resource="https://www.bis.org/bcbs/publ/d589.htm"/>
+        <rdf:li resource="https://www.bis.org/bcbs/publ/d588.htm"/>
+        <rdf:li resource="https://www.bis.org/bcbs/publ/d587.htm"/>
+        <rdf:li resource="https://www.bis.org/bcbs/publ/d586.htm"/>
+        <rdf:li resource="https://www.bis.org/bcbs/publ/d585.htm"/>
+        <rdf:li resource="https://www.bis.org/bcbs/publ/d584.htm"/>
+        <rdf:li resource="https://www.bis.org/bcbs/publ/d583.htm"/>
+        <rdf:li resource="https://www.bis.org/bcbs/publ/d582.htm"/>
+        <rdf:li resource="https://www.bis.org/bcbs/publ/d581.htm"/>
+        <rdf:li resource="https://www.bis.org/bcbs/publ/wp44.htm"/>
+        <rdf:li resource="https://www.bis.org/bcbs/publ/d579.htm"/>
+        <rdf:li resource="https://www.bis.org/bcbs/publ/d580.htm"/>
+        <rdf:li resource="https://www.bis.org/bcbs/publ/d578.htm"/>
+        <rdf:li resource="https://www.bis.org/bcbs/publ/d577.htm"/>
+        <rdf:li resource="https://www.bis.org/bcbs/publ/d576.htm"/>
+        <rdf:li resource="https://www.bis.org/bcbs/publ/wp43.htm"/>
+        <rdf:li resource="https://www.bis.org/bcbs/publ/d575.htm"/>
+        <rdf:li resource="https://www.bis.org/bcbs/publ/d574.htm"/>
+        <rdf:li resource="https://www.bis.org/bcbs/publ/d573.htm"/>
+        <rdf:li resource="https://www.bis.org/bcbs/publ/d572.htm"/>
+        <rdf:li resource="https://www.bis.org/bcbs/publ/wp42.htm"/>
+        <rdf:li resource="https://www.bis.org/bcbs/publ/wp41.htm"/>
+        <rdf:li resource="https://www.bis.org/bcbs/publ/d571.htm"/>
+      </rdf:Seq>
+    </items>
+  </channel>
+  <item rdf:about="https://www.bis.org/bcbs/publ/d591.htm">
+    <title>Principles for the management of credit risk</title>
+    <link>https://www.bis.org/bcbs/publ/d591.htm</link>
+    <description>The Basel Committee on Banking Supervision has issued a public consultation on a limited update of the Principles for the Management of Credit Risk ('Credit Risk Principles').</description>
+    <dc:title>Principles for the management of credit risk</dc:title>
+    <dc:date>2025-02-05T10:00:00Z</dc:date>
+    <cb:paper>
+      <cb:simpleTitle>Principles for the management of credit risk</cb:simpleTitle>
+      <cb:occurrenceDate>2025-02-05T10:00:00Z</cb:occurrenceDate>
+      <cb:institutionAbbrev>BIS</cb:institutionAbbrev>
+      <cb:resource>
+        <cb:title>PDF version</cb:title>
+        <cb:link>https://www.bis.org/bcbs/publ/d591.pdf</cb:link>
+        <cb:description/>
+      </cb:resource>
+      <cb:publicationDate>05 Feb 2025</cb:publicationDate>
+      <cb:publication>Bank for International Settlements: Papers</cb:publication>
+    </cb:paper>
+  </item>
+  <item rdf:about="https://www.bis.org/bcbs/publ/d590.htm">
+    <title>Transparency and responsiveness of initial margin in centrally cleared markets - review and policy proposals</title>
+    <link>https://www.bis.org/bcbs/publ/d590.htm</link>
+    <description>This BCBS-CPMI-IOSCO report sets out ten final policy proposals which aim to increase the resilience of the centrally cleared market ecosystem in times of market stress. </description>
+    <dc:title>Transparency and responsiveness of initial margin in centrally cleared markets - review and policy proposals</dc:title>
+    <dc:date>2025-01-15T10:00:00Z</dc:date>
+    <cb:paper>
+      <cb:simpleTitle>Transparency and responsiveness of initial margin in centrally cleared markets - review and policy proposals</cb:simpleTitle>
+      <cb:occurrenceDate>2025-01-15T10:00:00Z</cb:occurrenceDate>
+      <cb:institutionAbbrev>BIS</cb:institutionAbbrev>
+      <cb:resource>
+        <cb:title>PDF version</cb:title>
+        <cb:link>https://www.bis.org/bcbs/publ/d590.pdf</cb:link>
+        <cb:description/>
+      </cb:resource>
+      <cb:publicationDate>15 Jan 2025</cb:publicationDate>
+      <cb:publication>Bank for International Settlements: Papers</cb:publication>
+    </cb:paper>
+  </item>
+  <item rdf:about="https://www.bis.org/bcbs/publ/d589.htm">
+    <title>Streamlining variation margin processes and initial margin responsiveness of margin models in non-centrally cleared markets</title>
+    <link>https://www.bis.org/bcbs/publ/d589.htm</link>
+    <description>This report by the BCBS and IOSCO sets out eight recommendations to participants in non-centrally cleared markets to encourage the widespread implementation of good market practices related to (i) variation margin processes; and (ii) the responsiveness of initial margin models.</description>
+    <dc:title>Streamlining variation margin processes and initial margin responsiveness of margin models in non-centrally cleared markets</dc:title>
+    <dc:date>2025-01-15T10:00:00Z</dc:date>
+    <cb:paper>
+      <cb:simpleTitle>Streamlining variation margin processes and initial margin responsiveness of margin models in non-centrally cleared markets</cb:simpleTitle>
+      <cb:occurrenceDate>2025-01-15T10:00:00Z</cb:occurrenceDate>
+      <cb:institutionAbbrev>BIS</cb:institutionAbbrev>
+      <cb:resource>
+        <cb:title>PDF version</cb:title>
+        <cb:link>https://www.bis.org/bcbs/publ/d589.pdf</cb:link>
+        <cb:description/>
+      </cb:resource>
+      <cb:publicationDate>15 Jan 2025</cb:publicationDate>
+      <cb:publication>Bank for International Settlements: Papers</cb:publication>
+    </cb:paper>
+  </item>
+  <item rdf:about="https://www.bis.org/bcbs/publ/d588.htm">
+    <title>Final guidelines for counterparty credit risk management</title>
+    <link>https://www.bis.org/bcbs/publ/d588.htm</link>
+    <description>The Basel Committee on Banking Supervision has issued guidelines for banks' counterparty credit risk (CCR) management. The guidelines include key practices critical to resolving long-standing industry weaknesses in CCR management, including the need to: (i) conduct comprehensive due diligence at both initial onboarding, as well as on an ongoing basis; (ii) develop a comprehensive credit risk mitigation strategy to effectively manage counterparty exposures; (iii) measure, control and limit CCR using a wide variety of complementary metrics; and (iv) build a strong CCR governance framework.</description>
+    <dc:title>Final guidelines for counterparty credit risk management</dc:title>
+    <dc:date>2024-12-11T15:00:00Z</dc:date>
+    <cb:paper>
+      <cb:simpleTitle>Final guidelines for counterparty credit risk management</cb:simpleTitle>
+      <cb:occurrenceDate>2024-12-11T15:00:00Z</cb:occurrenceDate>
+      <cb:institutionAbbrev>BIS</cb:institutionAbbrev>
+      <cb:resource>
+        <cb:title>PDF version</cb:title>
+        <cb:link>https://www.bis.org/bcbs/publ/d588.pdf</cb:link>
+        <cb:description/>
+      </cb:resource>
+      <cb:publicationDate>11 Dec 2024</cb:publicationDate>
+      <cb:publication>Bank for International Settlements: Papers</cb:publication>
+    </cb:paper>
+  </item>
+  <item rdf:about="https://www.bis.org/bcbs/publ/d587.htm">
+    <title>Regulatory Consistency Assessment Programme (RCAP): Assessment of Basel Committee's large exposures framework - Korea</title>
+    <link>https://www.bis.org/bcbs/publ/d587.htm</link>
+    <description>This report describes the Committee's assessment of the implementation of the Basel Committee's large exposures framework (LEX) in Korea. The Korean LEX regulations have been assessed as largely compliant.</description>
+    <dc:title>Regulatory Consistency Assessment Programme (RCAP): Assessment of Basel Committee's large exposures framework - Korea</dc:title>
+    <dc:date>2024-12-04T09:29:00Z</dc:date>
+    <cb:paper>
+      <cb:simpleTitle>Regulatory Consistency Assessment Programme (RCAP): Assessment of Basel Committee's large exposures framework - Korea</cb:simpleTitle>
+      <cb:occurrenceDate>2024-12-04T09:29:00Z</cb:occurrenceDate>
+      <cb:institutionAbbrev>BIS</cb:institutionAbbrev>
+      <cb:resource>
+        <cb:title>PDF version</cb:title>
+        <cb:link>https://www.bis.org/bcbs/publ/d587.pdf</cb:link>
+        <cb:description/>
+      </cb:resource>
+      <cb:publicationDate>04 Dec 2024</cb:publicationDate>
+      <cb:publication>Bank for International Settlements: Papers</cb:publication>
+    </cb:paper>
+  </item>
+  <item rdf:about="https://www.bis.org/bcbs/publ/d586.htm">
+    <title>Regulatory Consistency Assessment Programme (RCAP): Assessment of Basel Committee's Net Stable Funding Ratio standard - Korea</title>
+    <link>https://www.bis.org/bcbs/publ/d586.htm</link>
+    <description>This report describes the Committee's assessment of the implementation of the Basel Committee's Net Stable Funding Ratio (NSFR) standard in Korea. The Korean NSFR regulations have been assessed as compliant.</description>
+    <dc:title>Regulatory Consistency Assessment Programme (RCAP): Assessment of Basel Committee's Net Stable Funding Ratio standard - Korea</dc:title>
+    <dc:date>2024-12-04T09:29:00Z</dc:date>
+    <cb:paper>
+      <cb:simpleTitle>Regulatory Consistency Assessment Programme (RCAP): Assessment of Basel Committee's Net Stable Funding Ratio standard - Korea</cb:simpleTitle>
+      <cb:occurrenceDate>2024-12-04T09:29:00Z</cb:occurrenceDate>
+      <cb:institutionAbbrev>BIS</cb:institutionAbbrev>
+      <cb:resource>
+        <cb:title>PDF version</cb:title>
+        <cb:link>https://www.bis.org/bcbs/publ/d586.pdf</cb:link>
+        <cb:description/>
+      </cb:resource>
+      <cb:publicationDate>04 Dec 2024</cb:publicationDate>
+      <cb:publication>Bank for International Settlements: Papers</cb:publication>
+    </cb:paper>
+  </item>
+  <item rdf:about="https://www.bis.org/bcbs/publ/d585.htm">
+    <title>Range of practices in implementing a positive neutral countercyclical capital buffer</title>
+    <link>https://www.bis.org/bcbs/publ/d585.htm</link>
+    <description>The Basel Committee on Banking Supervision has published a report which describes the range of practices in implementing a positive neutral countercyclical capital buffer (CCyB).</description>
+    <dc:title>Range of practices in implementing a positive neutral countercyclical capital buffer</dc:title>
+    <dc:date>2024-11-28T10:28:00Z</dc:date>
+    <cb:paper>
+      <cb:simpleTitle>Range of practices in implementing a positive neutral countercyclical capital buffer</cb:simpleTitle>
+      <cb:occurrenceDate>2024-11-28T10:28:00Z</cb:occurrenceDate>
+      <cb:institutionAbbrev>BIS</cb:institutionAbbrev>
+      <cb:resource>
+        <cb:title>PDF version</cb:title>
+        <cb:link>https://www.bis.org/bcbs/publ/d585.pdf</cb:link>
+        <cb:description/>
+      </cb:resource>
+      <cb:publicationDate>28 Nov 2024</cb:publicationDate>
+      <cb:publication>Bank for International Settlements: Papers</cb:publication>
+    </cb:paper>
+  </item>
+  <item rdf:about="https://www.bis.org/bcbs/publ/d584.htm">
+    <title>Technical Amendment - Hedging of counterparty credit risk exposures</title>
+    <link>https://www.bis.org/bcbs/publ/d584.htm</link>
+    <description>To help promote consistent interpretation of the Basel Framework, the Basel Committee on Banking Supervision periodically publishes proposals for technical amendments.</description>
+    <dc:title>Technical Amendment - Hedging of counterparty credit risk exposures</dc:title>
+    <dc:date>2024-11-27T10:00:00Z</dc:date>
+    <cb:paper>
+      <cb:simpleTitle>Technical Amendment - Hedging of counterparty credit risk exposures</cb:simpleTitle>
+      <cb:occurrenceDate>2024-11-27T10:00:00Z</cb:occurrenceDate>
+      <cb:institutionAbbrev>BIS</cb:institutionAbbrev>
+      <cb:resource>
+        <cb:title>PDF version</cb:title>
+        <cb:link>https://www.bis.org/bcbs/publ/d584.pdf</cb:link>
+        <cb:description/>
+      </cb:resource>
+      <cb:publicationDate>27 Nov 2024</cb:publicationDate>
+      <cb:publication>Bank for International Settlements: Papers</cb:publication>
+    </cb:paper>
+  </item>
+  <item rdf:about="https://www.bis.org/bcbs/publ/d583.htm">
+    <title>Finalisation of various technical amendments</title>
+    <link>https://www.bis.org/bcbs/publ/d583.htm</link>
+    <description>This document sets out various technical amendments to the Basel Framework. The amendments relate to: (i) the standardised approach to credit risk; and (ii) cryptoasset exposures.</description>
+    <dc:title>Finalisation of various technical amendments</dc:title>
+    <dc:date>2024-11-27T10:00:00Z</dc:date>
+    <cb:paper>
+      <cb:simpleTitle>Finalisation of various technical amendments</cb:simpleTitle>
+      <cb:occurrenceDate>2024-11-27T10:00:00Z</cb:occurrenceDate>
+      <cb:institutionAbbrev>BIS</cb:institutionAbbrev>
+      <cb:resource>
+        <cb:title>PDF version</cb:title>
+        <cb:link>https://www.bis.org/bcbs/publ/d583.pdf</cb:link>
+        <cb:description/>
+      </cb:resource>
+      <cb:publicationDate>27 Nov 2024</cb:publicationDate>
+      <cb:publication>Bank for International Settlements: Papers</cb:publication>
+    </cb:paper>
+  </item>
+  <item rdf:about="https://www.bis.org/bcbs/publ/d582.htm">
+    <title>The 2023 banking turmoil and liquidity risk: a progress report</title>
+    <link>https://www.bis.org/bcbs/publ/d582.htm</link>
+    <description>This progress report to the G20 Finance Ministers and Central Bank Governors provides an update on the Basel Committee's analytical work on the 2023 banking turmoil.</description>
+    <dc:title>The 2023 banking turmoil and liquidity risk: a progress report</dc:title>
+    <dc:date>2024-10-11T08:57:00Z</dc:date>
+    <cb:paper>
+      <cb:simpleTitle>The 2023 banking turmoil and liquidity risk: a progress report</cb:simpleTitle>
+      <cb:occurrenceDate>2024-10-11T08:57:00Z</cb:occurrenceDate>
+      <cb:institutionAbbrev>BIS</cb:institutionAbbrev>
+      <cb:resource>
+        <cb:title>PDF version</cb:title>
+        <cb:link>https://www.bis.org/bcbs/publ/d582.pdf</cb:link>
+        <cb:description/>
+      </cb:resource>
+      <cb:publicationDate>11 Oct 2024</cb:publicationDate>
+      <cb:publication>Bank for International Settlements: Papers</cb:publication>
+    </cb:paper>
+  </item>
+  <item rdf:about="https://www.bis.org/bcbs/publ/d581.htm">
+    <title>Basel III monitoring report</title>
+    <link>https://www.bis.org/bcbs/publ/d581.htm</link>
+    <description>The report sets out the impact of the Basel III framework, including the December 2017 finalisation of the Basel III reforms and the January 2019 finalisation of the market risk framework.</description>
+    <dc:title>Basel III monitoring report</dc:title>
+    <dc:date>2024-10-07T09:23:00Z</dc:date>
+    <cb:paper>
+      <cb:simpleTitle>Basel III monitoring report</cb:simpleTitle>
+      <cb:occurrenceDate>2024-10-07T09:23:00Z</cb:occurrenceDate>
+      <cb:institutionAbbrev>BIS</cb:institutionAbbrev>
+      <cb:resource>
+        <cb:title>PDF version</cb:title>
+        <cb:link>https://www.bis.org/bcbs/publ/d581.pdf</cb:link>
+        <cb:description/>
+      </cb:resource>
+      <cb:publicationDate>07 Oct 2024</cb:publicationDate>
+      <cb:publication>Bank for International Settlements: Papers</cb:publication>
+    </cb:paper>
+  </item>
+  <item rdf:about="https://www.bis.org/bcbs/publ/wp44.htm">
+    <title>Novel risks, mitigants and uncertainties with permissionless distributed ledger technologies</title>
+    <link>https://www.bis.org/bcbs/publ/wp44.htm</link>
+    <description>Banks that transact on permissionless blockchains or similar distributed ledger technologies (DLTs) face various risks. This paper considers the risks related to operations and security, governance, legal, compliance (including money laundering/financing of terrorism) and settlement finality. </description>
+    <dc:title>Novel risks, mitigants and uncertainties with permissionless distributed ledger technologies</dc:title>
+    <dc:date>2024-08-28T12:53:00Z</dc:date>
+    <cb:paper>
+      <cb:simpleTitle>Novel risks, mitigants and uncertainties with permissionless distributed ledger technologies</cb:simpleTitle>
+      <cb:occurrenceDate>2024-08-28T12:53:00Z</cb:occurrenceDate>
+      <cb:institutionAbbrev>BIS</cb:institutionAbbrev>
+      <cb:resource>
+        <cb:title>PDF version</cb:title>
+        <cb:link>https://www.bis.org/bcbs/publ/wp44.pdf</cb:link>
+        <cb:description/>
+      </cb:resource>
+      <cb:publicationDate>28 Aug 2024</cb:publicationDate>
+      <cb:publication>Bank for International Settlements: Working Papers</cb:publication>
+      <cb:issue>44</cb:issue>
+    </cb:paper>
+  </item>
+  <item rdf:about="https://www.bis.org/bcbs/publ/d579.htm">
+    <title>Cryptoasset standard amendments</title>
+    <link>https://www.bis.org/bcbs/publ/d579.htm</link>
+    <description>The Basel Committee on Banking Supervision has finalised targeted amendments to its prudential standard on banks' exposures to cryptoassets.</description>
+    <dc:title>Cryptoasset standard amendments</dc:title>
+    <dc:date>2024-07-17T09:00:00Z</dc:date>
+    <cb:paper>
+      <cb:simpleTitle>Cryptoasset standard amendments</cb:simpleTitle>
+      <cb:occurrenceDate>2024-07-17T09:00:00Z</cb:occurrenceDate>
+      <cb:institutionAbbrev>BIS</cb:institutionAbbrev>
+      <cb:resource>
+        <cb:title>PDF version</cb:title>
+        <cb:link>https://www.bis.org/bcbs/publ/d579.pdf</cb:link>
+        <cb:description/>
+      </cb:resource>
+      <cb:publicationDate>17 Jul 2024</cb:publicationDate>
+      <cb:publication>Bank for International Settlements: Papers</cb:publication>
+    </cb:paper>
+  </item>
+  <item rdf:about="https://www.bis.org/bcbs/publ/d580.htm">
+    <title>Disclosure of cryptoasset exposures</title>
+    <link>https://www.bis.org/bcbs/publ/d580.htm</link>
+    <description>The Basel Committee on Banking Supervision has finalised its disclosure framework for banks' cryptoasset exposures.</description>
+    <dc:title>Disclosure of cryptoasset exposures</dc:title>
+    <dc:date>2024-07-17T09:00:00Z</dc:date>
+    <cb:paper>
+      <cb:simpleTitle>Disclosure of cryptoasset exposures</cb:simpleTitle>
+      <cb:occurrenceDate>2024-07-17T09:00:00Z</cb:occurrenceDate>
+      <cb:institutionAbbrev>BIS</cb:institutionAbbrev>
+      <cb:resource>
+        <cb:title>PDF version</cb:title>
+        <cb:link>https://www.bis.org/bcbs/publ/d580.pdf</cb:link>
+        <cb:description/>
+      </cb:resource>
+      <cb:publicationDate>17 Jul 2024</cb:publicationDate>
+      <cb:publication>Bank for International Settlements: Papers</cb:publication>
+    </cb:paper>
+  </item>
+  <item rdf:about="https://www.bis.org/bcbs/publ/d578.htm">
+    <title>Recalibration of shocks for interest rate risk in the banking book</title>
+    <link>https://www.bis.org/bcbs/publ/d578.htm</link>
+    <description>The Basel Committee on Banking Supervision has finalised targeted adjustments to its standard on interest rate risk in the banking book (IRRBB).</description>
+    <dc:title>Recalibration of shocks for interest rate risk in the banking book</dc:title>
+    <dc:date>2024-07-16T09:00:00Z</dc:date>
+    <cb:paper>
+      <cb:simpleTitle>Recalibration of shocks for interest rate risk in the banking book</cb:simpleTitle>
+      <cb:occurrenceDate>2024-07-16T09:00:00Z</cb:occurrenceDate>
+      <cb:institutionAbbrev>BIS</cb:institutionAbbrev>
+      <cb:resource>
+        <cb:title>PDF version</cb:title>
+        <cb:link>https://www.bis.org/bcbs/publ/d578.pdf</cb:link>
+        <cb:description/>
+      </cb:resource>
+      <cb:publicationDate>16 Jul 2024</cb:publicationDate>
+      <cb:publication>Bank for International Settlements: Papers</cb:publication>
+    </cb:paper>
+  </item>
+  <item rdf:about="https://www.bis.org/bcbs/publ/d577.htm">
+    <title>Principles for the sound management of third-party risk</title>
+    <link>https://www.bis.org/bcbs/publ/d577.htm</link>
+    <description>The Basel Committee on Banking Supervision has issued a consultative document proposing Principles for the sound management of third-party risk in the banking sector. The Principles address banks' increasing reliance on third-party service providers due to the ongoing digitalisation and rapid growth in financial technology. ...</description>
+    <dc:title>Principles for the sound management of third-party risk</dc:title>
+    <dc:date>2024-07-09T13:36:00Z</dc:date>
+    <cb:paper>
+      <cb:simpleTitle>Principles for the sound management of third-party risk</cb:simpleTitle>
+      <cb:occurrenceDate>2024-07-09T13:36:00Z</cb:occurrenceDate>
+      <cb:institutionAbbrev>BIS</cb:institutionAbbrev>
+      <cb:resource>
+        <cb:title>PDF version</cb:title>
+        <cb:link>https://www.bis.org/bcbs/publ/d577.pdf</cb:link>
+        <cb:description/>
+      </cb:resource>
+      <cb:publicationDate>09 Jul 2024</cb:publicationDate>
+      <cb:publication>Bank for International Settlements: Papers</cb:publication>
+    </cb:paper>
+  </item>
+  <item rdf:about="https://www.bis.org/bcbs/publ/d576.htm">
+    <title>Various technical amendments and FAQs</title>
+    <link>https://www.bis.org/bcbs/publ/d576.htm</link>
+    <description>The set of interpretative issues addressed in this document relate to: (i) the standardised approach to credit risk; (ii) cryptoasset exposures; (iii) counterparty credit risk; (iv) the standardised approach to operational risk; (v) the simplified standardised, standardised and internal models approaches to market risk; and (vi) the net stable funding ratio.</description>
+    <dc:title>Various technical amendments and FAQs</dc:title>
+    <dc:date>2024-07-05T13:36:00Z</dc:date>
+    <cb:paper>
+      <cb:simpleTitle>Various technical amendments and FAQs</cb:simpleTitle>
+      <cb:occurrenceDate>2024-07-05T13:36:00Z</cb:occurrenceDate>
+      <cb:institutionAbbrev>BIS</cb:institutionAbbrev>
+      <cb:resource>
+        <cb:title>PDF version</cb:title>
+        <cb:link>https://www.bis.org/bcbs/publ/d576.pdf</cb:link>
+        <cb:description/>
+      </cb:resource>
+      <cb:publicationDate>05 Jul 2024</cb:publicationDate>
+      <cb:publication>Bank for International Settlements: Papers</cb:publication>
+    </cb:paper>
+  </item>
+  <item rdf:about="https://www.bis.org/bcbs/publ/wp43.htm">
+    <title>Literature review on financial technology and competition for banking services</title>
+    <link>https://www.bis.org/bcbs/publ/wp43.htm</link>
+    <description>by Hein Bogaard, Sebastian Doerr, Nicole Jonker, Hua Kiefer, Onur Koltukcu, Calixto López, José Renato Haas Ornelas, Ricky Rambharat, Sigrid Röhrs, Federica Teppa, Frans van Bruggen, Eric Vansteenberghe&lt;br /&gt;The extent to which financial technology will shape the banking industry depends in part on the nature of competition for banking services that arises from innovation by incumbent banks and the entry of new players. This paper presents a review of the growing body of economic literature on financial technology and competition for banking services. </description>
+    <dc:title>Literature review on financial technology and competition for banking services</dc:title>
+    <dc:creator>Hein Bogaard</dc:creator>
+    <dc:creator>Sebastian Doerr</dc:creator>
+    <dc:creator>Nicole Jonker</dc:creator>
+    <dc:creator>Hua Kiefer</dc:creator>
+    <dc:creator>Onur Koltukcu</dc:creator>
+    <dc:creator>Calixto López</dc:creator>
+    <dc:creator>José Renato Haas Ornelas</dc:creator>
+    <dc:creator>Ricky Rambharat</dc:creator>
+    <dc:creator>Sigrid Röhrs</dc:creator>
+    <dc:creator>Federica Teppa</dc:creator>
+    <dc:creator>Frans van Bruggen</dc:creator>
+    <dc:creator>Eric Vansteenberghe</dc:creator>
+    <dc:date>2024-06-07T15:07:00Z</dc:date>
+    <cb:paper>
+      <cb:simpleTitle>Literature review on financial technology and competition for banking services</cb:simpleTitle>
+      <cb:occurrenceDate>2024-06-07T15:07:00Z</cb:occurrenceDate>
+      <cb:institutionAbbrev>BIS</cb:institutionAbbrev>
+      <cb:resource>
+        <cb:title>PDF version</cb:title>
+        <cb:link>https://www.bis.org/bcbs/publ/wp43.pdf</cb:link>
+        <cb:description/>
+      </cb:resource>
+      <cb:person type="author">
+        <cb:nameAsWritten>Hein Bogaard</cb:nameAsWritten>
+        <cb:surname/>
+      </cb:person>
+      <cb:person type="author">
+        <cb:nameAsWritten>Sebastian Doerr</cb:nameAsWritten>
+        <cb:surname>Doerr</cb:surname>
+      </cb:person>
+      <cb:person type="author">
+        <cb:nameAsWritten>Nicole Jonker</cb:nameAsWritten>
+        <cb:surname/>
+      </cb:person>
+      <cb:person type="author">
+        <cb:nameAsWritten>Hua Kiefer</cb:nameAsWritten>
+        <cb:surname/>
+      </cb:person>
+      <cb:person type="author">
+        <cb:nameAsWritten>Onur Koltukcu</cb:nameAsWritten>
+        <cb:surname/>
+      </cb:person>
+      <cb:person type="author">
+        <cb:nameAsWritten>Calixto López</cb:nameAsWritten>
+        <cb:surname/>
+      </cb:person>
+      <cb:person type="author">
+        <cb:nameAsWritten>José Renato Haas Ornelas</cb:nameAsWritten>
+        <cb:surname>Haas</cb:surname>
+      </cb:person>
+      <cb:person type="author">
+        <cb:nameAsWritten>Ricky Rambharat</cb:nameAsWritten>
+        <cb:surname/>
+      </cb:person>
+      <cb:person type="author">
+        <cb:nameAsWritten>Sigrid Röhrs</cb:nameAsWritten>
+        <cb:surname/>
+      </cb:person>
+      <cb:person type="author">
+        <cb:nameAsWritten>Federica Teppa</cb:nameAsWritten>
+        <cb:surname/>
+      </cb:person>
+      <cb:person type="author">
+        <cb:nameAsWritten>Frans van Bruggen</cb:nameAsWritten>
+        <cb:surname/>
+      </cb:person>
+      <cb:person type="author">
+        <cb:nameAsWritten>Eric Vansteenberghe</cb:nameAsWritten>
+        <cb:surname/>
+      </cb:person>
+      <cb:publicationDate>07 Jun 2024</cb:publicationDate>
+      <cb:publication>Bank for International Settlements: Working Papers</cb:publication>
+      <cb:issue>43</cb:issue>
+    </cb:paper>
+  </item>
+  <item rdf:about="https://www.bis.org/bcbs/publ/d575.htm">
+    <title>Digitalisation of finance</title>
+    <link>https://www.bis.org/bcbs/publ/d575.htm</link>
+    <description>The Basel Committee on Banking Supervision has published a report which considers the implications of the ongoing digitalisation of finance on banks and supervision. This report builds on the Sound Practices: Implications of fintech developments for banks and bank supervisors published in 2018, and takes stock of recent developments in the digitalisation of finance.</description>
+    <dc:title>Digitalisation of finance</dc:title>
+    <dc:date>2024-05-16T14:46:00Z</dc:date>
+    <cb:paper>
+      <cb:simpleTitle>Digitalisation of finance</cb:simpleTitle>
+      <cb:occurrenceDate>2024-05-16T14:46:00Z</cb:occurrenceDate>
+      <cb:institutionAbbrev>BIS</cb:institutionAbbrev>
+      <cb:resource>
+        <cb:title>PDF version</cb:title>
+        <cb:link>https://www.bis.org/bcbs/publ/d575.pdf</cb:link>
+        <cb:description/>
+      </cb:resource>
+      <cb:publicationDate>16 May 2024</cb:publicationDate>
+      <cb:publication>Bank for International Settlements: Papers</cb:publication>
+    </cb:paper>
+  </item>
+  <item rdf:about="https://www.bis.org/bcbs/publ/d574.htm">
+    <title>Guidelines for counterparty credit risk management</title>
+    <link>https://www.bis.org/bcbs/publ/d574.htm</link>
+    <description>The Basel Committee on Banking Supervision has issued a consultation on guidelines for counterparty credit risk management. The proposed guidelines include key practices critical to resolving long-standing industry weaknesses in counterparty credit risk management, including the need to: (i) conduct comprehensive due diligence at both initial onboarding, as well as on an ongoing basis; (ii) develop a comprehensive credit risk mitigation strategy to effectively manage counterparty exposures; (iii) measure, control and limit CCR using a wide variety of complementary metrics; and (iv) build a strong CCR governance framework.</description>
+    <dc:title>Guidelines for counterparty credit risk management</dc:title>
+    <dc:date>2024-04-30T09:00:00Z</dc:date>
+    <cb:paper>
+      <cb:simpleTitle>Guidelines for counterparty credit risk management</cb:simpleTitle>
+      <cb:occurrenceDate>2024-04-30T09:00:00Z</cb:occurrenceDate>
+      <cb:institutionAbbrev>BIS</cb:institutionAbbrev>
+      <cb:resource>
+        <cb:title>PDF version</cb:title>
+        <cb:link>https://www.bis.org/bcbs/publ/d574.pdf</cb:link>
+        <cb:description/>
+      </cb:resource>
+      <cb:publicationDate>30 Apr 2024</cb:publicationDate>
+      <cb:publication>Bank for International Settlements: Papers</cb:publication>
+    </cb:paper>
+  </item>
+  <item rdf:about="https://www.bis.org/bcbs/publ/d573.htm">
+    <title>Core Principles for effective banking supervision</title>
+    <link>https://www.bis.org/bcbs/publ/d573.htm</link>
+    <description>This publication sets out the revised Core Principles for effective banking supervision ("Core Principles"). The revised Core Principles were endorsed by banking supervisors at the 23rd International Conference of Banking Supervisors held in Basel, Switzerland, on 24-25 April 2024.</description>
+    <dc:title>Core Principles for effective banking supervision</dc:title>
+    <dc:date>2024-04-25T16:00:00Z</dc:date>
+    <cb:paper>
+      <cb:simpleTitle>Core Principles for effective banking supervision</cb:simpleTitle>
+      <cb:occurrenceDate>2024-04-25T16:00:00Z</cb:occurrenceDate>
+      <cb:institutionAbbrev>BIS</cb:institutionAbbrev>
+      <cb:resource>
+        <cb:title>PDF version</cb:title>
+        <cb:link>https://www.bis.org/bcbs/publ/d573.pdf</cb:link>
+        <cb:description/>
+      </cb:resource>
+      <cb:publicationDate>25 Apr 2024</cb:publicationDate>
+      <cb:publication>Bank for International Settlements: Papers</cb:publication>
+    </cb:paper>
+  </item>
+  <item rdf:about="https://www.bis.org/bcbs/publ/d572.htm">
+    <title>The role of climate scenario analysis in strengthening the management and supervision of climate-related financial risks </title>
+    <link>https://www.bis.org/bcbs/publ/d572.htm</link>
+    <description>The Basel Committee on Banking Supervision has issued a discussion paper on how climate scenario analysis (CSA) can be practically used to help strengthen the management and supervision of climate-related financial risks.</description>
+    <dc:title>The role of climate scenario analysis in strengthening the management and supervision of climate-related financial risks </dc:title>
+    <dc:date>2024-04-16T07:47:00Z</dc:date>
+    <cb:paper>
+      <cb:simpleTitle>The role of climate scenario analysis in strengthening the management and supervision of climate-related financial risks </cb:simpleTitle>
+      <cb:occurrenceDate>2024-04-16T07:47:00Z</cb:occurrenceDate>
+      <cb:institutionAbbrev>BIS</cb:institutionAbbrev>
+      <cb:resource>
+        <cb:title>PDF version</cb:title>
+        <cb:link>https://www.bis.org/bcbs/publ/d572.pdf</cb:link>
+        <cb:description/>
+      </cb:resource>
+      <cb:publicationDate>16 Apr 2024</cb:publicationDate>
+      <cb:publication>Bank for International Settlements: Papers</cb:publication>
+    </cb:paper>
+  </item>
+  <item rdf:about="https://www.bis.org/bcbs/publ/wp42.htm">
+    <title>Banks' window-dressing of the G-SIB framework: causal evidence from a quantitative impact study</title>
+    <link>https://www.bis.org/bcbs/publ/wp42.htm</link>
+    <description>Exploiting a novel and uniquely extensive bank-level dataset, this study employs a difference-in-differences empirical strategy to test whether the response of banks to the G-SIB framework &amp;#8211; a key component of the Basel III macroprudential reforms &amp;#8211; directly contributes to window-dressing behaviour.</description>
+    <dc:title>Banks' window-dressing of the G-SIB framework: causal evidence from a quantitative impact study</dc:title>
+    <dc:date>2024-03-07T13:03:00Z</dc:date>
+    <cb:paper>
+      <cb:simpleTitle>Banks' window-dressing of the G-SIB framework: causal evidence from a quantitative impact study</cb:simpleTitle>
+      <cb:occurrenceDate>2024-03-07T13:03:00Z</cb:occurrenceDate>
+      <cb:institutionAbbrev>BIS</cb:institutionAbbrev>
+      <cb:resource>
+        <cb:title>PDF version</cb:title>
+        <cb:link>https://www.bis.org/bcbs/publ/wp42.pdf</cb:link>
+        <cb:description/>
+      </cb:resource>
+      <cb:publicationDate>07 Mar 2024</cb:publicationDate>
+      <cb:publication>Bank for International Settlements: Working Papers</cb:publication>
+    </cb:paper>
+  </item>
+  <item rdf:about="https://www.bis.org/bcbs/publ/wp41.htm">
+    <title>G-SIB denominators and scores dynamics: a ten-year assessment</title>
+    <link>https://www.bis.org/bcbs/publ/wp41.htm</link>
+    <description>This paper examines the global systemically important bank (G-SIB) framework ten years after its introduction, covering three complementary perspectives: the evolution of the G-SIB denominators, the relative evolution of scores of G-SIBs and non-G-SIBs, and the adjustments in the balance sheets of G-SIBs.</description>
+    <dc:title>G-SIB denominators and scores dynamics: a ten-year assessment</dc:title>
+    <dc:date>2024-03-07T13:01:00Z</dc:date>
+    <cb:paper>
+      <cb:simpleTitle>G-SIB denominators and scores dynamics: a ten-year assessment</cb:simpleTitle>
+      <cb:occurrenceDate>2024-03-07T13:01:00Z</cb:occurrenceDate>
+      <cb:institutionAbbrev>BIS</cb:institutionAbbrev>
+      <cb:resource>
+        <cb:title>PDF version</cb:title>
+        <cb:link>https://www.bis.org/bcbs/publ/wp41.pdf</cb:link>
+        <cb:description/>
+      </cb:resource>
+      <cb:publicationDate>07 Mar 2024</cb:publicationDate>
+      <cb:publication>Bank for International Settlements: Working Papers</cb:publication>
+    </cb:paper>
+  </item>
+  <item rdf:about="https://www.bis.org/bcbs/publ/d571.htm">
+    <title>Global systemically important banks - revised assessment framework</title>
+    <link>https://www.bis.org/bcbs/publ/d571.htm</link>
+    <description>The Basel Committee on Banking Supervision issued today a consultation on revisions to the global systemically important banks (G-SIB) assessment framework aimed at mitigating "window-dressing" behaviour by some banks in the context of the G-SIB framework.</description>
+    <dc:title>Global systemically important banks - revised assessment framework</dc:title>
+    <dc:date>2024-03-07T13:00:00Z</dc:date>
+    <cb:paper>
+      <cb:simpleTitle>Global systemically important banks - revised assessment framework</cb:simpleTitle>
+      <cb:occurrenceDate>2024-03-07T13:00:00Z</cb:occurrenceDate>
+      <cb:institutionAbbrev>BIS</cb:institutionAbbrev>
+      <cb:resource>
+        <cb:title>PDF version</cb:title>
+        <cb:link>https://www.bis.org/bcbs/publ/d571.pdf</cb:link>
+        <cb:description/>
+      </cb:resource>
+      <cb:publicationDate>07 Mar 2024</cb:publicationDate>
+      <cb:publication>Bank for International Settlements: Papers</cb:publication>
+    </cb:paper>
+  </item>
+</rdf:RDF>
