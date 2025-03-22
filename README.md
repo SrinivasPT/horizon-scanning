@@ -1,5 +1,7 @@
 ## To Run:
 
+npm run job -- 1
+
 > npx ts-node src/index.ts fdic
 
 npx ts-node src/sec.ts
