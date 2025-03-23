@@ -1,6 +1,6 @@
 import agencyConfigs from '../config/agencies.config';
 import RssScanner from '../scanners/rss-scanner';
-import Document from '../models/document';
+import HtmlTableScanner from '../scanners/html-table-scanner';
 import ScanConfig from 'src/models/scan-config';
 import ApiService from './api-service';
 
@@ -13,7 +13,7 @@ class ScannerService {
     }
 
     private scannerFactory: any = {
-        // html: (agencyName: string) => new HtmlScanner(agencyName),
+        HTML_TABLE: (scanConfig: ScanConfig) => new HtmlTableScanner(scanConfig),
         RSS: (scanConfig: ScanConfig) => new RssScanner(scanConfig),
         // playwright: (agencyName: string) => new PlaywrightScanner(agencyName),
     };

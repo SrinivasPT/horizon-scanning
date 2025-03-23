@@ -16,7 +16,7 @@ CREATE TABLE scanner (
 );
 
 DELIMITER //
-
+-- DROP TRIGGER before_insert_scanner;
 CREATE TRIGGER before_insert_scanner
 BEFORE INSERT ON scanner
 FOR EACH ROW

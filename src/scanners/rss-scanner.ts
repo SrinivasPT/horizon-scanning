@@ -153,7 +153,7 @@ export class RssScanner extends BaseScanner {
             // Convert HTML to Markdown using the new utility
             if (description) {
                 try {
-                    console.log(`Converting HTML description to markdown for item ${index}`);
+                    // console.log(`Converting HTML description to markdown for item ${index}`);
                     description = htmlToMarkdown.convert(description);
                 } catch (error) {
                     console.error(`Error converting HTML to markdown: ${error}`);

@@ -1,5 +1,11 @@
 import ScanConfig from 'src/models/scan-config';
 
+/**
+ * HTML Selector:
+ * - URL - Ensure that key is 'url' and value is the selector for element containing the URL
+ * - PublishedOn - Ensure that key is 'publishedOn' and value is the selector for element containing the published date
+ */
+
 const agencyConfigs: ScanConfig[] = [
     {
         id: 1,
@@ -28,6 +34,43 @@ const agencyConfigs: ScanConfig[] = [
         url: 'https://www.federalreserve.gov/feeds/press_all.xml',
         scannerType: 'RSS',
         defaults: { source: 'FRB', issuingAuthority: 'NEWS', eventType: 'PRESS-RELEASES' },
+    },
+    {
+        id: 5,
+        name: 'FDIC-NEWS-FIN-INST-LETTERS',
+        url: 'https://fdic.gov/news/financial-institution-letters/index.html',
+        scannerType: 'HTML_TABLE',
+        selector: {
+            isDivTable: true,
+            tableSelector: '.views-element-container',
+            rowSelector: '.views-row',
+            headerRowIndex: -1,
+            columns: [
+                { name: 'publishedOn', selector: '.news-date' },
+                { name: 'title', selector: '.news-title' },
+                { name: 'summary', selector: '.news-content' },
+                { name: 'url', selector: '.news-title' },
+            ],
+        },
+        defaults: { source: 'FDIC', issuingAuthority: 'NEWS', eventType: 'FIN-INST-LETTERS' },
+    },
+    {
+        id: 6,
+        name: 'FINCEN-RESOURCES-ALERTS-ADVISORIES-NOTICES',
+        url: 'https://fincen.gov/resources/advisoriesbulletinsfact-sheets',
+        scannerType: 'HTML_TABLE',
+        selector: {
+            isDivTable: false,
+            tableSelector: '#block-alerts table tr',
+            headerRowIndex: 1,
+            columns: [
+                { name: 'identifier', selector: 'td:first-child' },
+                { name: 'publishedOn', selector: 'td:nth-child(2)' },
+                { name: 'title', selector: 'td:nth-child(3)' },
+                { name: 'url', selector: 'td:first-child' },
+            ],
+        },
+        defaults: { source: 'FINCEN', issuingAuthority: 'RESOURCES', eventType: 'ALERTS-ADVISORIES-NOTICES' },
     },
 ];
 
