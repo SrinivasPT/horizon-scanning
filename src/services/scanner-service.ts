@@ -18,22 +18,22 @@ class ScannerService {
         // playwright: (agencyName: string) => new PlaywrightScanner(agencyName),
     };
 
-    async startJob(id: number): Promise<void> {
-        const scanConfig: ScanConfig = agencyConfigs.find(a => a.id === id) as ScanConfig;
+    async startJob(jobConfigId: number): Promise<void> {
+        const scanConfig: ScanConfig = agencyConfigs.find(a => a.id === jobConfigId) as ScanConfig;
 
         if (!scanConfig) {
-            const errorMsg = `Agency with ID ${id} not found`;
+            const errorMsg = `Agency with ID ${jobConfigId} not found`;
             console.error(errorMsg);
             throw new Error(errorMsg);
         }
 
-        console.log(`Starting job for agency: ${scanConfig.name || id}`);
+        console.log(`Starting job for agency: ${scanConfig.name || jobConfigId}`);
 
-        let jobId;
+        let jobRunId;
         try {
             // Save job entry to database and get the ID
-            jobId = await this.apiService.startScan(scanConfig);
-            console.log(`Created job entry with ID: ${jobId}`);
+            jobRunId = await this.apiService.startScan(scanConfig);
+            console.log(`Created job entry with ID: ${jobRunId}`);
 
             const scannerCreator = this.scannerFactory[scanConfig.scannerType];
             if (!scannerCreator) {
@@ -45,12 +45,12 @@ class ScannerService {
             const documents = await scanner.scan(scanConfig);
 
             // Update job entry to completed status
-            await this.apiService.completeScan(jobId, documents);
+            await this.apiService.completeScan(jobRunId, documents);
 
-            console.log(`Completed job for agency: ${scanConfig.name || id}`);
+            console.log(`Completed job for agency: ${scanConfig.name || jobConfigId}`);
         } catch (error) {
-            if (jobId) await this.apiService.scanFailed(jobId);
-            console.error(`Error processing job for agency ${scanConfig.name || id}:`, error);
+            if (jobRunId) await this.apiService.scanFailed(jobRunId);
+            console.error(`Error processing job for agency ${scanConfig.name || jobConfigId}:`, error);
             throw error; // Re-throw to allow caller to handle
         } finally {
             this.runningScanners.delete(scanConfig);

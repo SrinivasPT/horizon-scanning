@@ -18,9 +18,9 @@ class ApiService {
     }
 
     // success... Complete the scan.
-    async completeScan(jobId: number, documents: Document[]): Promise<void> {
+    async completeScan(jobRunId: string, documents: Document[]): Promise<void> {
         try {
-            const payload = { job_id: jobId, result_data: documents, status: 'COMPLETED' };
+            const payload = { id: jobRunId, result_data: documents, status: 'COMPLETED' };
             const response = await axios.put(`${this.apiUrl}/complete-scan`, payload, { headers: { 'Content-Type': 'application/json' } });
 
             if (response.status !== 200) throw new Error(`API upsert failed with status: ${response.status}`);
@@ -30,9 +30,9 @@ class ApiService {
         }
     }
 
-    async scanFailed(jobId: number): Promise<void> {
+    async scanFailed(jobRunId: string): Promise<void> {
         try {
-            const payload = { job_id: jobId, status: 'FAILED' };
+            const payload = { id: jobRunId, status: 'FAILED' };
             const response = await axios.put(`${this.apiUrl}/complete-scan`, payload, { headers: { 'Content-Type': 'application/json' } });
 
             if (response.status !== 200) throw new Error(`API issue 1 failed with status: ${response.status}`);
@@ -42,38 +42,38 @@ class ApiService {
         }
     }
 
-    // Get scan results for a specific agency
-    async getScanResults(agencyId: number): Promise<Document[]> {
-        try {
-            const response = await axios.get(`${this.apiUrl}/results/${agencyId}`);
-            return response.data as Document[];
-        } catch (error) {
-            console.error(`Error getting scan results for agency ${agencyId}:`, error);
-            throw error;
-        }
-    }
+    // // Get scan results for a specific agency
+    // async getScanResults(agencyId: number): Promise<Document[]> {
+    //     try {
+    //         const response = await axios.get(`${this.apiUrl}/results/${agencyId}`);
+    //         return response.data as Document[];
+    //     } catch (error) {
+    //         console.error(`Error getting scan results for agency ${agencyId}:`, error);
+    //         throw error;
+    //     }
+    // }
 
-    // Get all scan configurations
-    async getScanConfigs(): Promise<ScanConfig[]> {
-        try {
-            const response = await axios.get(`${this.apiUrl}/configs`);
-            return response.data as ScanConfig[];
-        } catch (error) {
-            console.error('Error getting scan configurations:', error);
-            throw error;
-        }
-    }
+    // // Get all scan configurations
+    // async getScanConfigs(): Promise<ScanConfig[]> {
+    //     try {
+    //         const response = await axios.get(`${this.apiUrl}/configs`);
+    //         return response.data as ScanConfig[];
+    //     } catch (error) {
+    //         console.error('Error getting scan configurations:', error);
+    //         throw error;
+    //     }
+    // }
 
-    // Update a scan configuration
-    async updateScanConfig(config: ScanConfig): Promise<ScanConfig> {
-        try {
-            const response = await axios.put(`${this.apiUrl}/configs/${config.id}`, config);
-            return response.data as ScanConfig;
-        } catch (error) {
-            console.error(`Error updating scan config ${config.id}:`, error);
-            throw error;
-        }
-    }
+    // // Update a scan configuration
+    // async updateScanConfig(config: ScanConfig): Promise<ScanConfig> {
+    //     try {
+    //         const response = await axios.put(`${this.apiUrl}/configs/${config.id}`, config);
+    //         return response.data as ScanConfig;
+    //     } catch (error) {
+    //         console.error(`Error updating scan config ${config.id}:`, error);
+    //         throw error;
+    //     }
+    // }
 }
 
 export default ApiService;
