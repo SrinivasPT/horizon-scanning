@@ -56,13 +56,13 @@ const agencyConfigs: ScanConfig[] = [
     },
     {
         id: 6,
-        name: 'FINCEN-RESOURCES-ALERTS-ADVISORIES-NOTICES',
+        name: 'FINCEN-RESOURCES-ALERTS',
         url: 'https://fincen.gov/resources/advisoriesbulletinsfact-sheets',
         scannerType: 'HTML_TABLE',
         selector: {
             isDivTable: false,
             tableSelector: '#block-alerts table tr',
-            headerRowIndex: 1,
+            headerRowIndex: 0,
             columns: [
                 { name: 'identifier', selector: 'td:first-child' },
                 { name: 'publishedOn', selector: 'td:nth-child(2)' },
@@ -70,7 +70,43 @@ const agencyConfigs: ScanConfig[] = [
                 { name: 'url', selector: 'td:first-child' },
             ],
         },
-        defaults: { source: 'FINCEN', issuingAuthority: 'RESOURCES', eventType: 'ALERTS-ADVISORIES-NOTICES' },
+        defaults: { source: 'FINCEN', issuingAuthority: 'RESOURCES', eventType: 'ALERTS' },
+    },
+    {
+        id: 7,
+        name: 'FINCEN-RESOURCES-ADVISORIES',
+        url: 'https://fincen.gov/resources/advisoriesbulletinsfact-sheets',
+        scannerType: 'HTML_TABLE',
+        selector: {
+            isDivTable: false,
+            tableSelector: '#block-views-block-advisories-block-1-2',
+            headerRowIndex: 0,
+            columns: [
+                { name: 'identifier', selector: 'td:first-child' },
+                { name: 'publishedOn', selector: 'td:nth-child(2)' },
+                { name: 'title', selector: 'td:nth-child(3)' },
+                { name: 'url', selector: 'td:first-child' },
+            ],
+        },
+        defaults: { source: 'FINCEN', issuingAuthority: 'RESOURCES', eventType: 'ADVISORIES' },
+    },
+    {
+        id: 8,
+        name: 'SEC-RULE-MAKING',
+        url: 'https://www.sec.gov/rules-regulations/rulemaking-activity',
+        scannerType: 'PLAYWRIGHT',
+        selector: {
+            isDivTable: false,
+            tableSelector: '.usa-table.views-table.views-view-table',
+            headerRowIndex: 0,
+            columns: [
+                { name: 'publishedOn', selector: '.views-field-field-publish-date time.datetime' },
+                { name: 'identifier', selector: '.views-field-field-release-file-number' },
+                { name: 'title', selector: '.view-field-custom--rulemaking' },
+                { name: 'url', selector: '.view-field-custom--status' },
+            ],
+        },
+        defaults: { source: 'SEC', issuingAuthority: 'RESOURCES', eventType: 'RULE' },
     },
 ];
 

@@ -2,6 +2,7 @@ import axios from 'axios';
 import * as cheerio from 'cheerio';
 import BaseScanner from './base-scanner';
 import Document from '../models/document';
+import { chromium, Browser, Page } from 'playwright';
 import ScanConfig, { HtmlTableSelector, ColumnDefinition } from 'src/models/scan-config';
 import htmlToMarkdown from '../utils/html-to-md';
 
@@ -11,6 +12,8 @@ export interface TableRow {
 }
 
 export class HtmlTableScanner extends BaseScanner {
+    private browser: Browser | null = null;
+
     constructor(scanConfig: ScanConfig) {
         super(scanConfig);
     }
@@ -25,7 +28,13 @@ export class HtmlTableScanner extends BaseScanner {
             documents.push(...agencyDocuments);
         } catch (error: any) {
             console.error(`Error scanning HTML table for ${this.scanConfig.name} at ${this.scanConfig.url}:`, error.message);
-            throw error; // Let ScannerService handle the error
+            throw error;
+        } finally {
+            // Clean up Playwright browser if it was used
+            if (this.browser) {
+                await this.browser.close();
+                this.browser = null;
+            }
         }
 
         return documents;
@@ -60,10 +69,29 @@ export class HtmlTableScanner extends BaseScanner {
 
     private async fetchTableData(url: string): Promise<TableRow[]> {
         try {
-            const response = await axios.get(url);
-            console.log(`HTML response received from ${url}, content length: ${response.data.length}`);
+            const scannerType = this.scanConfig.scannerType || 'HTML_TABLE';
+            let htmlContent: string;
 
-            const $ = cheerio.load(response.data);
+            if (scannerType === 'PLAYWRIGHT') {
+                // Use Playwright for dynamic content
+                this.browser = await chromium.launch({ headless: false });
+                const page = await this.browser.newPage();
+
+                // await page.goto(url, { waitUntil: 'networkidle' });
+                await page.goto(url, { waitUntil: 'domcontentloaded' });
+                await page.waitForSelector(this.scanConfig?.selector?.tableSelector as string, { state: 'attached' });
+                htmlContent = await page.content();
+                await page.close();
+
+                console.log(`HTML response received via Playwright from ${url}, content length: ${htmlContent.length}`);
+            } else {
+                // Default to Axios for static content
+                const response = await axios.get(url);
+                htmlContent = response.data;
+                console.log(`HTML response received via Axios from ${url}, content length: ${htmlContent.length}`);
+            }
+
+            const $ = cheerio.load(htmlContent);
             const config = this.getTableConfig();
             const headers = this.extractTableHeaders($, config);
             const rows = this.processTableRows($, config, headers, url);
@@ -71,7 +99,7 @@ export class HtmlTableScanner extends BaseScanner {
             this.logResults(rows);
             return rows;
         } catch (error: any) {
-            console.error(`Error parsing HTML table: ${error.message}`);
+            console.error(`Error fetching HTML table data: ${error.message}`);
             throw error;
         }
     }
@@ -169,14 +197,13 @@ export class HtmlTableScanner extends BaseScanner {
 
     private processTableRows($: any, config: HtmlTableSelector, headers: string[], baseUrl: string): TableRow[] {
         const rows: TableRow[] = [];
-        const selector = `${config.tableSelector} ${config.rowSelector}`;
+        const selector = `${config.tableSelector} ${config.rowSelector} tr`; // Adding tr to get the rows
 
         $(selector).each((rowIndex: number, row: any) => {
             console.log(`Processing row ${rowIndex}...`);
             // Skip header rows
-            if (config.headerRowIndex === rowIndex) return;
-
-            const rowData = this.extractRowData($, row, headers, baseUrl, config);
+            let rowData: any = {};
+            if (config.headerRowIndex !== rowIndex) rowData = this.extractRowData($, row, headers, baseUrl, config);
 
             // Only add non-empty rows
             if (Object.keys(rowData).length > 0) {

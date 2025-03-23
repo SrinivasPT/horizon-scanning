@@ -14,6 +14,7 @@ class ScannerService {
 
     private scannerFactory: any = {
         HTML_TABLE: (scanConfig: ScanConfig) => new HtmlTableScanner(scanConfig),
+        PLAYWRIGHT: (scanConfig: ScanConfig) => new HtmlTableScanner(scanConfig),
         RSS: (scanConfig: ScanConfig) => new RssScanner(scanConfig),
         // playwright: (agencyName: string) => new PlaywrightScanner(agencyName),
     };
