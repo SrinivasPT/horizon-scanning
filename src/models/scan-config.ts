@@ -1,23 +1,23 @@
-export interface ColumnDefinition {
-    name: string;
-    selector?: string;
+import { Document } from './document';
+
+export interface PipelineStep {
+    stage: string;
+    params?: Record<string, any>;
+    config?: any;
+    disabled?: boolean;
 }
 
-export interface HtmlTableSelector {
-    isDivTable?: boolean;
-    columns?: Array<string | ColumnDefinition>;
-    tableSelector?: string;
-    rowSelector?: string;
-    headerRowIndex?: number;
-    skipHeaderRows?: number;
+export interface PipelineConfig {
+    pipeline: PipelineStep[];
 }
 
-export default interface ScanConfig {
-    id: number;
+export interface ScanConfig {
+    id: string;
     name: string;
+    description?: string;
     url: string;
-    scannerType: string;
-    selector?: HtmlTableSelector; // For HTML & Playwright
-    mapper?: string[];
-    defaults: { [key: string]: string };
+    schedule?: string;
+    pipeline: PipelineConfig;
+    defaults?: Partial<Document>;
+    metadata?: Record<string, any>;
 }

@@ -10,7 +10,8 @@
         "forceConsistentCasingInFileNames": true,
         "baseUrl": ".",
         "paths": {
-            "lib/*": ["src/lib/*"]
+            "lib/*": ["src/lib/*"],
+            "@/*": ["src/*"]
         },
         "allowJs": true
     },

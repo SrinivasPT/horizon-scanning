@@ -1,4 +1,4 @@
-interface Document {
+export interface Document {
     source: string;
     issuingAuthority: string;
     typeOfChange: string;
@@ -20,5 +20,3 @@ interface Document {
     enactedDate: string;
     topic: string;
 }
-
-export default Document;
