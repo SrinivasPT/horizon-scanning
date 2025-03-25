@@ -1,0 +1,34 @@
+[
+    {
+        "id": "1001",
+        "name": "SEC Rulemaking Activity",
+        "description": "Tracks proposed and final rules from the SEC",
+        "url": "https://www.sec.gov/rules-regulations/rulemaking-activity",
+        "pipeline": [
+            {
+                "stage": "playwright-download",
+                "params": { "headless": true, "waitForSelector": ".usa-table", "timeout": 3000 }
+            },
+            {
+                "stage": "html-table-parse",
+                "config": {
+                    "tableSelector": ".usa-table.views-table",
+                    "columns": [
+                        { "name": "publishedOn", "selector": ".views-field-field-publish-date time", "attribute": "datetime" },
+                        { "name": "identifier", "selector": ".views-field-field-release-file-number" },
+                        { "name": "title", "selector": ".view-field-custom--rulemaking a", "extract": "text" },
+                        { "name": "url", "selector": ".view-field-custom--rulemaking a", "extract": "href", "transform": "resolveUrl" },
+                        { "name": "status", "selector": ".view-field-custom--status" }
+                    ],
+                    "rowSelector": "tbody tr"
+                }
+            }
+        ],
+        "defaults": {
+            "source": "SEC",
+            "issuingAuthority": "SEC",
+            "eventType": "RULEMAKING",
+            "topic": "Financial Regulation"
+        }
+    }
+]
