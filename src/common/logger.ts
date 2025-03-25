@@ -19,12 +19,33 @@ export interface LoggerConfig {
     fileMaxSize?: number; // in bytes
 }
 
+// Define log level names mapping
+const LOG_LEVEL_NAMES: Record<LogLevel, string> = {
+    [LogLevel.ERROR]: 'ERROR',
+    [LogLevel.WARN]: 'WARN',
+    [LogLevel.INFO]: 'INFO',
+    [LogLevel.DEBUG]: 'DEBUG',
+    [LogLevel.TRACE]: 'TRACE',
+};
+
+// Log method type for console methods
+type LogMethod = (message?: any, ...optionalParams: any[]) => void;
+
 export class Logger {
     private config: LoggerConfig;
     private static defaultConfig: LoggerConfig = {
         level: LogLevel.INFO,
         useConsole: true,
         useFile: true,
+    };
+
+    // Console method mapping
+    private consoleMethods: Record<string, LogMethod> = {
+        ERROR: console.error,
+        WARN: console.warn,
+        INFO: console.info,
+        DEBUG: console.debug,
+        TRACE: console.trace,
     };
 
     constructor(config: Partial<LoggerConfig> = {}) {
@@ -40,8 +61,11 @@ export class Logger {
     }
 
     // Private method to format log messages
-    private formatMessage(level: string, message: string): string {
+    private formatMessage(level: string, message: any): string {
         const timestamp = new Date().toISOString();
+        if (typeof message === 'object' && message !== null) {
+            return `[${timestamp}] [${level}] ${JSON.stringify(message, null, 2)}`;
+        }
         return `[${timestamp}] [${level}] ${message}`;
     }
 
@@ -66,45 +90,46 @@ export class Logger {
         }
     }
 
-    // Log methods
-    error(message: string, ...args: any[]): void {
-        if (this.config.level >= LogLevel.ERROR) {
-            const formattedMsg = this.formatMessage('ERROR', message);
-            if (this.config.useConsole) console.error(formattedMsg, ...args);
-            this.logToFile(formattedMsg + (args.length ? ' ' + JSON.stringify(args) : ''));
+    // Core log method that handles all logging
+    private log(logLevel: LogLevel, message: any, ...args: any[]): void {
+        if (this.config.level < logLevel) return;
+
+        const levelName = LOG_LEVEL_NAMES[logLevel];
+        const formattedMsg = this.formatMessage(levelName, message);
+
+        // Handle console output
+        if (this.config.useConsole) {
+            const logMethod = this.consoleMethods[levelName];
+            if (typeof message === 'object' && message !== null) {
+                logMethod(`[${new Date().toISOString()}] [${levelName}]`, message, ...args);
+            } else {
+                logMethod(formattedMsg, ...args);
+            }
         }
+
+        // Handle file output
+        this.logToFile(formattedMsg + (args.length ? ' ' + JSON.stringify(args) : ''));
     }
 
-    warn(message: string, ...args: any[]): void {
-        if (this.config.level >= LogLevel.WARN) {
-            const formattedMsg = this.formatMessage('WARN', message);
-            if (this.config.useConsole) console.warn(formattedMsg, ...args);
-            this.logToFile(formattedMsg + (args.length ? ' ' + JSON.stringify(args) : ''));
-        }
+    // Public logging methods
+    error(message: any, ...args: any[]): void {
+        this.log(LogLevel.ERROR, message, ...args);
     }
 
-    info(message: string, ...args: any[]): void {
-        if (this.config.level >= LogLevel.INFO) {
-            const formattedMsg = this.formatMessage('INFO', message);
-            if (this.config.useConsole) console.info(formattedMsg, ...args);
-            this.logToFile(formattedMsg + (args.length ? ' ' + JSON.stringify(args) : ''));
-        }
+    warn(message: any, ...args: any[]): void {
+        this.log(LogLevel.WARN, message, ...args);
     }
 
-    debug(message: string, ...args: any[]): void {
-        if (this.config.level >= LogLevel.DEBUG) {
-            const formattedMsg = this.formatMessage('DEBUG', message);
-            if (this.config.useConsole) console.debug(formattedMsg, ...args);
-            this.logToFile(formattedMsg + (args.length ? ' ' + JSON.stringify(args) : ''));
-        }
+    info(message: any, ...args: any[]): void {
+        this.log(LogLevel.INFO, message, ...args);
     }
 
-    trace(message: string, ...args: any[]): void {
-        if (this.config.level >= LogLevel.TRACE) {
-            const formattedMsg = this.formatMessage('TRACE', message);
-            if (this.config.useConsole) console.trace(formattedMsg, ...args);
-            this.logToFile(formattedMsg + (args.length ? ' ' + JSON.stringify(args) : ''));
-        }
+    debug(message: any, ...args: any[]): void {
+        this.log(LogLevel.DEBUG, message, ...args);
+    }
+
+    trace(message: any, ...args: any[]): void {
+        this.log(LogLevel.TRACE, message, ...args);
     }
 
     // Method to update configuration

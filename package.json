@@ -5,9 +5,8 @@
     "main": "src/index.ts",
     "scripts": {
         "build": "tsc",
-        "job": "ts-node src/cli/job.ts",
-        "server": "node api/app.js",
-        "dev": "nodemon api/app.js"
+        "job": "ts-node src/job-cli.ts",
+        "server": "nodemon api/app.js"
     },
     "keywords": [
         "rss",

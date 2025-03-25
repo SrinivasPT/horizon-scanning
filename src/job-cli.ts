@@ -1,4 +1,4 @@
-import { main } from '../index';
+import { pipeline } from './pipeline';
 
 // Parse command line arguments
 const args = process.argv.slice(2);
@@ -14,7 +14,7 @@ const jobId = args[0];
 console.log(`Starting job execution for job ID: ${jobId}`);
 
 // Execute the main function with the specified job ID
-main(jobId).catch(error => {
+pipeline(jobId).catch((error: any) => {
     console.error('Error running job:', error);
     process.exit(1);
 });

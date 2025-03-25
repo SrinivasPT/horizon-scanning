@@ -6,7 +6,7 @@
             "request": "launch",
             "name": "Debug Job 5",
             "runtimeExecutable": "npm",
-            "runtimeArgs": ["run", "job", "--", "8"],
+            "runtimeArgs": ["run", "job", "--", "1001"],
             "skipFiles": ["<node_internals>/**"],
             "console": "integratedTerminal",
             "internalConsoleOptions": "neverOpen",
