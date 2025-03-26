@@ -22,13 +22,16 @@ export const rssParser = async (state: State, jobConfig: JobConfig): Promise<Sta
 
 async function fetchRssFeed(rssUrl: string, jobConfig: JobConfig): Promise<Document[]> {
     logger.debug(`Fetching RSS feed from ${rssUrl}`);
-    const response = await axios.get(rssUrl, { timeout: 1000 });
+    const response = await axios.get(rssUrl, { timeout: 6000 });
     logger.debug(`RSS response received, content length: ${response.data.length}`);
 
     const parser = new Parser({
         explicitArray: true,
         mergeAttrs: true,
         xmlns: true,
+        // Add this to preserve CDATA information
+        explicitCharkey: true,
+        preserveChildrenOrder: true, // Fixed property name
     });
 
     const result = await parseStringPromise(response.data);
@@ -44,14 +47,35 @@ async function fetchRssFeed(rssUrl: string, jobConfig: JobConfig): Promise<Docum
     }
 
     // Normalize items
-    const items: Document[] = rawItems.map(item => ({
-        ...jobConfig.defaults,
-        title: item.title?.[0] || item.title || 'No title',
-        description: item.description?.[0] || item.description || item.summary?.[0] || '',
-        publishedOn: parseDate(item.pubDate?.[0] || item.published?.[0] || item['dc:date']?.[0]),
-        linkToRegChangeText: item.link?.[0]?.href || item.link?.[0] || item.link || '',
-    }));
+    const items: Document[] = rawItems.map(item => {
+        const { description, htmlContent } = getDescriptionContent(item);
+
+        return {
+            ...jobConfig.defaults,
+            title: item.title?.[0] || item.title || 'No title',
+            description,
+            htmlContent,
+            publishedOn: parseDate(item.pubDate?.[0] || item.published?.[0] || item['dc:date']?.[0]),
+            linkToRegChangeText: item.link?.[0]?.href || item.link?.[0] || item.link || '',
+        };
+    });
 
     logger.info(`Found ${items.length} items in the RSS feed`);
     return items;
+}
+
+function getDescriptionContent(item: any): { description: string; htmlContent: string } {
+    // Get the raw description content
+    const descriptionContent = item.description?.[0] || item.description || item.summary?.[0] || '';
+
+    // Check if description contains CDATA
+    const hasCDATA = typeof descriptionContent === 'object' && (descriptionContent['_'] || descriptionContent['#']);
+
+    // Extract HTML content if CDATA exists
+    const htmlContent = hasCDATA ? descriptionContent['_'] || descriptionContent['#'] : '';
+
+    // Set description to empty if CDATA exists, otherwise use the plain text
+    const description = hasCDATA ? '' : descriptionContent;
+
+    return { description, htmlContent };
 }

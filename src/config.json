@@ -68,5 +68,11 @@
             "regulationStatus": 486,
             "topic": "Financial Regulation"
         }
+    },
+    {
+        "id": "1004",
+        "name": "FED-REGISTER-REG-CHANGES",
+        "description": "Ded Register",
+        "pipeline": [{ "stage": "FED-REGISTER-PARSER" }]
     }
 ]
