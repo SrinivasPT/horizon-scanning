@@ -49,3 +49,30 @@ export function joinUrl(baseUrl: string, path: string): string {
         return cleanBaseUrl + cleanPath;
     }
 }
+
+export function extractValueFromObj(obj: any, key: string): string {
+    if (!obj || !key || typeof obj !== 'object') return '';
+    const value = obj[key];
+    if (!value) return '';
+
+    if (Array.isArray(value)) {
+        if (value.length === 0) return '';
+        // Handle arrays of arrays or objects
+        if (typeof value[0] === 'object' && value[0] !== null) {
+            return value[0]._ || String(value[0]).trim() || '';
+        }
+        return String(value[0]).trim();
+    }
+
+    if (typeof value === 'object') return value._ || '';
+    return String(value).trim();
+}
+
+export const parseDate = (dateStr: string): string => {
+    if (!dateStr) return '';
+
+    // Try ISO 8601 (Atom)
+    if (dateStr.includes('T')) return new Date(dateStr).toISOString();
+    // Try RFC 822 (RSS 2.0)
+    return new Date(dateStr).toISOString();
+};

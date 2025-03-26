@@ -8,6 +8,8 @@ export interface Document {
     summary?: string;
     linkToRegChangeText?: string;
     publishedOn?: string;
+    htmlContent?: string;
+    pdfContent?: string;
     // Other
     introducedOn?: string;
     citationId?: string;

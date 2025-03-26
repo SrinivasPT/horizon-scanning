@@ -1,5 +1,7 @@
 import * as fs from 'fs';
 import * as path from 'path';
+import { RssParseConfig } from './rss-parse';
+import { HtmlTableParseConfig } from './html-table-parse';
 
 export interface JobDefaults {
     source: string;
@@ -12,26 +14,10 @@ export interface PipelineStageParams {
     [key: string]: any;
 }
 
-export interface ColumnConfig {
-    name: string;
-    selector: string;
-    isLink?: boolean;
-    linkAttribute?: string;
-    attribute?: string;
-    extract?: 'text' | 'href' | 'html';
-    transform?: 'resolveUrl' | string; // Add this back as it's in your config.json
-}
-
-export interface HtmlTableParseConfig {
-    tableSelector: string;
-    columns: ColumnConfig[];
-    rowSelector: string;
-}
-
 export interface PipelineStage {
     stage: string;
     params?: PipelineStageParams;
-    config?: HtmlTableParseConfig | any;
+    config?: HtmlTableParseConfig | RssParseConfig | any;
 }
 
 export class JobConfig {
@@ -94,4 +80,9 @@ export class JobConfig {
         const configs = JobConfig.loadFromDefaultConfig();
         return configs.find(config => config.id === jobId);
     }
+}
+
+export enum StageType {
+    'HTML-TABLE-PARSER' = 'HTML-TABLE-PARSER',
+    'RSS-PARSER' = 'RSS-PARSER',
 }

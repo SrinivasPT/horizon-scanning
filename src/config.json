@@ -22,6 +22,42 @@
             }
         ],
         "defaults": {
+            "source": "FDIC",
+            "issuingAuthority": "FDIC",
+            "typeOfChange": 3,
+            "eventType": 481,
+            "regType": 542,
+            "identifier": "${publishedOn}",
+            "year": "${new Date(publishedOn).getFullYear()}",
+            "regulationStatus": 486,
+            "topic": "Financial Regulation"
+        }
+    },
+    {
+        "id": "1002",
+        "name": "SEC-NEWS-PRESS-RELEASES",
+        "description": "FDIC Financial Institution Letters",
+        "url": "https://www.sec.gov/news/pressreleases.rss",
+        "pipeline": [{ "stage": "RSS-PARSER" }],
+        "defaults": {
+            "source": "SEC",
+            "issuingAuthority": "SEC",
+            "typeOfChange": 3,
+            "eventType": 481,
+            "regType": 542,
+            "identifier": "${publishedOn}",
+            "year": "${new Date(publishedOn).getFullYear()}",
+            "regulationStatus": 486,
+            "topic": "Financial Regulation"
+        }
+    },
+    {
+        "id": "1003",
+        "name": "FDIC-NEWS-PRESS-RELEASES",
+        "description": "FDIC Press Releases",
+        "url": "https://public.govdelivery.com/topics/USFDIC_26/feed.rss",
+        "pipeline": [{ "stage": "RSS-PARSER" }],
+        "defaults": {
             "source": "SEC",
             "issuingAuthority": "SEC",
             "typeOfChange": 3,

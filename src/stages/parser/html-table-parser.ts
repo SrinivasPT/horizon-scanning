@@ -1,8 +1,9 @@
 import { logger, joinUrl } from '../../common';
 import { load } from 'cheerio';
-import { HtmlTableParseConfig, JobConfig } from 'src/model/job-config';
+import { JobConfig } from 'src/model/job-config';
 import { State } from 'src/model/state';
 import { Document } from 'src/model/document';
+import { HtmlTableParseConfig } from 'src/model/html-table-parse';
 
 export const htmlTableParser = (state: State, jobConfig: JobConfig): State => {
     logger.info(`Starting HTML Table Parser`);
