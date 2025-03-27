@@ -2,13 +2,50 @@ import { JobConfig } from './model/job-config';
 import { logger } from './common';
 import { factory } from './factory';
 import { State } from './model/state';
+import * as db from './services/db-service';
 
-async function pipeline(jobId: string): Promise<void> {
+export async function pipeline(jobId: string, correlationId: string): Promise<void> {
     logger.info(`Loading job configuration for ID: ${jobId}`);
 
-    let state: State = {};
+    try {
+        const jobConfig = initialize(jobId);
 
-    // Load the job configuration for the specified ID
+        preValidate(correlationId);
+
+        const runId = await db.startScan(jobConfig, correlationId);
+        let state: State = { runId, correlationId: correlationId };
+
+        // Execute each pipeline stage
+        for (let i = 0; i < jobConfig.pipeline.length; i++) {
+            const stage = jobConfig.pipeline[i];
+            logger.info(`Executing pipeline stage ${i + 1}/${jobConfig.pipeline.length}: ${stage.stage}`);
+
+            // Get the stage function from the factory
+            const stageFunction = factory[stage.stage as keyof typeof factory];
+
+            // Handle both async and sync functions. Promise.resolve will wrap sync returns in a Promise, and leave async returns as is
+            const stateState = await Promise.resolve(stageFunction(state, jobConfig));
+            state = { ...state, ...stateState };
+
+            logger.info(`Completed pipeline stage: ${stage.stage}`);
+        }
+
+        persist(jobConfig, state);
+    } catch (error) {
+        logger.error('Error running pipeline:', error);
+        db.scanFailed(jobId);
+        process.exit(1);
+    }
+}
+
+function preValidate(correlationId: string | undefined) {
+    if (!correlationId) {
+        logger.error('Correlation ID is required');
+        process.exit(1);
+    }
+}
+
+function initialize(jobId: string): JobConfig {
     const jobConfig = JobConfig.loadJobById(jobId);
 
     if (!jobConfig) {
@@ -21,41 +58,12 @@ async function pipeline(jobId: string): Promise<void> {
     logger.info(`URL: ${jobConfig.url}`);
     logger.info(`Pipeline stages: ${jobConfig.pipeline.length}`);
 
-    // Execute each pipeline stage
-    for (let i = 0; i < jobConfig.pipeline.length; i++) {
-        const stage = jobConfig.pipeline[i];
-        logger.info(`Executing pipeline stage ${i + 1}/${jobConfig.pipeline.length}: ${stage.stage}`);
+    return jobConfig;
+}
 
-        // Get the stage function from the factory
-        const stageFunction = factory[stage.stage as keyof typeof factory];
-
-        // Handle both async and sync functions
-        // Promise.resolve will wrap sync returns in a Promise, and leave async returns as is
-        state = await Promise.resolve(stageFunction(state, jobConfig));
-
-        logger.info(`Completed pipeline stage: ${stage.stage}`);
-    }
+function persist(jobConfig: JobConfig, state: State) {
+    db.completeScan(state.runId as number, state.documents as Document[]);
 
     logger.info(state.documents);
     logger.info('Job execution completed successfully.');
 }
-
-// Parse command line arguments and run the main function
-if (require.main === module) {
-    const args = process.argv.slice(2);
-
-    if (args.length < 1) {
-        logger.error('Job ID argument is required');
-        logger.info('Usage: npm start -- <job-id>');
-        process.exit(1);
-    }
-
-    const jobId = args[0];
-    pipeline(jobId).catch(error => {
-        logger.error('Error running job:', error);
-        process.exit(1);
-    });
-}
-
-// Export for testing or programmatic usage
-export { pipeline };

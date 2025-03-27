@@ -1,3 +1,4 @@
 -- TRUNCATE TABLE scanner;
 -- DELETE FROM scanner WHERE job_name = 'FINCEN-RESOURCES-ALERTS-ADVISORIES-NOTICES';
 SELECT * FROM scanner ORDER BY id DESC;
+SELECT * FROM documentsStaging;

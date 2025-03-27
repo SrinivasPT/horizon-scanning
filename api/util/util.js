@@ -1,5 +1,3 @@
-// Convert ES Module to CommonJS format
-
 // Helper function to convert UUID to binary
 const uuidToBinary = uuid => {
     // Ensure uuid is a string before calling replace

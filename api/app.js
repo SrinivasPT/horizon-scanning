@@ -12,6 +12,7 @@ app.use(bodyParser.urlencoded({ limit: '5mb', extended: true }));
 
 // Routes
 app.use('/api', scannerRoutes);
+app.use('/api/scanner', scannerRoutes);
 
 // Start server
 app.listen(PORT, () => {

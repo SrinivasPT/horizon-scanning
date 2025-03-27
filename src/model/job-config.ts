@@ -71,14 +71,14 @@ export class JobConfig {
         }
     }
 
-    /**
-     * Loads a specific job configuration by ID
-     * @param jobId The ID of the job to load
-     * @returns The JobConfig with the specified ID or undefined if not found
-     */
     static loadJobById(jobId: string): JobConfig | undefined {
         const configs = JobConfig.loadFromDefaultConfig();
         return configs.find(config => config.id === jobId);
+    }
+
+    static getAllJobIds(): string[] {
+        const configs = JobConfig.loadFromDefaultConfig();
+        return configs.map(config => config.id);
     }
 }
 

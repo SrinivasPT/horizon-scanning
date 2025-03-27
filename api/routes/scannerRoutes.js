@@ -14,4 +14,7 @@ router.put('/scan-failed', scannerController.failScannerJob);
 // Get scanner job details
 router.get('/:id', scannerController.getScannerJob);
 
+// Route to populate documents staging from scanner job result data
+router.post('/:id/populate-staging', scannerController.populateDocumentsStaging);
+
 module.exports = router;

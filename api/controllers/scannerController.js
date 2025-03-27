@@ -1,114 +1,95 @@
-const pool = require('../db/database');
-// Removed UUID imports since we're using BIGINT now
+const scannerService = require('../services/scannerService');
+
+// Helper function for standardized responses
+const sendResponse = (res, statusCode, success, message, data = {}) => {
+    const response = { success, message, ...data };
+    return res.status(statusCode).json(response);
+};
 
 // Start a new scanner job
 exports.startScannerJob = async (req, res) => {
     try {
-        const { job_id, job_name, source } = req.body;
+        const { jobId, correlationId, jobName, source } = req.body;
+        console.log('Received request to start scanner job:', jobId);
 
-        if (!job_id || !job_name || !source) {
-            return res.status(400).json({ error: 'Missing required fields: job_id, job_name, and source are required' });
-        }
+        if (!jobId || !jobName || !source)
+            return sendResponse(res, 400, false, 'Missing required fields: jobId, jobName, and source are required');
 
-        // No need to generate UUID, database will use auto-increment or we'd provide a number directly
-
-        const connection = await pool.getConnection();
-        try {
-            const [result] = await connection.query(
-                `INSERT INTO scanner (job_id, job_name, source, start_time, status)
-                VALUES (?, ?, ?, ?, 'RUNNING')`,
-                [job_id, job_name, source, new Date()]
-            );
-
-            connection.release();
-            // Get the auto-generated ID
-            const id = result.insertId;
-            return res.status(201).json({ message: 'Scanner job started successfully', id, job_name, status: 'RUNNING' });
-        } catch (error) {
-            connection.release();
-            throw error;
-        }
+        const result = await scannerService.startJob(jobId, correlationId, jobName, source);
+        return sendResponse(res, 201, true, 'Scanner job started successfully', result);
     } catch (error) {
         console.error('Error starting scanner job:', error.message);
-        return res.status(500).json({ error: 'Failed to start scanner job', details: error.message });
+        return sendResponse(res, 500, false, 'Failed to start scanner job', { details: error.message });
     }
 };
 
 // Complete a scanner job with success
 exports.completeScannerJob = async (req, res) => {
     try {
-        const { id, result_data } = req.body;
+        console.log('Received request to complete scanner job:', req.body);
+        const { id, resultData } = req.body;
+        const jobId = id || 'unknown';
 
         if (!id) {
-            return res.status(400).json({ error: 'Missing required field: id' });
+            console.error('Missing required field: id');
+            return sendResponse(res, 400, false, 'Missing required field: id');
         }
 
-        const end_time = new Date();
-        const connection = await pool.getConnection();
+        console.log(`Processing completion for job ID: ${jobId}`);
+        const result = await scannerService.completeJob(jobId, resultData);
+        console.log(`Job completion update result:`, result);
 
         try {
-            const [result] = await connection.query(
-                `UPDATE scanner
-                SET status = 'COMPLETED', end_time = ?, result_data = ?
-                WHERE id = ? AND status = 'RUNNING'`,
-                [end_time, JSON.stringify(result_data || {}), id] // No need to convert ID
-            );
-
-            connection.release();
-
-            if (result.affectedRows === 0) {
-                return res.status(404).json({ error: 'UPDATE: Scanner job not found or not in running state' });
-            }
-
-            return res.status(200).json({ message: 'Scanner job completed successfully', id, status: 'COMPLETED' });
-        } catch (error) {
-            connection.release();
-            throw error;
+            console.log(`Starting to populate documents staging for job ID: ${jobId}`);
+            await scannerService.populateDocumentsStaging(jobId, resultData);
+            console.log(`Successfully populated documents staging for job ID: ${jobId}`);
+        } catch (stagingError) {
+            console.error(`Error populating documents staging for job ID: ${jobId}:`, stagingError);
+            return sendResponse(res, 500, false, 'Failed to populate documents staging', {
+                details: stagingError.message,
+                jobId: jobId,
+                status: 'PARTIAL_COMPLETION',
+            });
         }
+
+        if (result.affectedRows === 0) {
+            console.warn(`Job ID: ${jobId} not found or not in running state`);
+            return sendResponse(res, 404, false, 'Scanner job not found or not in running state', { jobId: jobId });
+        }
+
+        console.log(`Successfully completed job ID: ${jobId}`);
+        return sendResponse(res, 200, true, 'Scanner job completed successfully', {
+            id: jobId,
+            status: 'COMPLETED',
+            timestamp: new Date().toISOString(),
+            documentsProcessed: resultData?.documents?.length || 0,
+        });
     } catch (error) {
-        console.error('Error completing scanner job:', error);
-        return res.status(500).json({ error: 'Failed to complete scanner job', details: error.message });
+        const jobId = req.body?.id || 'unknown';
+        console.error(`Error completing scanner job ID: ${jobId}:`, error);
+        return sendResponse(res, 500, false, 'Failed to complete scanner job', {
+            details: error.message,
+            jobId: jobId,
+            status: 'ERROR',
+        });
     }
 };
 
 // Mark a scanner job as failed
 exports.failScannerJob = async (req, res) => {
     try {
-        const { id, error_message } = req.body;
+        const { id, errorMessage } = req.body;
 
-        if (!id) {
-            return res.status(400).json({ error: 'Missing required field: id' });
-        }
+        if (!id) return sendResponse(res, 400, false, 'Missing required field: id');
 
-        const end_time = new Date();
-        const connection = await pool.getConnection();
+        const result = await scannerService.failJob(id, errorMessage);
 
-        try {
-            const [result] = await connection.query(
-                `UPDATE scanner
-        SET status = 'FAILED', end_time = ?, error_message = ?
-        WHERE id = ? AND status = 'RUNNING'`,
-                [end_time, error_message || 'Unknown error', id] // No need to convert ID
-            );
+        if (result.affectedRows === 0) return sendResponse(res, 404, false, 'Scanner job not found or not in running state');
 
-            connection.release();
-
-            if (result.affectedRows === 0) {
-                return res.status(404).json({ error: 'FAILED: Scanner job not found or not in running state' });
-            }
-
-            return res.status(200).json({
-                message: 'Scanner job marked as failed',
-                id,
-                status: 'failed',
-            });
-        } catch (error) {
-            connection.release();
-            throw error;
-        }
+        return sendResponse(res, 200, true, 'Scanner job marked as failed', { id, status: 'failed' });
     } catch (error) {
         console.error('Error marking scanner job as failed:', error);
-        return res.status(500).json({ error: 'Failed to update scanner job status', details: error.message });
+        return sendResponse(res, 500, false, 'Failed to update scanner job status', { details: error.message });
     }
 };
 
@@ -117,29 +98,44 @@ exports.getScannerJob = async (req, res) => {
     try {
         const { id } = req.params;
 
-        if (!id) {
-            return res.status(400).json({ error: 'Missing required parameter: id' });
-        }
+        if (!id) return sendResponse(res, 400, false, 'Missing required parameter: id');
 
-        const connection = await pool.getConnection();
+        const job = await scannerService.getJob(id);
 
-        try {
-            const [rows] = await connection.query('SELECT * FROM scanner WHERE id = ?', [id]); // No need to convert ID
+        if (!job) return sendResponse(res, 404, false, 'Scanner job not found');
 
-            connection.release();
-
-            if (rows.length === 0) {
-                return res.status(404).json({ error: 'Scanner job not found' });
-            }
-
-            // No need to convert ID in the response
-            return res.status(200).json(rows[0]);
-        } catch (error) {
-            connection.release();
-            throw error;
-        }
+        return sendResponse(res, 200, true, 'Job retrieved successfully', job);
     } catch (error) {
         console.error('Error retrieving scanner job:', error);
-        return res.status(500).json({ error: 'Failed to retrieve scanner job', details: error.message });
+        return sendResponse(res, 500, false, 'Failed to retrieve scanner job', { details: error.message });
     }
 };
+
+exports.populateDocumentsStaging = async (req, res) => {
+    try {
+        const { id } = req.params;
+
+        if (!id) {
+            return res.status(400).json({ error: 'Scanner job ID is required' });
+        }
+
+        const result = await scannerService.populateDocumentsStaging(parseInt(id, 10));
+
+        return res.status(200).json({
+            success: true,
+            message: `Successfully populated documents staging with ${result.insertedCount} records`,
+            data: result,
+        });
+    } catch (error) {
+        console.error('Error populating documents staging:', error);
+        return res.status(500).json({
+            success: false,
+            message: 'Failed to populate documents staging',
+            error: error.message,
+        });
+    }
+};
+
+// Fix constructor error from the original code
+class ScannerController {}
+module.exports = exports;
