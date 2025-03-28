@@ -1,29 +1,26 @@
-DROP TABLE scanner;
-DROP TABLE documentsStaging;
+DROP TABLE jobRun;
+DROP TABLE documentStaging;
 DROP TABLE documents;
 
-CREATE TABLE scanner (
+CREATE TABLE jobRun (
     id BIGINT AUTO_INCREMENT NOT NULL PRIMARY KEY,
     correlationId VARCHAR(50) NOT NULL,
-    jobId INT NOT NULL,
-    jobName VARCHAR(100) NOT NULL,
-    SOURCE VARCHAR(100) NOT NULL,
+    jobId VARCHAR(100) NOT NULL,
+    resultData JSON,
+    jobStatus ENUM('RUNNING', 'COMPLETED', 'FAILED') NOT NULL,
     startTime DATETIME NOT NULL,
     endTime DATETIME,
-    STATUS ENUM('RUNNING', 'COMPLETED', 'FAILED') NOT NULL,
     errorMessage TEXT,
-    resultData JSON,
     processed BOOLEAN DEFAULT FALSE,
     createdAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     updatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 );
 
 
-CREATE TABLE documentsStaging (
+CREATE TABLE documentStaging (
     id SERIAL PRIMARY KEY,
-    correlationId VARCHAR(50) NOT NULL,
-    jobRunId INT NOT NULL,
-    SOURCE VARCHAR(255),
+    jobRunId BIGINT NOT NULL REFERENCES jobRun(id),
+    `source` VARCHAR(255),
     typeOfChange VARCHAR(100),
     eventType VARCHAR(100),
     issuingAuthority VARCHAR(255),
@@ -38,7 +35,7 @@ CREATE TABLE documentsStaging (
     citationId VARCHAR(100),
     billType VARCHAR(50),
     regType VARCHAR(50),
-    YEAR CHAR(4),
+     `year` CHAR(4),
     regulationStatus VARCHAR(100),
     billStatus VARCHAR(100),
     firstEffectiveDate TIMESTAMP,
@@ -51,9 +48,8 @@ CREATE TABLE documentsStaging (
 
 CREATE TABLE documents (
     id SERIAL PRIMARY KEY,
-    correlationId VARCHAR(50) NOT NULL,
     jobRunId INT NOT NULL,
-    SOURCE VARCHAR(255),
+    `source` VARCHAR(255),
     typeOfChange VARCHAR(100),
     eventType VARCHAR(100),
     issuingAuthority VARCHAR(255),
@@ -68,7 +64,7 @@ CREATE TABLE documents (
     citationId VARCHAR(100),
     billType VARCHAR(50),
     regType VARCHAR(50),
-    YEAR CHAR(4),
+    `year` CHAR(4),
     regulationStatus VARCHAR(100),
     billStatus VARCHAR(100),
     firstEffectiveDate TIMESTAMP,
@@ -82,13 +78,13 @@ CREATE TABLE documents (
 
 DELIMITER //
 -- DROP TRIGGER before_insert_scanner;
-CREATE TRIGGER before_insert_scanner
-BEFORE INSERT ON scanner
+CREATE TRIGGER before_insert_jobRun
+BEFORE INSERT ON jobRun
 FOR EACH ROW
 BEGIN
-    IF NEW.status = 'RUNNING' THEN
-        IF EXISTS (SELECT 1 FROM scanner WHERE jobName = NEW.jobName AND STATUS = 'RUNNING') THEN
-            SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Only one running job per jobName is allowed';
+    IF NEW.jobStatus = 'RUNNING' THEN
+        IF EXISTS (SELECT 1 FROM jobRun WHERE jobId = NEW.jobId AND jobStatus = 'RUNNING') THEN
+            SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Only one running job per jobId is allowed';
         END IF;
     END IF;
 END;//

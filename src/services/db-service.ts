@@ -9,20 +9,18 @@ export const startScan = async (jobConfig: JobConfig, correlationId: string): Pr
         const payload = {
             jobId: jobConfig.id,
             correlationId: correlationId,
-            jobName: jobConfig.name,
-            source: jobConfig.defaults.source,
         };
         const response = await axios.post(`${apiUrl}/start-scan`, payload);
         return response.data.id;
     } catch (error) {
-        console.error(`Error starting scan for agency ${jobConfig}:`, error);
+        console.error(`Error starting scan for job ${jobConfig}:`, error);
         throw error;
     }
 };
 
 export const completeScan = async (jobRunId: number, documents: Document[]): Promise<void> => {
     try {
-        const payload = { id: jobRunId, resultData: documents, status: 'COMPLETED' };
+        const payload = { jobRunId, resultData: documents, jobStatus: 'COMPLETED' };
         const response = await axios.put(`${apiUrl}/complete-scan`, payload, { headers: { 'Content-Type': 'application/json' } });
         if (response.status !== 200) throw new Error(`API upsert failed with status: ${response.status}`);
     } catch (error) {
@@ -33,7 +31,7 @@ export const completeScan = async (jobRunId: number, documents: Document[]): Pro
 
 export const scanFailed = async (jobRunId: string): Promise<void> => {
     try {
-        const payload = { id: jobRunId, status: 'FAILED' };
+        const payload = { id: jobRunId, jobStatus: 'FAILED' };
         const response = await axios.put(`${apiUrl}/complete-scan`, payload, { headers: { 'Content-Type': 'application/json' } });
 
         if (response.status !== 200) throw new Error(`API issue 1 failed with status: ${response.status}`);

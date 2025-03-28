@@ -8,25 +8,25 @@ class ScannerService {
     async startJob(jobId, correlationId, jobName, source) {
         return withConnection(async connection => {
             const [result] = await connection.query(
-                `INSERT INTO scanner (jobId, correlationId, jobName, source, startTime, status)
-                VALUES (?, ?, ?, ?, ?, 'RUNNING')`,
-                [jobId, correlationId, jobName, source, new Date()]
+                `INSERT INTO jobRun (jobId, correlationId, startTime, jobStatus)
+                VALUES (?, ?, ?, 'RUNNING')`,
+                [jobId, correlationId, new Date()]
             );
 
-            return { id: result.insertId, jobName, status: 'RUNNING' };
+            return { id: result.insertId, jobStatus: 'RUNNING' };
         });
     }
 
     /**
      * Complete a scanner job with success status
      */
-    async completeJob(id, resultData) {
+    async completeJob(jobRunId, resultData) {
         return withConnection(async connection => {
             const [result] = await connection.query(
-                `UPDATE scanner
-                SET status = 'COMPLETED', endTime = ?, resultData = ?
-                WHERE id = ? AND status = 'RUNNING'`,
-                [new Date(), JSON.stringify(resultData || {}), id]
+                `UPDATE jobRun
+                SET jobStatus = 'COMPLETED', endTime = ?, resultData = ?
+                WHERE id = ? AND jobStatus = 'RUNNING'`,
+                [new Date(), JSON.stringify(resultData || {}), jobRunId]
             );
 
             return { affectedRows: result.affectedRows };
@@ -35,28 +35,24 @@ class ScannerService {
 
     /**
      * Populate documents_staging table with data from scanner resultData
-     * @param id The scanner job ID
+     * @param jobRunId The scanner job ID
      * @returns Object with count of inserted records
      */
-    async populateDocumentsStaging(id, providedResultData = null) {
+    async populateDocumentsStaging(jobRunId, providedResultData = null) {
         return withConnection(async connection => {
             // First, get the job to access correlationId and resultData
-            const [jobRows] = await connection.query('SELECT correlationId, jobId, resultData FROM scanner WHERE id = ?', [id]);
+            // const [jobRows] = await connection.query('SELECT correlationId, jobId, resultData FROM jobRun WHERE id = ?', [jobRunId]);
 
-            if (jobRows.length === 0) {
-                throw new Error(`No scanner job found with id ${id}`);
-            }
+            // if (jobRows.length === 0) {
+            //     throw new Error(`No job found with id ${jobRunId}`);
+            // }
 
-            const job = jobRows[0];
-            const correlationId = job.correlationId;
-            const jobRunId = job.jobId;
+            // const job = jobRows[0];
 
             // Use provided resultData if available, otherwise use from DB
-            const resultData = providedResultData || job.resultData;
+            const resultData = providedResultData;
 
-            if (!resultData) {
-                return { insertedCount: 0 };
-            }
+            if (!resultData) return { insertedCount: 0 };
 
             // Ensure resultData is properly formatted as JSON string
             let resultDataJSON;
@@ -73,18 +69,17 @@ class ScannerService {
                 throw new Error('Invalid resultData format. Expected JSON object or string');
             }
 
-            // Insert data from resultData JSON into documents_staging using JSON_TABLE
+            // Insert data from resultData JSON into documentStaging using JSON_TABLE
             const [result] = await connection.query(
                 `
-                INSERT INTO documentsStaging (
-                    correlationId, jobRunId, source, typeOfChange, eventType,
+                INSERT INTO documentStaging (
+                    jobRunId, source, typeOfChange, eventType,
                     issuingAuthority, identifier, title, summary, linkToRegChangeText,
                     publishedOn, htmlContent, introducedOn, citationId,
                     billType, regType, year, regulationStatus, billStatus,
                     firstEffectiveDate, enactedDate, topic, comments
                 )
                 SELECT
-                    ? AS correlationId,
                     ? AS jobRunId,
                     doc.source,
                     doc.typeOfChange,
@@ -135,11 +130,41 @@ class ScannerService {
                         )
                     ) AS doc
             `,
-                [correlationId, jobRunId, resultDataJSON]
+                [jobRunId, resultDataJSON]
             );
 
-            // Update the processed flag in scanner table
-            await connection.query('UPDATE scanner SET processed = TRUE WHERE id = ?', [id]);
+            // Update the processed flag in jobRun table
+            await connection.query('UPDATE jobRun SET processed = TRUE WHERE id = ?', [jobRunId]);
+
+            return { insertedCount: result.affectedRows };
+        });
+    }
+
+    /**
+     * Insert processed records from documentStaging to documents table
+     */
+    async moveToDocuments() {
+        return withConnection(async connection => {
+            const [result] = await connection.query(
+                `INSERT INTO documents (
+                    jobRunId, source, typeOfChange, eventType,
+                    issuingAuthority, identifier, title, summary, linkToRegChangeText,
+                    publishedOn, htmlContent, pdfContent, introducedOn, citationId,
+                    billType, regType, year, regulationStatus, billStatus,
+                    firstEffectiveDate, enactedDate, topic, comments
+                )
+                SELECT
+                    jobRunId, source, typeOfChange, eventType,
+                    issuingAuthority, identifier, title, summary, linkToRegChangeText,
+                    publishedOn, htmlContent, pdfContent, introducedOn, citationId,
+                    billType, regType, year, regulationStatus, billStatus,
+                    firstEffectiveDate, enactedDate, topic, comments
+                FROM documentStaging
+                WHERE processed = FALSE`
+            );
+
+            // Mark records as processed
+            await connection.query('UPDATE documentStaging SET processed = TRUE WHERE processed = FALSE');
 
             return { insertedCount: result.affectedRows };
         });
@@ -151,9 +176,9 @@ class ScannerService {
     async failJob(id, errorMessage) {
         return withConnection(async connection => {
             const [result] = await connection.query(
-                `UPDATE scanner
-                SET status = 'FAILED', endTime = ?, errorMessage = ?
-                WHERE id = ? AND status = 'RUNNING'`,
+                `UPDATE jobRun
+                SET jobStatus = 'FAILED', endTime = ?, errorMessage = ?
+                WHERE id = ? AND jobStatus = 'RUNNING'`,
                 [new Date(), errorMessage || 'Unknown error', id]
             );
 
@@ -166,7 +191,7 @@ class ScannerService {
      */
     async getJob(id) {
         return withConnection(async connection => {
-            const [rows] = await connection.query('SELECT * FROM scanner WHERE id = ?', [id]);
+            const [rows] = await connection.query('SELECT * FROM jobRun WHERE id = ?', [id]);
 
             if (rows.length > 0) {
                 // If resultData exists and is a string, parse it to an object
