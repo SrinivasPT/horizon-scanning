@@ -1,7 +1,5 @@
 import { logger, parseDate } from '../../common';
-import { State } from 'src/model/state';
-import { Document } from 'src/model/document';
-import { JobConfig } from 'src/model/job-config';
+import { Document, JobConfig, State } from '../../model';
 import axios from 'axios';
 
 export const fedRegisterParser = async (state: State, jobConfig: JobConfig): Promise<State> => {

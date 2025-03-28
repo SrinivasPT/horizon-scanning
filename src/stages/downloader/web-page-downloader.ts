@@ -1,7 +1,6 @@
 import axios from 'axios';
 import { logger } from '../../common';
-import { JobConfig } from 'src/model/job-config';
-import { State } from 'src/model/state';
+import { JobConfig, State } from '../../model';
 
 export const webPageDownloader = async (state: State, jobConfig: JobConfig): Promise<State> => {
     logger.info(`Starting web page download for: ${jobConfig.url}`);

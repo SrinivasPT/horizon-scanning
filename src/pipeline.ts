@@ -30,6 +30,10 @@ export async function pipeline(jobId: string, correlationId: string): Promise<vo
             logger.info(`Completed pipeline stage: ${stage.stage}`);
         }
 
+        // Post Process
+        factory['EXPRESSION-EVAL-ENRICHER'](state, jobConfig);
+        factory['TEXT-CLEANUP-ENRICHER'](state, jobConfig);
+
         persist(jobConfig, state);
     } catch (error) {
         logger.error('Error running pipeline:', error);

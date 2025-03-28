@@ -1,7 +1,5 @@
-import { logger, joinUrl, extractValueFromObj, parseDate } from '../../common';
-import { State } from 'src/model/state';
-import { Document } from 'src/model/document';
-import { JobConfig } from 'src/model/job-config';
+import { logger, parseDate } from '../../common';
+import { Document, JobConfig, State } from '../../model';
 import axios from 'axios';
 import { Parser } from 'xml2js';
 import { parseStringPromise } from 'xml2js';

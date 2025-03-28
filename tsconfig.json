@@ -8,10 +8,8 @@
         "esModuleInterop": true,
         "skipLibCheck": true,
         "forceConsistentCasingInFileNames": true,
-        "baseUrl": ".",
-        "paths": {
-            "lib/*": ["src/lib/*"]
-        },
+        "baseUrl": "./",
+        "paths": {},
         "allowJs": true
     },
     "include": ["src/**/*"],

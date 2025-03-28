@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { JobConfig } from 'src/model/job-config';
+import { JobConfig } from '../model/job-config';
 
 const apiUrl = process.env.API_URL || 'http://localhost:3000/api';
 
