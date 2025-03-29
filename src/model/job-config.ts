@@ -2,6 +2,7 @@ import * as fs from 'fs';
 import * as path from 'path';
 import { RssParseConfig } from './rss-parse';
 import { HtmlTableParseConfig } from './html-table-parse';
+import { ExtractionOptions } from './summary-extraction-html';
 
 export interface JobDefaults {
     source: string;
@@ -17,7 +18,7 @@ export interface PipelineStageParams {
 export interface PipelineStage {
     stage: string;
     params?: PipelineStageParams;
-    config?: HtmlTableParseConfig | RssParseConfig | any;
+    config?: HtmlTableParseConfig | RssParseConfig | ExtractionOptions | any;
 }
 
 export class JobConfig {

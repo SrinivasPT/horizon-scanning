@@ -5,3 +5,4 @@ export * from './state';
 // State specific models
 export * from './rss-parse';
 export * from './html-table-parse';
+export * from './summary-extraction-html';

@@ -51,7 +51,7 @@ async function fetchRssFeed(rssUrl: string, jobConfig: JobConfig): Promise<Docum
         return {
             ...jobConfig.defaults,
             title: item.title?.[0] || item.title || 'No title',
-            description,
+            summary: description,
             htmlContent,
             publishedOn: parseDate(item.pubDate?.[0] || item.published?.[0] || item['dc:date']?.[0]),
             linkToRegChangeText: item.link?.[0]?.href || item.link?.[0] || item.link || '',

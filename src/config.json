@@ -1,7 +1,23 @@
 [
     {
+        "id": "BIS-PRESS-RELEASES",
+        "title": "BIS BCBS publications",
+        "url": "https://www.bis.org/doclist/all_pressrels.rss",
+        "pipeline": [{ "stage": "RSS-PARSER" }],
+        "defaults": {
+            "source": "BIS",
+            "issuingAuthority": "BIS",
+            "typeOfChange": 3,
+            "eventType": 481,
+            "regType": 542,
+            "identifier": "${publishedOn.split('T')[0]}",
+            "year": "${new Date(publishedOn).getFullYear()}",
+            "regulationStatus": 486
+        }
+    },
+    {
         "id": "BIS-BCBS-PUBLICATION",
-        "title": "BCBS publications",
+        "title": "BIS BCBS publications",
         "url": "https://www.bis.org/doclist/bcbspubls.rss",
         "pipeline": [{ "stage": "RSS-PARSER" }],
         "defaults": {
@@ -16,9 +32,24 @@
         }
     },
     {
-        "id": "1001",
-        "name": "FDIC-NEWS-FIN-INST-LETTERS",
-        "description": "FDIC Financial Institution Letters",
+        "id": "BIS-OTHER-PUBLICATION",
+        "title": "BIS Other Publications",
+        "url": "https://www.bis.org/doclist/other_publs.rss",
+        "pipeline": [{ "stage": "RSS-PARSER" }],
+        "defaults": {
+            "source": "BIS",
+            "issuingAuthority": "BIS",
+            "typeOfChange": 3,
+            "eventType": 481,
+            "regType": 542,
+            "identifier": "${publishedOn.split('T')[0]}",
+            "year": "${new Date(publishedOn).getFullYear()}",
+            "regulationStatus": 486
+        }
+    },
+    {
+        "id": "FDIC-NEWS-FIN-INST-LETTERS",
+        "title": "FDIC News Financial Institution Letters",
         "url": "https://fdic.gov/news/financial-institution-letters/index.html",
         "pipeline": [
             {
@@ -35,6 +66,10 @@
                         { "name": "linkToRegChangeText", "selector": ".news-title", "isLink": true }
                     ]
                 }
+            },
+            {
+                "stage": "SUMMARY-FROM-SITE-LINK-EXTRACTOR",
+                "config": { "selector": "h2:contains('Summary:')" }
             }
         ],
         "defaults": {
@@ -43,7 +78,83 @@
             "typeOfChange": 3,
             "eventType": 481,
             "regType": 542,
-            "identifier": "${publishedOn}",
+            "identifier": "${publishedOn.split('T')[0]}",
+            "year": "${new Date(publishedOn).getFullYear()}",
+            "regulationStatus": 486,
+            "topic": "Financial Regulation"
+        }
+    },
+    {
+        "id": "FDIC-NEWS-PRESS-RELEASES",
+        "title": "FDIC News Press Releases",
+        "url": "https://public.govdelivery.com/topics/USFDIC_26/feed.rss",
+        "pipeline": [
+            {
+                "stage": "RSS-PARSER"
+            },
+            { "stage": "SUMMARY-HTML-TO-TEXT-EXTRACTOR" }
+        ],
+        "defaults": {
+            "source": "FDIC",
+            "issuingAuthority": "FDIC",
+            "typeOfChange": 3,
+            "eventType": 481,
+            "regType": 542,
+            "identifier": "${publishedOn.split('T')[0]}",
+            "year": "${new Date(publishedOn).getFullYear()}",
+            "regulationStatus": 486,
+            "topic": "Financial Regulation"
+        }
+    },
+    {
+        "id": "FRB-NEWS-PRESS-RELEASES",
+        "title": "Federal Reserve Bank News Press Releases",
+        "url": "https://www.federalreserve.gov/feeds/press_all.xml",
+        "pipeline": [{ "stage": "RSS-PARSER" }],
+        "defaults": {
+            "source": "FRB",
+            "issuingAuthority": "FRB",
+            "typeOfChange": 3,
+            "eventType": 481,
+            "regType": 542,
+            "identifier": "${publishedOn.split('T')[0]}",
+            "year": "${new Date(publishedOn).getFullYear()}",
+            "regulationStatus": 486,
+            "topic": "Financial Regulation"
+        }
+    },
+    {
+        "id": "FINCEN-NEWS",
+        "title": "FINCEN News",
+        "url": "https://www.fincen.gov/news-room/news",
+        "pipeline": [
+            {
+                "stage": "WEB-PAGE-DOWNLOADER"
+            },
+            {
+                "stage": "HTML-TABLE-PARSER",
+                "config": {
+                    "tableSelector": ".views-view-grid .views-row",
+                    "columns": [
+                        { "name": "publishedOn", "selector": ".views-field-field-date-release" },
+                        { "name": "title", "selector": ".views-field-title" },
+                        { "name": "summary", "selector": ".views-field-body" },
+                        { "name": "linkToRegChangeText", "selector": ".views-field-title", "isLink": true }
+                    ]
+                }
+            },
+            {
+                "stage": "SUMMARY-FROM-SITE-LINK-EXTRACTOR",
+                "config": { "selector": ".region.region-content" }
+            }
+        ],
+        "defaults": {
+            "source": "FINCEN",
+            "issuingAuthority": "FINCEN",
+            "typeOfChange": 3,
+            "eventType": 481,
+            "regType": 542,
+            "identifier": "${publishedOn.split('T')[0]}",
             "year": "${new Date(publishedOn).getFullYear()}",
             "regulationStatus": 486,
             "topic": "Financial Regulation"
@@ -67,24 +178,7 @@
             "topic": "Financial Regulation"
         }
     },
-    {
-        "id": "1003",
-        "name": "FDIC-NEWS-PRESS-RELEASES",
-        "description": "FDIC Press Releases",
-        "url": "https://public.govdelivery.com/topics/USFDIC_26/feed.rss",
-        "pipeline": [{ "stage": "RSS-PARSER" }],
-        "defaults": {
-            "source": "SEC",
-            "issuingAuthority": "SEC",
-            "typeOfChange": 3,
-            "eventType": 481,
-            "regType": 542,
-            "identifier": "${publishedOn}",
-            "year": "${new Date(publishedOn).getFullYear()}",
-            "regulationStatus": 486,
-            "topic": "Financial Regulation"
-        }
-    },
+
     {
         "id": "1004",
         "name": "FED-REGISTER-REG-CHANGES",

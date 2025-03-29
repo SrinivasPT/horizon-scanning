@@ -76,3 +76,32 @@ export const parseDate = (dateStr: string): string => {
     // Try RFC 822 (RSS 2.0)
     return new Date(dateStr).toISOString();
 };
+
+export function cleanText(text: string): string {
+    if (!text) return '';
+
+    // Step 1: Remove known patterns and artifacts
+    let cleaned = text
+        .replace(/^=+READOUT: /, '') // Remove READOUT prefix
+        .replace(/\s*Immediate Release\s+.+?\d{4}\s*/gs, '') // Remove release line
+        .replace(/\*{5,}/g, '') // Remove asterisk bars
+        .replace(/[\r\n]+/g, '\n') // Normalize line breaks
+        .replace(/[ \t]{2,}/g, ' ') // Collapse multiple spaces
+        .trim();
+
+    // Step 2: Reconstruct paragraphs properly
+    cleaned = cleaned
+        .split('\n')
+        .map(line => line.trim())
+        .filter(line => line.length > 0 && !/^[=*]+$/.test(line))
+        .join('\n\n');
+
+    // Step 3: Fix broken sentences and formatting
+    cleaned = cleaned
+        .replace(/([a-z,])\n([a-z"“])/gi, '$1 $2') // Join split words
+        .replace(/([.!?])\s*\n(\w)/g, '$1 $2') // Fix sentence breaks
+        .replace(/\n{3,}/g, '\n\n') // Limit consecutive newlines
+        .trim();
+
+    return cleaned;
+}

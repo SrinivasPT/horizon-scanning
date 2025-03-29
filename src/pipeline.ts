@@ -68,6 +68,6 @@ function initialize(jobId: string): JobConfig {
 function persist(jobConfig: JobConfig, state: State) {
     db.completeScan(state.runId as number, state.documents as Document[]);
 
-    logger.info(state.documents);
-    logger.info('Job execution completed successfully.');
+    // logger.info(state.documents);
+    // logger.info('Job execution completed successfully.');
 }
