@@ -40,34 +40,26 @@ class ScannerService {
      */
     async populateDocumentsStaging(jobRunId, providedResultData = null, lastRunDate) {
         return withConnection(async connection => {
-            // First, get the job to access correlationId and resultData
-            // const [jobRows] = await connection.query('SELECT correlationId, jobId, resultData FROM jobRun WHERE id = ?', [jobRunId]);
-
-            // if (jobRows.length === 0) {
-            //     throw new Error(`No job found with id ${jobRunId}`);
-            // }
-
-            // const job = jobRows[0];
-
-            // Use provided resultData if available, otherwise use from DB
             const resultData = providedResultData;
 
             if (!resultData) return { insertedCount: 0 };
 
-            // Ensure resultData is properly formatted as JSON string
-            let resultDataJSON;
-            if (typeof resultData === 'string') {
-                try {
-                    // Validate it's proper JSON by parsing and re-stringifying
-                    resultDataJSON = JSON.stringify(JSON.parse(resultData));
-                } catch (error) {
-                    throw new Error(`Invalid JSON in resultData: ${error.message}`);
-                }
-            } else if (typeof resultData === 'object') {
-                resultDataJSON = JSON.stringify(resultData);
-            } else {
-                throw new Error('Invalid resultData format. Expected JSON object or string');
-            }
+            // // Ensure resultData is properly formatted as JSON string
+            // let resultDataJSON;
+            // if (typeof resultData === 'string') {
+            //     try {
+            //         // Validate it's proper JSON by parsing and re-stringifying
+            //         resultDataJSON = JSON.stringify(JSON.parse(resultData));
+            //     } catch (error) {
+            //         throw new Error(`Invalid JSON in resultData: ${error.message}`);
+            //     }
+            // } else if (typeof resultData === 'object') {
+            //     resultDataJSON = JSON.stringify(resultData);
+            // } else {
+            //     throw new Error('Invalid resultData format. Expected JSON object or string');
+            // }
+
+            // console.log('Last Run Date:', lastRunDate);
 
             // Insert data from resultData JSON into documentStaging using JSON_TABLE
             // Only insert records where publishedOn >= lastRunDate
@@ -132,22 +124,10 @@ class ScannerService {
                     ) AS doc
                 WHERE DATE(doc.publishedOn) >= DATE(?)
             `,
-                [jobRunId, resultDataJSON, lastRunDate]
+                [jobRunId, JSON.stringify(resultData), lastRunDate]
             );
 
-            // Update the processed flag in jobRun table
-            await connection.query('UPDATE jobRun SET processed = TRUE WHERE id = ?', [jobRunId]);
-
-            return { insertedCount: result.affectedRows };
-        });
-    }
-
-    /**
-     * Insert processed records from documentStaging to documents table
-     */
-    async moveToDocuments() {
-        return withConnection(async connection => {
-            const [result] = await connection.query(
+            const [finalResult] = await connection.query(
                 `INSERT INTO documents (
                     jobRunId, source, typeOfChange, eventType,
                     issuingAuthority, identifier, title, summary, linkToRegChangeText,
@@ -156,21 +136,62 @@ class ScannerService {
                     firstEffectiveDate, enactedDate, topic, comments
                 )
                 SELECT
-                    jobRunId, source, typeOfChange, eventType,
-                    issuingAuthority, identifier, title, summary, linkToRegChangeText,
-                    publishedOn, htmlContent, pdfContent, introducedOn, citationId,
-                    billType, regType, year, regulationStatus, billStatus,
-                    firstEffectiveDate, enactedDate, topic, comments
-                FROM documentStaging
-                WHERE processed = FALSE`
+                    ds.jobRunId, ds.source, ds.typeOfChange, ds.eventType,
+                    ds.issuingAuthority, ds.identifier, ds.title, ds.summary, ds.linkToRegChangeText,
+                    ds.publishedOn, ds.htmlContent, ds.pdfContent, ds.introducedOn, ds.citationId,
+                    ds.billType, ds.regType, ds.year, ds.regulationStatus, ds.billStatus,
+                    ds.firstEffectiveDate, ds.enactedDate, ds.topic, ds.comments
+                FROM documentStaging ds
+                WHERE ds.jobRunId = ?
+                AND NOT EXISTS (
+                    SELECT 1 FROM documents d
+                    WHERE d.source = ds.source
+                    AND d.title = ds.title
+                    AND DATE(d.publishedOn) = DATE(ds.publishedOn)
+                )`,
+                [jobRunId]
             );
 
-            // Mark records as processed
-            await connection.query('UPDATE documentStaging SET processed = TRUE WHERE processed = FALSE');
-
-            return { insertedCount: result.affectedRows };
+            return { insertedCount: finalResult.affectedRows };
         });
     }
+
+    /**
+     * Insert processed records from documentStaging to documents table
+     * Only moves records that don't have matching source, title, and publishedOn date in documents table
+     */
+    // async moveToDocuments() {
+    //     return withConnection(async connection => {
+    //         const [result] = await connection.query(
+    //             `INSERT INTO documents (
+    //                 jobRunId, source, typeOfChange, eventType,
+    //                 issuingAuthority, identifier, title, summary, linkToRegChangeText,
+    //                 publishedOn, htmlContent, pdfContent, introducedOn, citationId,
+    //                 billType, regType, year, regulationStatus, billStatus,
+    //                 firstEffectiveDate, enactedDate, topic, comments
+    //             )
+    //             SELECT
+    //                 ds.jobRunId, ds.source, ds.typeOfChange, ds.eventType,
+    //                 ds.issuingAuthority, ds.identifier, ds.title, ds.summary, ds.linkToRegChangeText,
+    //                 ds.publishedOn, ds.htmlContent, ds.pdfContent, ds.introducedOn, ds.citationId,
+    //                 ds.billType, ds.regType, ds.year, ds.regulationStatus, ds.billStatus,
+    //                 ds.firstEffectiveDate, ds.enactedDate, ds.topic, ds.comments
+    //             FROM documentStaging ds
+    //             WHERE ds.processed = FALSE
+    //             AND NOT EXISTS (
+    //                 SELECT 1 FROM documents d
+    //                 WHERE d.source = ds.source
+    //                 AND d.title = ds.title
+    //                 AND DATE(d.publishedOn) = DATE(ds.publishedOn)
+    //             )`
+    //         );
+
+    //         // Mark records as processed
+    //         // await connection.query('UPDATE documentStaging SET processed = TRUE WHERE processed = FALSE');
+
+    //         return { insertedCount: result.affectedRows };
+    //     });
+    // }
 
     /**
      * Mark a scanner job as failed
