@@ -26,7 +26,7 @@ exports.startScannerJob = async (req, res) => {
 exports.completeScannerJob = async (req, res) => {
     try {
         console.log('Received request to complete scanner job:', req.body);
-        const { jobRunId, resultData } = req.body;
+        const { jobRunId, resultData, lastRunDate } = req.body;
 
         if (!jobRunId) {
             console.error('Missing required field: id');
@@ -39,7 +39,7 @@ exports.completeScannerJob = async (req, res) => {
 
         try {
             console.log(`Starting to populate documents staging for job ID: ${jobRunId}`);
-            await scannerService.populateDocumentsStaging(jobRunId, resultData);
+            await scannerService.populateDocumentsStaging(jobRunId, resultData, lastRunDate);
             console.log(`Successfully populated documents staging for job ID: ${jobRunId}`);
         } catch (stagingError) {
             console.error(`Error populating documents staging for job ID: ${jobRunId}:`, stagingError);

@@ -4,8 +4,9 @@ import { factory } from './factory';
 import { State } from './model/state';
 import * as db from './services/db-service';
 
-export async function pipeline(jobId: string, correlationId: string): Promise<void> {
+export async function pipeline(jobId: string, correlationId: string, lastRunDate: Date): Promise<void> {
     logger.info(`Loading job configuration for ID: ${jobId}`);
+    logger.info(`Using last run date: ${lastRunDate.toISOString().split('T')[0]}`);
 
     try {
         const jobConfig = initialize(jobId);
@@ -13,7 +14,11 @@ export async function pipeline(jobId: string, correlationId: string): Promise<vo
         preValidate(correlationId);
 
         const runId = await db.startScan(jobConfig, correlationId);
-        let state: State = { runId, correlationId: correlationId };
+        let state: State = {
+            runId,
+            correlationId: correlationId,
+            lastRunDate: lastRunDate,
+        };
 
         // Execute each pipeline stage
         for (let i = 0; i < jobConfig.pipeline.length; i++) {
@@ -66,7 +71,7 @@ function initialize(jobId: string): JobConfig {
 }
 
 function persist(jobConfig: JobConfig, state: State) {
-    db.completeScan(state.runId as number, state.documents as Document[]);
+    db.completeScan(state.runId as number, state.documents as Document[], state.lastRunDate as Date);
 
     // logger.info(state.documents);
     // logger.info('Job execution completed successfully.');

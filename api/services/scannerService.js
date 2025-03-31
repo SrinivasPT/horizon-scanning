@@ -38,7 +38,7 @@ class ScannerService {
      * @param jobRunId The scanner job ID
      * @returns Object with count of inserted records
      */
-    async populateDocumentsStaging(jobRunId, providedResultData = null) {
+    async populateDocumentsStaging(jobRunId, providedResultData = null, lastRunDate) {
         return withConnection(async connection => {
             // First, get the job to access correlationId and resultData
             // const [jobRows] = await connection.query('SELECT correlationId, jobId, resultData FROM jobRun WHERE id = ?', [jobRunId]);
@@ -70,6 +70,7 @@ class ScannerService {
             }
 
             // Insert data from resultData JSON into documentStaging using JSON_TABLE
+            // Only insert records where publishedOn >= lastRunDate
             const [result] = await connection.query(
                 `
                 INSERT INTO documentStaging (
@@ -129,8 +130,9 @@ class ScannerService {
                             comments TEXT PATH '$.comments'
                         )
                     ) AS doc
+                WHERE DATE(doc.publishedOn) >= DATE(?)
             `,
-                [jobRunId, resultDataJSON]
+                [jobRunId, resultDataJSON, lastRunDate]
             );
 
             // Update the processed flag in jobRun table

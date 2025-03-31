@@ -1,5 +1,6 @@
 import axios from 'axios';
 import { JobConfig } from '../model/job-config';
+import { format } from 'date-fns';
 
 const apiUrl = process.env.API_URL || 'http://localhost:3000/api';
 
@@ -18,9 +19,9 @@ export const startScan = async (jobConfig: JobConfig, correlationId: string): Pr
     }
 };
 
-export const completeScan = async (jobRunId: number, documents: Document[]): Promise<void> => {
+export const completeScan = async (jobRunId: number, documents: Document[], lastRunDate: Date): Promise<void> => {
     try {
-        const payload = { jobRunId, resultData: documents, jobStatus: 'COMPLETED' };
+        const payload = { jobRunId, resultData: documents, jobStatus: 'COMPLETED', lastRunDate: format(lastRunDate, 'yyyy-MM-dd') };
         const response = await axios.put(`${apiUrl}/complete-scan`, payload, { headers: { 'Content-Type': 'application/json' } });
         if (response.status !== 200) throw new Error(`API upsert failed with status: ${response.status}`);
     } catch (error) {

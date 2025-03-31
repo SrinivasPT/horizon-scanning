@@ -38,13 +38,8 @@ async function processDocument(document: Document, htmlSource: string): Promise<
     if (!document.summary || typeof document.summary !== 'string') return document;
 
     const htmlContent = await getHtmlContent(document, htmlSource);
-    console.log('Before HTML conversion:', htmlContent.substring(0, 100) + '...');
-
     const formattedText = convertHtmlToFormattedText(htmlContent);
-    console.log('After HTML conversion:', formattedText.substring(0, 100) + '...');
-
     const cleanedText = cleanText(formattedText);
-    console.log('After cleanText:', cleanedText.substring(0, 100) + '...');
 
     // Force additional cleaning if needed
     const furtherCleanedText = cleanedText
